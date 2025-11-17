@@ -1,17 +1,3 @@
-
---
--- PostgreSQL database dump
---
---
--- PostgreSQL database dump complete
---
-
-
---
--- PostgreSQL database dump
---
-
-
 -- Dumped from database version 18.0 (Debian 18.0-1.pgdg13+3)
 -- Dumped by pg_dump version 18.0 (Debian 18.0-1.pgdg13+3)
 
