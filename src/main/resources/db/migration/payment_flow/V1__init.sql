@@ -1,7 +1,7 @@
 -- Flyway migration: Initial schema for payment_flow
 -- Extracted from schema.sql (excluding backup and *_DDMMYY/_YYMMDD objects and audit_* tables outside the audit schema).
 
-CREATE SCHEMA payment_flow;
+CREATE SCHEMA IF NOT EXISTS payment_flow;
 
 CREATE TABLE payment_flow.board_master (
     id bigint NOT NULL,

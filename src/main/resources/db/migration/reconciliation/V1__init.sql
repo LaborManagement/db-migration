@@ -1,7 +1,7 @@
 -- Flyway migration: Initial schema for reconciliation
 -- Extracted from schema.sql (excluding backup and *_DDMMYY/_YYMMDD objects and audit_* tables outside the audit schema).
 
-CREATE SCHEMA reconciliation;
+CREATE SCHEMA IF NOT EXISTS reconciliation;
 
 CREATE TABLE reconciliation.bank_account (
     id bigint NOT NULL,
@@ -469,4 +469,4 @@ CREATE POLICY statement_transaction_std_write ON reconciliation.statement_transa
 -- PostgreSQL database dump complete
 --
 
-\unrestrict KhupiCfjLeP2xhdJ0I3VscKsJaEQ6HaoFKqi9vfSo5egFf5tVA6WVWc1WgjQPio
+

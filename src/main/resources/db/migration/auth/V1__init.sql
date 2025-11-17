@@ -1,7 +1,7 @@
 -- Flyway migration: Initial schema for auth
 -- Extracted from schema.sql (excluding backup and *_DDMMYY/_YYMMDD objects and audit_* tables outside the audit schema).
 
-CREATE SCHEMA auth;
+CREATE SCHEMA IF NOT EXISTS auth;
 
 CREATE FUNCTION auth.can_read_row(p_board_id uuid, p_employer_id uuid DEFAULT NULL::uuid) RETURNS boolean
     LANGUAGE plpgsql STABLE SECURITY DEFINER

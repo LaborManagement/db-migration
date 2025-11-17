@@ -1,7 +1,7 @@
 -- Flyway migration: Initial schema for audit
 -- Extracted from schema.sql (excluding backup and *_DDMMYY/_YYMMDD objects and audit_* tables outside the audit schema).
 
-CREATE SCHEMA audit;
+CREATE SCHEMA IF NOT EXISTS audit;
 
 COMMENT ON SCHEMA audit IS 'Centralized audit logging for all services';
 
