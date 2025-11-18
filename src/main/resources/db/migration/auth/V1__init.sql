@@ -1,16 +1,89 @@
+-- Utility: Apply standard RLS policies if not present
+-- Utility: Apply standard RLS policies for tables with custom board/employer column names
+-- p_board_col: name of the board column, or NULL if not present
+-- p_employer_col: name of the employer column, or NULL if not present
+CREATE OR REPLACE FUNCTION auth.apply_std_rls_policy(
+    p_schema text,
+    p_table text,
+    p_read boolean DEFAULT true,
+    p_write boolean DEFAULT true,
+    p_board_col text DEFAULT NULL,
+    p_employer_col text DEFAULT NULL
+) RETURNS void AS $$
+DECLARE
+    read_policy_name text := p_table || '_std_read';
+    write_policy_name text := p_table || '_std_write';
+    policy_exists boolean;
+    read_expr text;
+    write_expr text;
+    board_expr text;
+    employer_expr text;
+BEGIN
+    -- Enable RLS on the table
+    EXECUTE format('ALTER TABLE %I.%I ENABLE ROW LEVEL SECURITY', p_schema, p_table);
+
+    IF p_board_col IS NOT NULL AND p_employer_col IS NOT NULL THEN
+        board_expr := p_board_col;
+        employer_expr := p_employer_col;
+    ELSIF p_board_col IS NOT NULL THEN
+        board_expr := p_board_col;
+        employer_expr := 'NULL';
+    ELSIF p_employer_col IS NOT NULL THEN
+        board_expr := 'NULL';
+        employer_expr := p_employer_col;
+    ELSE
+        RAISE EXCEPTION 'At least one of p_board_col or p_employer_col must be provided';
+    END IF;
+
+    read_expr := format('auth.can_read_row(%s, %s)', board_expr, employer_expr);
+    write_expr := format('auth.can_write_row(%s, %s)', board_expr, employer_expr);
+
+    IF p_read THEN
+        -- Check if read policy exists
+        SELECT EXISTS (
+            SELECT 1 FROM pg_policies
+            WHERE schemaname = p_schema AND tablename = p_table AND policyname = read_policy_name
+        ) INTO policy_exists;
+
+        IF NOT policy_exists THEN
+            EXECUTE format(
+                'CREATE POLICY %I ON %I.%I FOR SELECT USING (%s)',
+                read_policy_name, p_schema, p_table, read_expr
+            );
+        END IF;
+    END IF;
+
+    IF p_write THEN
+        -- Check if write policy exists
+        SELECT EXISTS (
+            SELECT 1 FROM pg_policies
+            WHERE schemaname = p_schema AND tablename = p_table AND policyname = write_policy_name
+        ) INTO policy_exists;
+
+        IF NOT policy_exists THEN
+            EXECUTE format(
+                'CREATE POLICY %I ON %I.%I USING (%s) WITH CHECK (%s)',
+                write_policy_name, p_schema, p_table, write_expr, write_expr
+            );
+        END IF;
+    END IF;
+END;
+$$ LANGUAGE plpgsql SECURITY DEFINER;
 -- Flyway migration: Initial schema for auth
 -- Extracted from schema.sql (excluding backup and *_DDMMYY/_YYMMDD objects and audit_* tables outside the audit schema).
 
 CREATE SCHEMA IF NOT EXISTS auth;
 
-CREATE FUNCTION auth.can_read_row(p_board_id uuid, p_employer_id uuid DEFAULT NULL::uuid) RETURNS boolean
+
+-- Updated: Use character varying for board_id/employer_id, bigint for user_id
+CREATE FUNCTION auth.can_read_row(p_board_id character varying, p_employer_id character varying DEFAULT NULL::character varying) RETURNS boolean
     LANGUAGE plpgsql STABLE SECURITY DEFINER
     AS $$
 DECLARE
-    v_user_id UUID;
+    v_user_id BIGINT;
     v_has_access boolean;
 BEGIN
-    v_user_id := auth.get_user_context();
+    v_user_id := auth.get_user_context()::BIGINT;
     
     -- If no user context is set, deny access
     IF v_user_id IS NULL THEN
@@ -30,50 +103,21 @@ BEGIN
 END;
 $$;
 
-COMMENT ON FUNCTION auth.can_read_row(p_board_id uuid, p_employer_id uuid) IS 'Check if current user can read a row. Called by SELECT RLS policies. Returns false if no user context or no ACL match.';
+COMMENT ON FUNCTION auth.can_read_row(p_board_id character varying, p_employer_id character varying) IS 'Check if current user can read a row. Called by SELECT RLS policies. Returns false if no user context or no ACL match. All IDs are bigint or varchar.';
 
-CREATE FUNCTION auth.can_read_row(p_board_id character varying, p_employer_id character varying DEFAULT NULL::character varying) RETURNS boolean
+
+-- Removed overload: now only one version with varchar/bigint
+
+
+-- Updated: Use character varying for board_id/employer_id, bigint for user_id
+CREATE FUNCTION auth.can_write_row(p_board_id character varying, p_employer_id character varying DEFAULT NULL::character varying) RETURNS boolean
     LANGUAGE plpgsql STABLE SECURITY DEFINER
     AS $$
 DECLARE
-    v_user_id TEXT;
-    v_user_id_bigint BIGINT;
+    v_user_id BIGINT;
     v_has_access boolean;
 BEGIN
-    v_user_id := auth.get_user_context();
-    
-    IF v_user_id IS NULL THEN
-        RETURN false;
-    END IF;
-    
-    BEGIN
-        v_user_id_bigint := v_user_id::BIGINT;
-    EXCEPTION WHEN OTHERS THEN
-        RETURN false;
-    END;
-    
-    SELECT EXISTS(
-        SELECT 1 FROM auth.user_tenant_acl acl
-        WHERE acl.user_id = v_user_id_bigint
-          AND acl.board_id = p_board_id
-          AND (acl.employer_id IS NULL OR acl.employer_id = p_employer_id)
-          AND acl.can_read = true
-    ) INTO v_has_access;
-    
-    RETURN COALESCE(v_has_access, false);
-END;
-$$;
-
-COMMENT ON FUNCTION auth.can_read_row(p_board_id character varying, p_employer_id character varying) IS 'VARCHAR overload for can_read_row. Casts VARCHAR tenant keys to UUID and checks read permission.';
-
-CREATE FUNCTION auth.can_write_row(p_board_id uuid, p_employer_id uuid DEFAULT NULL::uuid) RETURNS boolean
-    LANGUAGE plpgsql STABLE SECURITY DEFINER
-    AS $$
-DECLARE
-    v_user_id UUID;
-    v_has_access boolean;
-BEGIN
-    v_user_id := auth.get_user_context();
+    v_user_id := auth.get_user_context()::BIGINT;
     
     -- If no user context is set, deny access
     IF v_user_id IS NULL THEN
@@ -93,42 +137,11 @@ BEGIN
 END;
 $$;
 
-COMMENT ON FUNCTION auth.can_write_row(p_board_id uuid, p_employer_id uuid) IS 'Check if current user can write to a row. Called by INSERT/UPDATE/DELETE RLS policies. Returns false if no user context or no ACL match.';
+COMMENT ON FUNCTION auth.can_write_row(p_board_id character varying, p_employer_id character varying) IS 'Check if current user can write to a row. Called by INSERT/UPDATE/DELETE RLS policies. Returns false if no user context or no ACL match. All IDs are bigint or varchar.';
 
-CREATE FUNCTION auth.can_write_row(p_board_id character varying, p_employer_id character varying DEFAULT NULL::character varying) RETURNS boolean
-    LANGUAGE plpgsql STABLE SECURITY DEFINER
-    AS $$
-DECLARE
-    v_user_id TEXT;
-    v_user_id_bigint BIGINT;
-    v_has_access boolean;
-BEGIN
-    v_user_id := auth.get_user_context();
-    
-    IF v_user_id IS NULL THEN
-        RETURN false;
-    END IF;
-    
-    BEGIN
-        v_user_id_bigint := v_user_id::BIGINT;
-    EXCEPTION WHEN OTHERS THEN
-        RETURN false;
-    END;
-    
-    SELECT EXISTS(
-        SELECT 1 FROM auth.user_tenant_acl acl
-        WHERE acl.user_id = v_user_id_bigint
-          AND acl.board_id = p_board_id
-          AND (acl.employer_id IS NULL OR acl.employer_id = p_employer_id)
-          AND acl.can_write = true
-    ) INTO v_has_access;
-    
-    RETURN COALESCE(v_has_access, false);
-END;
-$$;
 
-COMMENT ON FUNCTION auth.can_write_row(p_board_id character varying, p_employer_id character varying) IS 'VARCHAR overload for can_write_row. Casts VARCHAR tenant keys to UUID and checks write permission.';
 
+-- get_user_context: Retrieve the current user ID from transaction-local context
 CREATE FUNCTION auth.get_user_context() RETURNS text
     LANGUAGE plpgsql STABLE SECURITY DEFINER
     AS $$
@@ -139,7 +152,7 @@ EXCEPTION WHEN OTHERS THEN
 END;
 $$;
 
-COMMENT ON FUNCTION auth.get_user_context() IS 'Retrieve the current user ID from transaction-local context. Returns NULL if not set. Returns TEXT.';
+COMMENT ON FUNCTION auth.get_user_context() IS 'Retrieve the current user ID from transaction-local context. Returns NULL if not set. Returns BIGINT as string.';
 
 CREATE FUNCTION auth.safe_endpoint_policy_link(p_endpoint_method text, p_endpoint_path text, p_policy_name text) RETURNS void
     LANGUAGE plpgsql
@@ -214,24 +227,18 @@ $$;
 
 COMMENT ON FUNCTION auth.set_user_context(p_user_id text) IS 'Set the current user ID in transaction-local context. Accepts TEXT/BIGINT user IDs.';
 
+
 CREATE FUNCTION auth.user_accessible_tenants() RETURNS TABLE(board_id character varying, employer_id character varying, can_read boolean, can_write boolean)
     LANGUAGE plpgsql STABLE SECURITY DEFINER
     AS $$
 DECLARE
-    v_user_id TEXT;
-    v_user_id_bigint BIGINT;
+    v_user_id BIGINT;
 BEGIN
-    v_user_id := auth.get_user_context();
+    v_user_id := auth.get_user_context()::BIGINT;
     
     IF v_user_id IS NULL THEN
         RETURN;
     END IF;
-    
-    BEGIN
-        v_user_id_bigint := v_user_id::BIGINT;
-    EXCEPTION WHEN OTHERS THEN
-        RETURN;
-    END;
     
     RETURN QUERY
     SELECT 
@@ -240,7 +247,7 @@ BEGIN
         acl.can_read,
         acl.can_write
     FROM auth.user_tenant_acl acl
-    WHERE acl.user_id = v_user_id_bigint
+    WHERE acl.user_id = v_user_id
     ORDER BY board_id, employer_id;
 END;
 $$;
@@ -268,30 +275,6 @@ $$;
 SET default_tablespace = '';
 
 SET default_table_access_method = heap;
-
-CREATE TABLE auth.authorization_audit (
-    id bigint NOT NULL,
-    user_id bigint NOT NULL,
-    username character varying(50) NOT NULL,
-    endpoint_key character varying(100),
-    http_method character varying(10),
-    request_path character varying(255),
-    required_capability character varying(100),
-    decision character varying(20) NOT NULL,
-    reason character varying(500),
-    ip_address character varying(45),
-    user_agent character varying(255),
-    created_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP NOT NULL
-);
-
-ALTER TABLE auth.authorization_audit ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENTITY (
-    SEQUENCE NAME auth.authorization_audit_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1
-);
 
 CREATE TABLE auth.endpoint_policies (
     id bigint NOT NULL,
@@ -657,8 +640,6 @@ ALTER TABLE ONLY auth.user_tenant_acl ALTER COLUMN id SET DEFAULT nextval('auth.
 
 ALTER TABLE ONLY auth.user_tenant_acl_audit ALTER COLUMN id SET DEFAULT nextval('auth.user_tenant_acl_audit_id_seq'::regclass);
 
-ALTER TABLE ONLY auth.authorization_audit
-    ADD CONSTRAINT authorization_audit_pkey PRIMARY KEY (id);
 
 ALTER TABLE ONLY auth.endpoint_policies
     ADD CONSTRAINT endpoint_policies_pkey PRIMARY KEY (id);
@@ -810,3 +791,68 @@ ALTER TABLE ONLY auth.user_roles
 
 ALTER TABLE ONLY auth.user_roles
     ADD CONSTRAINT fk_user_roles_user FOREIGN KEY (user_id) REFERENCES auth.users(id) ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+
+DO $$
+BEGIN
+    IF NOT EXISTS (SELECT FROM pg_catalog.pg_roles WHERE rolname = 'app_auth') THEN
+        CREATE ROLE app_auth LOGIN PASSWORD 'changeme';
+    END IF;
+END$$;
+
+-- ...existing code...
+
+-- =====================
+-- Grant privileges to app_auth (must come after all tables and functions are created)
+-- =====================
+GRANT INSERT, SELECT, UPDATE, DELETE, TRUNCATE, REFERENCES, TRIGGER ON auth.user_tenant_acl TO app_auth;
+GRANT INSERT, SELECT, UPDATE, DELETE ON auth.user_roles TO app_auth;
+GRANT INSERT, SELECT, UPDATE, DELETE ON auth.roles TO app_auth;
+GRANT INSERT, SELECT, UPDATE, DELETE ON auth.role_policies TO app_auth;
+GRANT INSERT, SELECT, UPDATE, DELETE ON auth.user_tenant_acl_audit TO app_auth;
+GRANT INSERT, SELECT, UPDATE, DELETE ON auth.notification_templates TO app_auth;
+GRANT INSERT, SELECT, UPDATE, DELETE ON auth.system_config TO app_auth;
+GRANT INSERT, SELECT, UPDATE, DELETE ON auth.user_sessions TO app_auth;
+GRANT INSERT, SELECT, UPDATE, DELETE ON auth.policies TO app_auth;
+GRANT INSERT, SELECT, UPDATE, DELETE ON auth.users TO app_auth;
+GRANT INSERT, SELECT, UPDATE, DELETE ON auth.endpoints TO app_auth;
+GRANT INSERT, SELECT, UPDATE, DELETE ON auth.endpoint_policies TO app_auth;
+GRANT INSERT, SELECT, UPDATE, DELETE ON auth.ui_pages TO app_auth;
+GRANT INSERT, SELECT, UPDATE, DELETE ON auth.page_actions TO app_auth;
+GRANT INSERT, SELECT, UPDATE, DELETE ON auth.revoked_tokens TO app_auth;
+
+-- Grant EXECUTE on relevant functions
+GRANT EXECUTE ON FUNCTION auth.can_read_row(character varying, character varying) TO app_auth;
+GRANT EXECUTE ON FUNCTION auth.can_write_row(character varying, character varying) TO app_auth;
+GRANT EXECUTE ON FUNCTION auth.get_user_context() TO app_auth;
+GRANT EXECUTE ON FUNCTION auth.set_user_context(text) TO app_auth;
+GRANT EXECUTE ON FUNCTION auth.user_accessible_tenants() TO app_auth;
+GRANT EXECUTE ON FUNCTION auth.apply_std_rls_policy(text, text, boolean, boolean, text, text) TO app_auth;
+
+-- === Merged app user grants (from extra-app-user-grants.sql) ===
+-- Grant schema usage
+GRANT USAGE ON SCHEMA auth TO app_auth;
+GRANT USAGE ON SCHEMA payment_flow TO app_payment_flow;
+GRANT USAGE ON SCHEMA reconciliation TO app_reconciliation;
+GRANT USAGE ON SCHEMA audit TO app_auth, app_payment_flow, app_reconciliation;
+
+-- Grant all table privileges in each schema
+GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA auth TO app_auth;
+GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA payment_flow TO app_payment_flow;
+GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA reconciliation TO app_reconciliation;
+
+-- Special privileges for app_auth
+GRANT TRUNCATE, REFERENCES, TRIGGER ON auth.user_tenant_acl TO app_auth;
+
+-- Cross-schema SELECT grants
+GRANT SELECT ON auth.user_tenant_acl TO app_payment_flow, app_reconciliation;
+GRANT SELECT ON audit.v_recent_events TO app_auth, app_payment_flow, app_reconciliation;
+GRANT SELECT ON audit.v_entity_changes_today TO app_auth, app_payment_flow, app_reconciliation;
+GRANT SELECT ON audit.v_activity_summary TO app_auth, app_payment_flow, app_reconciliation;
+GRANT SELECT ON audit.entity_audit_event TO app_auth, app_payment_flow, app_reconciliation;
+GRANT SELECT ON audit.audit_event TO app_auth, app_payment_flow, app_reconciliation;
+
+-- Cross-schema INSERT for audit logs
+GRANT INSERT ON audit.entity_audit_event TO app_auth, app_payment_flow, app_reconciliation;
+GRANT INSERT ON audit.audit_event TO app_auth, app_payment_flow, app_reconciliation;

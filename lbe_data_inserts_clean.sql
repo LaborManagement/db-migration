@@ -1,167 +1,3 @@
--- Dumped from database version 18.0 (Debian 18.0-1.pgdg13+3)
--- Dumped by pg_dump version 18.0 (Debian 18.0-1.pgdg13+3)
-
-SET statement_timeout = 0;
-SET lock_timeout = 0;
-SET idle_in_transaction_session_timeout = 0;
-SET transaction_timeout = 0;
-SET client_encoding = 'UTF8';
-SET standard_conforming_strings = on;
-SELECT pg_catalog.set_config('search_path', '', false);
-SET check_function_bodies = false;
-SET xmloption = content;
-SET client_min_messages = warning;
-SET row_security = off;
-
---
--- Data for Name: authorization_audit; Type: TABLE DATA; Schema: auth; Owner: -
---
-
-
-
---
--- Name: authorization_audit_id_seq; Type: SEQUENCE SET; Schema: auth; Owner: -
---
-
-SELECT pg_catalog.setval('auth.authorization_audit_id_seq', 1, false);
-
-
---
--- PostgreSQL database dump complete
---
-
-
---
--- PostgreSQL database dump
---
-
-
--- Dumped from database version 18.0 (Debian 18.0-1.pgdg13+3)
--- Dumped by pg_dump version 18.0 (Debian 18.0-1.pgdg13+3)
-
-SET statement_timeout = 0;
-SET lock_timeout = 0;
-SET idle_in_transaction_session_timeout = 0;
-SET transaction_timeout = 0;
-SET client_encoding = 'UTF8';
-SET standard_conforming_strings = on;
-SELECT pg_catalog.set_config('search_path', '', false);
-SET check_function_bodies = false;
-SET xmloption = content;
-SET client_min_messages = warning;
-SET row_security = off;
-
---
--- Data for Name: endpoint_policies; Type: TABLE DATA; Schema: auth; Owner: -
---
-
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (521, 35, 11);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (522, 99, 11);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (523, 102, 9);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (532, 100, 18);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (533, 73, 18);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (534, 107, 18);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (535, 108, 18);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (536, 109, 18);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (537, 112, 20);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (538, 110, 20);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (539, 111, 20);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (547, 113, 21);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (548, 114, 21);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (403, 5, 2);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (404, 6, 2);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (405, 7, 2);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (406, 8, 2);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (407, 9, 2);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (408, 3, 2);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (409, 10, 3);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (410, 11, 3);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (411, 12, 3);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (412, 13, 3);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (413, 14, 3);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (549, 115, 21);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (550, 116, 21);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (551, 64, 19);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (552, 74, 19);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (553, 75, 19);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (419, 20, 8);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (554, 76, 19);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (555, 77, 19);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (556, 78, 19);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (557, 79, 19);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (558, 80, 19);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (559, 81, 19);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (560, 83, 19);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (561, 84, 19);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (428, 29, 6);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (429, 30, 6);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (430, 31, 7);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (431, 32, 7);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (432, 33, 7);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (433, 34, 7);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (562, 85, 19);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (563, 86, 19);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (564, 87, 19);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (437, 37, 11);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (438, 38, 11);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (439, 39, 11);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (440, 40, 11);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (441, 42, 11);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (442, 43, 11);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (443, 44, 11);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (444, 45, 12);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (445, 46, 12);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (446, 47, 12);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (447, 53, 12);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (448, 48, 13);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (449, 49, 13);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (450, 50, 13);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (451, 51, 13);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (452, 52, 13);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (453, 54, 14);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (454, 55, 14);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (455, 56, 14);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (456, 57, 15);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (457, 58, 15);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (458, 59, 15);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (459, 60, 15);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (460, 61, 15);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (461, 71, 2);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (462, 72, 2);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (565, 93, 19);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (502, 18, 4);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (503, 19, 4);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (504, 16, 5);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (505, 17, 5);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (506, 91, 5);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (507, 15, 5);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (516, 69, 1);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (517, 70, 1);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (518, 62, 1);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (519, 95, 1);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (520, 63, 1);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (512, 66, 1);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (513, 67, 1);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (514, 4, 1);
-INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (515, 68, 1);
-
-
---
--- Name: endpoint_policies_id_seq; Type: SEQUENCE SET; Schema: auth; Owner: -
---
-
-SELECT pg_catalog.setval('auth.endpoint_policies_id_seq', 565, true);
-
-
---
--- PostgreSQL database dump complete
---
-
-
---
--- PostgreSQL database dump
---
-
 
 -- Dumped from database version 18.0 (Debian 18.0-1.pgdg13+3)
 -- Dumped by pg_dump version 18.0 (Debian 18.0-1.pgdg13+3)
@@ -290,203 +126,6 @@ SELECT pg_catalog.setval('auth.endpoints_id_seq', 116, true);
 --
 
 
---
--- PostgreSQL database dump
---
-
-
--- Dumped from database version 18.0 (Debian 18.0-1.pgdg13+3)
--- Dumped by pg_dump version 18.0 (Debian 18.0-1.pgdg13+3)
-
-SET statement_timeout = 0;
-SET lock_timeout = 0;
-SET idle_in_transaction_session_timeout = 0;
-SET transaction_timeout = 0;
-SET client_encoding = 'UTF8';
-SET standard_conforming_strings = on;
-SELECT pg_catalog.set_config('search_path', '', false);
-SET check_function_bodies = false;
-SET xmloption = content;
-SET client_min_messages = warning;
-SET row_security = off;
-
---
--- Data for Name: entity_audit_event; Type: TABLE DATA; Schema: auth; Owner: -
---
-
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (2, '2025-11-01 14:15:43.776283', 'a71225d0-ff26-4d6c-8c60-e0ad5e0bae6d', '20251101000001', 'USER', '1', 'UPDATE', 'admin', '8cbc16db-a71f-4ca0-8437-508ad58e2542', '{"referer": "http://localhost:8080/swagger-ui/index.html", "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}', '{"id": 1, "role": "ADMIN", "email": "admin@example.com", "roles": [1], "enabled": true, "fullName": "System Administrator", "username": "admin", "createdAt": "2025-10-09T15:23:20", "lastLogin": "2025-10-31T05:16:46", "updatedAt": "2025-10-31T05:16:46", "passwordHash": "$2b$10$ZuNPpWnsWE/DVaHFzPGnHuh0ANT7.ZlT8YeSCnY3W8pInAOKk/vwu", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 3, "credentialsNonExpired": true}', '{"id": 1, "role": "ADMIN", "email": "admin@example.com", "roles": [1], "enabled": true, "fullName": "System Administrator", "username": "admin", "createdAt": "2025-10-09T15:23:20", "lastLogin": "2025-11-01T14:15:43.768645", "updatedAt": "2025-11-01T14:15:43.769685", "passwordHash": "$2b$10$ZuNPpWnsWE/DVaHFzPGnHuh0ANT7.ZlT8YeSCnY3W8pInAOKk/vwu", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 3, "credentialsNonExpired": true}', NULL, '0:0:0:0:0:0:0:1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36', '0000000000000000000000000000000000000000000000000000000000000000', 'a742fef3244c6951471b547e66e318286a1e23ce23075b754ad8962b3cc257eb', '2025-11-01 14:15:43.671862');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (3, '2025-11-01 22:57:51.562912', 'ca5b8ce6-6730-474a-8f0c-0356eaec8d11', '20251101000001', 'USER', '1', 'UPDATE', 'admin', '94db13b8-7f46-4359-bea3-b731c1aa0d87', '{"referer": "http://localhost:8080/swagger-ui/index.html", "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}', '{"id": 1, "role": "ADMIN", "email": "admin@example.com", "roles": [1, 7], "enabled": true, "fullName": "System Administrator", "username": "admin", "createdAt": "2025-10-09T15:23:20", "lastLogin": "2025-11-01T14:15:43.768645", "updatedAt": "2025-11-01T14:15:43.769685", "passwordHash": "$2b$10$ZuNPpWnsWE/DVaHFzPGnHuh0ANT7.ZlT8YeSCnY3W8pInAOKk/vwu", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 3, "credentialsNonExpired": true}', '{"id": 1, "role": "ADMIN", "email": "admin@example.com", "roles": [1, 7], "enabled": true, "fullName": "System Administrator", "username": "admin", "createdAt": "2025-10-09T15:23:20", "lastLogin": "2025-11-01T22:57:51.520685", "updatedAt": "2025-11-01T22:57:51.536130", "passwordHash": "$2b$10$ZuNPpWnsWE/DVaHFzPGnHuh0ANT7.ZlT8YeSCnY3W8pInAOKk/vwu", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 3, "credentialsNonExpired": true}', NULL, '0:0:0:0:0:0:0:1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36', 'a742fef3244c6951471b547e66e318286a1e23ce23075b754ad8962b3cc257eb', '8fbd5f45bc47a8a3cea25962db17fd54e6838fa27771e47c7b67ceb79309e11f', '2025-11-01 22:57:51.406631');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (4, '2025-11-02 10:27:04.001405', 'bc125723-e01c-4404-8a3b-0e77d8f7a603', '20251101000001', 'USER', '1', 'UPDATE', 'admin', '62e200af-1efa-44e2-a360-4f25825dd913', '{"referer": "http://localhost:8080/swagger-ui/index.html", "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}', '{"id": 1, "role": "ADMIN", "email": "admin@example.com", "roles": [1, 7], "enabled": true, "fullName": "System Administrator", "username": "admin", "createdAt": "2025-10-09T15:23:20", "lastLogin": "2025-11-01T22:57:51.520685", "updatedAt": "2025-11-01T22:57:51.536130", "passwordHash": "$2b$10$ZuNPpWnsWE/DVaHFzPGnHuh0ANT7.ZlT8YeSCnY3W8pInAOKk/vwu", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 3, "credentialsNonExpired": true}', '{"id": 1, "role": "ADMIN", "email": "admin@example.com", "roles": [1, 7], "enabled": true, "fullName": "System Administrator", "username": "admin", "createdAt": "2025-10-09T15:23:20", "lastLogin": "2025-11-02T10:27:03.960444", "updatedAt": "2025-11-02T10:27:03.973716", "passwordHash": "$2b$10$ZuNPpWnsWE/DVaHFzPGnHuh0ANT7.ZlT8YeSCnY3W8pInAOKk/vwu", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 3, "credentialsNonExpired": true}', NULL, '0:0:0:0:0:0:0:1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36', '8fbd5f45bc47a8a3cea25962db17fd54e6838fa27771e47c7b67ceb79309e11f', '0d9d9cccc96596f1bb97d107fe49776754d0ba6d205a7e4abff8a5e93e2241cd', '2025-11-02 10:27:03.850537');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (5, '2025-11-02 10:34:40.381114', 'cb3d5d1c-8a19-444b-a5b9-2878297abe04', '20251102000001', 'USER', '8', 'CREATE', 'admin', 'e9bcba13-8e79-44a6-996f-63ad4f92efb7', '{"referer": "http://localhost:8080/swagger-ui/index.html", "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}', NULL, '{"id": 8, "role": "USER", "email": "test@tets.com", "roles": [], "enabled": true, "fullName": "test user", "username": "test", "createdAt": "2025-11-02T10:34:40.364349", "lastLogin": null, "updatedAt": null, "passwordHash": "$2a$10$h0.i.5ftglB76teVZANaqOnaSzyZXojfMRkB.3N/vXk5CrYChZvqK", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', NULL, '0:0:0:0:0:0:0:1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36', '0000000000000000000000000000000000000000000000000000000000000000', '5b3dde6478107a98737de883697d414d547f4f6e6abdb1faa8011960bbeb9a41', '2025-11-02 10:34:40.279385');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (6, '2025-11-02 18:36:28.883879', '25c96274-4c96-47cb-9999-a4990020fe08', '20251102000002', 'USER', '9', 'UPDATE', 'platform.bootstrap', 'd0661282-1fb5-4dcf-988f-aedb6ac38756', '{"referer": null, "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}', '{"id": 9, "role": "ADMIN", "email": "bootstrap@system.local", "roles": [1], "enabled": true, "fullName": "Platform Bootstrap", "username": "platform.bootstrap", "createdAt": "2025-11-02T12:43:03.103158", "lastLogin": null, "updatedAt": "2025-11-02T12:56:18.370143", "passwordHash": "$2a$10$K7ZdK4muqK0KrXwcTwV/auNw6C8AF0VYPtrUlB8IGIeByIWFJ1ie6", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', '{"id": 9, "role": "ADMIN", "email": "bootstrap@system.local", "roles": [1], "enabled": true, "fullName": "Platform Bootstrap", "username": "platform.bootstrap", "createdAt": "2025-11-02T12:43:03.103158", "lastLogin": "2025-11-02T18:36:28.846082", "updatedAt": "2025-11-02T18:36:28.857670", "passwordHash": "$2a$10$K7ZdK4muqK0KrXwcTwV/auNw6C8AF0VYPtrUlB8IGIeByIWFJ1ie6", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', NULL, '0:0:0:0:0:0:0:1', 'curl/8.7.1', '0000000000000000000000000000000000000000000000000000000000000000', 'c44bf42670c249cbeecb26a67bd1743912c038f2700c97a33b5e59e4def05e50', '2025-11-02 18:36:28.759579');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (37, '2025-11-03 13:47:58.018871', 'cfc9e2f1-cf4b-47bf-a8b7-9dacbae8137a', '20251103000003', 'ROLE', '4', 'CREATE', 'tech.bootstrap', '82dc6de0-ab93-40f7-b56f-054eec57d3cc', '{"referer": "http://localhost:8080/swagger-ui/index.html", "tableName": "roles", "entityClass": "com.example.userauth.entity.Role", "requestedWith": null}', NULL, '{"id": 4, "name": "WORKER_UPLOAD_DATA_VIEW", "isActive": true, "createdAt": "2025-11-03T13:47:57.996975", "updatedAt": "2025-11-03T13:47:57.996975", "description": "Read only role of view uploaded data"}', NULL, '0:0:0:0:0:0:0:1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36', '0000000000000000000000000000000000000000000000000000000000000000', '8ed826c20d69b6e55bbe163dab15b87240d27f858f37118d956b90c1ebdb9dec', '2025-11-03 13:47:57.988649');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (7, '2025-11-02 18:36:34.443945', 'b81800d9-b444-4805-8be5-20bb72bc047f', '20251102000003', 'USER', '10', 'UPDATE', 'admin.tech', '950ddedd-2e01-4b12-addf-86239a110142', '{"referer": null, "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}', '{"id": 10, "role": "ADMIN", "email": "admin.tech@system.local", "roles": [2], "enabled": true, "fullName": "Tech Administrator", "username": "admin.tech", "createdAt": "2025-11-02T12:43:03.103158", "lastLogin": null, "updatedAt": "2025-11-02T12:56:18.370143", "passwordHash": "$2a$10$m2WyB7vO.wPiScT1Dm.gw.64oC2Eq4lOzEy798QR0ktIg4jdBgaT.", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', '{"id": 10, "role": "ADMIN", "email": "admin.tech@system.local", "roles": [2], "enabled": true, "fullName": "Tech Administrator", "username": "admin.tech", "createdAt": "2025-11-02T12:43:03.103158", "lastLogin": "2025-11-02T18:36:34.437952", "updatedAt": "2025-11-02T18:36:34.438831", "passwordHash": "$2a$10$m2WyB7vO.wPiScT1Dm.gw.64oC2Eq4lOzEy798QR0ktIg4jdBgaT.", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', NULL, '0:0:0:0:0:0:0:1', 'curl/8.7.1', '0000000000000000000000000000000000000000000000000000000000000000', 'd7cf101f1d560ec0bd35f766c4e6d36d65c8cfcaa3654f3d53e7c332a483399a', '2025-11-02 18:36:34.371631');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (8, '2025-11-02 18:36:38.324388', '59d5a4cd-8a73-4319-9a43-a90b8ca7dae6', '20251102000004', 'USER', '14', 'UPDATE', 'worker1', '7a1d9b49-75c2-48d9-9cf7-a66e4a7a9797', '{"referer": null, "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}', '{"id": 14, "role": "WORKER", "email": "worker1@company.local", "roles": [6], "enabled": true, "fullName": "Worker User One", "username": "worker1", "createdAt": "2025-11-02T12:43:03.103158", "lastLogin": null, "updatedAt": "2025-11-02T12:56:18.370143", "passwordHash": "$2a$10$aTm0BsUSwGerSrNrOau8..lV8V7Z5VQO0mnaa1txPLLLgX3A8xRbW", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', '{"id": 14, "role": "WORKER", "email": "worker1@company.local", "roles": [6], "enabled": true, "fullName": "Worker User One", "username": "worker1", "createdAt": "2025-11-02T12:43:03.103158", "lastLogin": "2025-11-02T18:36:38.318290", "updatedAt": "2025-11-02T18:36:38.319147", "passwordHash": "$2a$10$aTm0BsUSwGerSrNrOau8..lV8V7Z5VQO0mnaa1txPLLLgX3A8xRbW", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', NULL, '0:0:0:0:0:0:0:1', 'curl/8.7.1', '0000000000000000000000000000000000000000000000000000000000000000', '33b98ab7ab0eb18a64778e8700f41130273056095208afaa94e087b55e6f2799', '2025-11-02 18:36:38.251655');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (9, '2025-11-02 18:38:56.211561', 'd054b2e0-b88d-4884-934c-3310eead5c7f', '20251102000002', 'USER', '9', 'UPDATE', 'platform.bootstrap', 'cb256925-a162-4d58-bde5-3b141c6bd3e2', '{"referer": "http://localhost:8080/swagger-ui/index.html", "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}', '{"id": 9, "role": "ADMIN", "email": "bootstrap@system.local", "roles": [1], "enabled": true, "fullName": "Platform Bootstrap", "username": "platform.bootstrap", "createdAt": "2025-11-02T12:43:03.103158", "lastLogin": "2025-11-02T18:36:28.846082", "updatedAt": "2025-11-02T18:36:28.857670", "passwordHash": "$2a$10$K7ZdK4muqK0KrXwcTwV/auNw6C8AF0VYPtrUlB8IGIeByIWFJ1ie6", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', '{"id": 9, "role": "ADMIN", "email": "bootstrap@system.local", "roles": [1], "enabled": true, "fullName": "Platform Bootstrap", "username": "platform.bootstrap", "createdAt": "2025-11-02T12:43:03.103158", "lastLogin": "2025-11-02T18:38:56.205843", "updatedAt": "2025-11-02T18:38:56.206901", "passwordHash": "$2a$10$K7ZdK4muqK0KrXwcTwV/auNw6C8AF0VYPtrUlB8IGIeByIWFJ1ie6", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', NULL, '0:0:0:0:0:0:0:1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36', 'c44bf42670c249cbeecb26a67bd1743912c038f2700c97a33b5e59e4def05e50', 'ef93d03d58625bfbf3a6ca6619001b1c73509db71fb0d607713b0a55897821fd', '2025-11-02 18:38:56.109137');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (10, '2025-11-02 18:46:32.305915', '59bd0e2a-49d8-40c0-8340-f3a576933929', '20251102000005', 'USER', '12', 'UPDATE', 'board1', '54de9254-62b4-497b-8a40-c17d4e6cfacc', '{"referer": "http://localhost:8080/swagger-ui/index.html", "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}', '{"id": 12, "role": "BOARD", "email": "board1@company.local", "roles": [4], "enabled": true, "fullName": "Board Member One", "username": "board1", "createdAt": "2025-11-02T12:43:03.103158", "lastLogin": null, "updatedAt": "2025-11-02T12:56:18.370143", "passwordHash": "$2a$10$97nkDtl5VXGUWs6jd7XOV.gjtGe3bwS/NgDFuykUZka/2kWTjWxbC", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', '{"id": 12, "role": "BOARD", "email": "board1@company.local", "roles": [4], "enabled": true, "fullName": "Board Member One", "username": "board1", "createdAt": "2025-11-02T12:43:03.103158", "lastLogin": "2025-11-02T18:46:32.299833", "updatedAt": "2025-11-02T18:46:32.300769", "passwordHash": "$2a$10$97nkDtl5VXGUWs6jd7XOV.gjtGe3bwS/NgDFuykUZka/2kWTjWxbC", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', NULL, '0:0:0:0:0:0:0:1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36', '0000000000000000000000000000000000000000000000000000000000000000', '8693b5de67013a9b0a347f95b10a75e3ab2e6440243a433a14ddd3ad1c140901', '2025-11-02 18:46:32.212398');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (11, '2025-11-02 19:44:39.78643', '48e40758-577b-4c6c-b6cc-2ccfbeb87ba6', '20251102000006', 'USER', '34', 'UPDATE', 'board1', 'e0fb41ac-299d-4b3c-b97a-81a23308a30d', '{"referer": null, "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}', '{"id": 34, "role": "BOARD", "email": "board1@company.local", "roles": [5, 2], "enabled": true, "fullName": "Board Member One", "username": "board1", "createdAt": "2025-11-02T14:08:14.722667", "lastLogin": null, "updatedAt": "2025-11-02T14:08:14.722667", "passwordHash": "$2a$10$97nkDtl5VXGUWs6jd7XOV.gjtGe3bwS/NgDFuykUZka/2kWTjWxbC", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', '{"id": 34, "role": "BOARD", "email": "board1@company.local", "roles": [5, 2], "enabled": true, "fullName": "Board Member One", "username": "board1", "createdAt": "2025-11-02T14:08:14.722667", "lastLogin": "2025-11-02T19:44:39.764525", "updatedAt": "2025-11-02T19:44:39.768123", "passwordHash": "$2a$10$97nkDtl5VXGUWs6jd7XOV.gjtGe3bwS/NgDFuykUZka/2kWTjWxbC", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', NULL, '0:0:0:0:0:0:0:1', 'curl/8.7.1', '0000000000000000000000000000000000000000000000000000000000000000', 'b629167827d41fd19a67b2168bbd5228c55d105735dd4cdc88b0f0cbf30ce01f', '2025-11-02 19:44:39.69403');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (12, '2025-11-02 19:44:44.149398', '41d93d8e-c9da-46eb-8f77-41d509511284', '20251102000006', 'USER', '34', 'UPDATE', 'board1', 'da894ef3-71cb-48f4-913a-a6805897e23d', '{"referer": null, "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}', '{"id": 34, "role": "BOARD", "email": "board1@company.local", "roles": [5, 2], "enabled": true, "fullName": "Board Member One", "username": "board1", "createdAt": "2025-11-02T14:08:14.722667", "lastLogin": "2025-11-02T19:44:39.764525", "updatedAt": "2025-11-02T19:44:39.768123", "passwordHash": "$2a$10$97nkDtl5VXGUWs6jd7XOV.gjtGe3bwS/NgDFuykUZka/2kWTjWxbC", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', '{"id": 34, "role": "BOARD", "email": "board1@company.local", "roles": [5, 2], "enabled": true, "fullName": "Board Member One", "username": "board1", "createdAt": "2025-11-02T14:08:14.722667", "lastLogin": "2025-11-02T19:44:44.144484", "updatedAt": "2025-11-02T19:44:44.145345", "passwordHash": "$2a$10$97nkDtl5VXGUWs6jd7XOV.gjtGe3bwS/NgDFuykUZka/2kWTjWxbC", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', NULL, '0:0:0:0:0:0:0:1', 'curl/8.7.1', 'b629167827d41fd19a67b2168bbd5228c55d105735dd4cdc88b0f0cbf30ce01f', '983161a384f6bbf35b52fd6795508f8278f61a9915cf28aaab3baccb215219da', '2025-11-02 19:44:44.07962');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (13, '2025-11-02 19:58:39.722464', '189f25b9-d3b8-42dc-8b2c-7828d24d6eac', '20251102000007', 'USER', '33', 'UPDATE', 'admin.ops', 'd54e65f0-4adc-4b8d-997d-9469b23b0691', '{"referer": null, "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}', '{"id": 33, "role": "ADMIN", "email": "admin.ops@system.local", "roles": [2, 4], "enabled": true, "fullName": "Operations Administrator", "username": "admin.ops", "createdAt": "2025-11-02T14:08:14.722667", "lastLogin": null, "updatedAt": "2025-11-02T14:08:14.722667", "passwordHash": "$2a$10$RsCl4r3u43sTIToUOsjKyOKYh.lmix.hWMCAhRgwDHVdPratagQRW", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', '{"id": 33, "role": "ADMIN", "email": "admin.ops@system.local", "roles": [2, 4], "enabled": true, "fullName": "Operations Administrator", "username": "admin.ops", "createdAt": "2025-11-02T14:08:14.722667", "lastLogin": "2025-11-02T19:58:39.700177", "updatedAt": "2025-11-02T19:58:39.702221", "passwordHash": "$2a$10$RsCl4r3u43sTIToUOsjKyOKYh.lmix.hWMCAhRgwDHVdPratagQRW", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', NULL, '0:0:0:0:0:0:0:1', 'curl/8.7.1', '0000000000000000000000000000000000000000000000000000000000000000', '59addff263450ff9b7c1d36eb300a86dc071ebd22100ee603d14097968ef97c8', '2025-11-02 19:58:39.630381');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (14, '2025-11-02 20:27:34.529303', 'e6ad8b09-4da3-4861-b0b4-9f9e614c6e57', '20251102000007', 'USER', '33', 'UPDATE', 'admin.ops', '2f073e8a-28f1-414c-81cc-1f32a15f99b3', '{"referer": "http://localhost:8080/swagger-ui/index.html", "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}', '{"id": 33, "role": "ADMIN", "email": "admin.ops@system.local", "roles": [2, 4], "enabled": true, "fullName": "Operations Administrator", "username": "admin.ops", "createdAt": "2025-11-02T14:08:14.722667", "lastLogin": "2025-11-02T19:58:39.700177", "updatedAt": "2025-11-02T19:58:39.702221", "passwordHash": "$2a$10$RsCl4r3u43sTIToUOsjKyOKYh.lmix.hWMCAhRgwDHVdPratagQRW", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', '{"id": 33, "role": "ADMIN", "email": "admin.ops@system.local", "roles": [2, 4], "enabled": true, "fullName": "Operations Administrator", "username": "admin.ops", "createdAt": "2025-11-02T14:08:14.722667", "lastLogin": "2025-11-02T20:27:34.507889", "updatedAt": "2025-11-02T20:27:34.510130", "passwordHash": "$2a$10$RsCl4r3u43sTIToUOsjKyOKYh.lmix.hWMCAhRgwDHVdPratagQRW", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', NULL, '0:0:0:0:0:0:0:1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36', '59addff263450ff9b7c1d36eb300a86dc071ebd22100ee603d14097968ef97c8', '99b9bb4a87515dec473c43ecbce4757bfb5a7df79ac61bc3d8bc64c6780d0db0', '2025-11-02 20:27:34.437879');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (15, '2025-11-02 20:28:50.991892', '07cd8219-1116-43f0-9a9b-27cecfcae020', '20251102000008', 'USER', '32', 'UPDATE', 'admin.tech', 'f2b40d18-74eb-4e2f-b2f0-24d7c6b513a7', '{"referer": "http://localhost:8080/swagger-ui/index.html", "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}', '{"id": 32, "role": "ADMIN", "email": "admin.tech@system.local", "roles": [2, 3], "enabled": true, "fullName": "Tech Administrator", "username": "admin.tech", "createdAt": "2025-11-02T14:08:14.722667", "lastLogin": null, "updatedAt": "2025-11-02T14:08:14.722667", "passwordHash": "$2a$10$m2WyB7vO.wPiScT1Dm.gw.64oC2Eq4lOzEy798QR0ktIg4jdBgaT.", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', '{"id": 32, "role": "ADMIN", "email": "admin.tech@system.local", "roles": [2, 3], "enabled": true, "fullName": "Tech Administrator", "username": "admin.tech", "createdAt": "2025-11-02T14:08:14.722667", "lastLogin": "2025-11-02T20:28:50.984961", "updatedAt": "2025-11-02T20:28:50.985924", "passwordHash": "$2a$10$m2WyB7vO.wPiScT1Dm.gw.64oC2Eq4lOzEy798QR0ktIg4jdBgaT.", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', NULL, '0:0:0:0:0:0:0:1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36', '0000000000000000000000000000000000000000000000000000000000000000', '8513b6b3df2ed4aa25526c37e3ab4c66170669b128d4d86b5b3bca0e12a17c4c', '2025-11-02 20:28:50.892921');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (16, '2025-11-02 20:42:10.2101', '97ba2fba-40eb-4daa-9cf7-0afb5b420cfc', '20251102000008', 'USER', '32', 'UPDATE', 'admin.tech', 'a3c019b2-3611-4c8d-ab72-8c8d9b71ae98', '{"referer": null, "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}', '{"id": 32, "role": "ADMIN", "email": "admin.tech@system.local", "roles": [2, 3], "enabled": true, "fullName": "Tech Administrator", "username": "admin.tech", "createdAt": "2025-11-02T14:08:14.722667", "lastLogin": "2025-11-02T20:28:50.984961", "updatedAt": "2025-11-02T20:28:50.985924", "passwordHash": "$2a$10$m2WyB7vO.wPiScT1Dm.gw.64oC2Eq4lOzEy798QR0ktIg4jdBgaT.", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', '{"id": 32, "role": "ADMIN", "email": "admin.tech@system.local", "roles": [2, 3], "enabled": true, "fullName": "Tech Administrator", "username": "admin.tech", "createdAt": "2025-11-02T14:08:14.722667", "lastLogin": "2025-11-02T20:42:10.190281", "updatedAt": "2025-11-02T20:42:10.192622", "passwordHash": "$2a$10$m2WyB7vO.wPiScT1Dm.gw.64oC2Eq4lOzEy798QR0ktIg4jdBgaT.", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', NULL, '0:0:0:0:0:0:0:1', 'curl/8.7.1', '8513b6b3df2ed4aa25526c37e3ab4c66170669b128d4d86b5b3bca0e12a17c4c', '3c5d68550ef701fba9ac83c89666dbdae040a98fda186fc44bfd0ca5b748b8e5', '2025-11-02 20:42:10.117353');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (17, '2025-11-02 20:42:15.587178', '426d9f08-0530-44ac-877e-a9bbe93e5518', '20251102000008', 'USER', '32', 'UPDATE', 'admin.tech', '31f8289a-7aa5-44de-be17-b3bd5bcd87a1', '{"referer": null, "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}', '{"id": 32, "role": "ADMIN", "email": "admin.tech@system.local", "roles": [2, 3], "enabled": true, "fullName": "Tech Administrator", "username": "admin.tech", "createdAt": "2025-11-02T14:08:14.722667", "lastLogin": "2025-11-02T20:42:10.190281", "updatedAt": "2025-11-02T20:42:10.192622", "passwordHash": "$2a$10$m2WyB7vO.wPiScT1Dm.gw.64oC2Eq4lOzEy798QR0ktIg4jdBgaT.", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', '{"id": 32, "role": "ADMIN", "email": "admin.tech@system.local", "roles": [2, 3], "enabled": true, "fullName": "Tech Administrator", "username": "admin.tech", "createdAt": "2025-11-02T14:08:14.722667", "lastLogin": "2025-11-02T20:42:15.582769", "updatedAt": "2025-11-02T20:42:15.583600", "passwordHash": "$2a$10$m2WyB7vO.wPiScT1Dm.gw.64oC2Eq4lOzEy798QR0ktIg4jdBgaT.", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', NULL, '0:0:0:0:0:0:0:1', 'curl/8.7.1', '3c5d68550ef701fba9ac83c89666dbdae040a98fda186fc44bfd0ca5b748b8e5', '4ec7cf605b778ab4571571751e3bb11f95b3fa74c9e3153b6988a42c3d07e65f', '2025-11-02 20:42:15.517014');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (18, '2025-11-02 20:44:20.808249', 'a12c654d-7287-4ef1-867a-2b540ec1b31e', '20251102000008', 'USER', '32', 'UPDATE', 'admin.tech', '0cfe3b2d-64df-4c85-bc3f-32d6cf1a95ab', '{"referer": null, "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}', '{"id": 32, "role": "ADMIN", "email": "admin.tech@system.local", "roles": [2, 3], "enabled": true, "fullName": "Tech Administrator", "username": "admin.tech", "createdAt": "2025-11-02T14:08:14.722667", "lastLogin": "2025-11-02T20:42:15.582769", "updatedAt": "2025-11-02T20:42:15.583600", "passwordHash": "$2a$10$m2WyB7vO.wPiScT1Dm.gw.64oC2Eq4lOzEy798QR0ktIg4jdBgaT.", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', '{"id": 32, "role": "ADMIN", "email": "admin.tech@system.local", "roles": [2, 3], "enabled": true, "fullName": "Tech Administrator", "username": "admin.tech", "createdAt": "2025-11-02T14:08:14.722667", "lastLogin": "2025-11-02T20:44:20.803854", "updatedAt": "2025-11-02T20:44:20.804625", "passwordHash": "$2a$10$m2WyB7vO.wPiScT1Dm.gw.64oC2Eq4lOzEy798QR0ktIg4jdBgaT.", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', NULL, '0:0:0:0:0:0:0:1', 'curl/8.7.1', '4ec7cf605b778ab4571571751e3bb11f95b3fa74c9e3153b6988a42c3d07e65f', 'cf234fb04f6cfebc42b929384c7ef525c378bae76351d4894808bf4bd12040e3', '2025-11-02 20:44:20.737815');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (19, '2025-11-03 10:45:37.383947', '54ff711e-c61e-4da9-804d-676125079d2c', '20251103000001', 'USER', '39', 'UPDATE', 'tech.bootstrap', 'e4e2a109-cf25-40cb-95f6-29796dfb1c51', '{"referer": null, "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}', '{"id": 39, "role": "ADMIN", "email": "tech.bootstrap@system.local", "roles": [1, 3], "enabled": true, "fullName": "Technical Bootstrap Administrator", "username": "tech.bootstrap", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": null, "updatedAt": "2025-11-03T05:03:38.142121", "passwordHash": "$2a$10$iAsGHtarbe7WWpbix.0jH.tdg39z46n/jRU1GBVqFQ0n3XkIS3sqq", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', '{"id": 39, "role": "ADMIN", "email": "tech.bootstrap@system.local", "roles": [1, 3], "enabled": true, "fullName": "Technical Bootstrap Administrator", "username": "tech.bootstrap", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-03T10:45:37.344220", "updatedAt": "2025-11-03T10:45:37.355881", "passwordHash": "$2a$10$iAsGHtarbe7WWpbix.0jH.tdg39z46n/jRU1GBVqFQ0n3XkIS3sqq", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', NULL, '0:0:0:0:0:0:0:1', 'curl/8.7.1', '0000000000000000000000000000000000000000000000000000000000000000', '8ed18b01108bafdc0ab9438403a13455c7735d04f53208ae48e756c58e4fba2c', '2025-11-03 10:45:37.256323');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (20, '2025-11-03 10:45:43.5621', '3af3afd9-c82d-4190-bd99-63913eb43e03', '20251103000002', 'USER', '38', 'UPDATE', 'business.admin', '56dc1520-8102-4894-986e-5ea8b6fb5474', '{"referer": null, "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}', '{"id": 38, "role": "ADMIN", "email": "business.admin@system.local", "roles": [1, 2], "enabled": true, "fullName": "Business Administrator", "username": "business.admin", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": null, "updatedAt": "2025-11-03T05:03:38.142121", "passwordHash": "$2a$10$iAsGHtarbe7WWpbix.0jH.tdg39z46n/jRU1GBVqFQ0n3XkIS3sqq", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', '{"id": 38, "role": "ADMIN", "email": "business.admin@system.local", "roles": [1, 2], "enabled": true, "fullName": "Business Administrator", "username": "business.admin", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-03T10:45:43.555757", "updatedAt": "2025-11-03T10:45:43.556638", "passwordHash": "$2a$10$iAsGHtarbe7WWpbix.0jH.tdg39z46n/jRU1GBVqFQ0n3XkIS3sqq", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', NULL, '0:0:0:0:0:0:0:1', 'curl/8.7.1', '0000000000000000000000000000000000000000000000000000000000000000', '1b365e566cd1cb966674f9ffca31b013843fc74ef662f792b3c139f35cb5c0ff', '2025-11-03 10:45:43.487756');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (21, '2025-11-03 10:46:06.269006', '3bd371a7-90bf-4d90-8dc8-4ef599dc0701', '20251103000001', 'USER', '39', 'UPDATE', 'tech.bootstrap', '8ffc69be-e732-46fb-8b03-11421298d9a9', '{"referer": "http://localhost:8080/swagger-ui/index.html", "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}', '{"id": 39, "role": "ADMIN", "email": "tech.bootstrap@system.local", "roles": [1, 3], "enabled": true, "fullName": "Technical Bootstrap Administrator", "username": "tech.bootstrap", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-03T10:45:37.344220", "updatedAt": "2025-11-03T10:45:37.355881", "passwordHash": "$2a$10$iAsGHtarbe7WWpbix.0jH.tdg39z46n/jRU1GBVqFQ0n3XkIS3sqq", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', '{"id": 39, "role": "ADMIN", "email": "tech.bootstrap@system.local", "roles": [1, 3], "enabled": true, "fullName": "Technical Bootstrap Administrator", "username": "tech.bootstrap", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-03T10:46:06.263281", "updatedAt": "2025-11-03T10:46:06.264463", "passwordHash": "$2a$10$iAsGHtarbe7WWpbix.0jH.tdg39z46n/jRU1GBVqFQ0n3XkIS3sqq", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', NULL, '0:0:0:0:0:0:0:1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36', '8ed18b01108bafdc0ab9438403a13455c7735d04f53208ae48e756c58e4fba2c', 'd175029bb9f9d7e890b05a2db76e7b52c041ed654a327e149206e8901f77bf5c', '2025-11-03 10:46:06.166979');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (22, '2025-11-03 10:55:07.125915', '0138fd81-d39b-41c0-9daa-54c04e33307b', '20251103000002', 'USER', '38', 'UPDATE', 'business.admin', 'cd06a717-e1e7-400a-bca3-d166ea2b660a', '{"referer": "http://localhost:8080/swagger-ui/index.html", "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}', '{"id": 38, "role": "ADMIN", "email": "business.admin@system.local", "roles": [1, 2], "enabled": true, "fullName": "Business Administrator", "username": "business.admin", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-03T10:45:43.555757", "updatedAt": "2025-11-03T10:45:43.556638", "passwordHash": "$2a$10$iAsGHtarbe7WWpbix.0jH.tdg39z46n/jRU1GBVqFQ0n3XkIS3sqq", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', '{"id": 38, "role": "ADMIN", "email": "business.admin@system.local", "roles": [1, 2], "enabled": true, "fullName": "Business Administrator", "username": "business.admin", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-03T10:55:07.103185", "updatedAt": "2025-11-03T10:55:07.106971", "passwordHash": "$2a$10$iAsGHtarbe7WWpbix.0jH.tdg39z46n/jRU1GBVqFQ0n3XkIS3sqq", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', NULL, '0:0:0:0:0:0:0:1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36', '1b365e566cd1cb966674f9ffca31b013843fc74ef662f792b3c139f35cb5c0ff', '9b66578e21ccc980c523a351574f20f5dff184d601fc570b965df5454e78d14a', '2025-11-03 10:55:07.028867');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (23, '2025-11-03 10:57:56.779189', 'c2ba132d-493e-4ee1-9b7b-ab4e7a1f016f', '20251103000002', 'USER', '38', 'UPDATE', 'business.admin', '78eaf80a-906d-4bfd-b44d-1943f8bc146c', '{"referer": null, "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}', '{"id": 38, "role": "ADMIN", "email": "business.admin@system.local", "roles": [1, 2], "enabled": true, "fullName": "Business Administrator", "username": "business.admin", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-03T10:55:07.103185", "updatedAt": "2025-11-03T10:55:07.106971", "passwordHash": "$2a$10$iAsGHtarbe7WWpbix.0jH.tdg39z46n/jRU1GBVqFQ0n3XkIS3sqq", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', '{"id": 38, "role": "ADMIN", "email": "business.admin@system.local", "roles": [1, 2], "enabled": true, "fullName": "Business Administrator", "username": "business.admin", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-03T10:57:56.773572", "updatedAt": "2025-11-03T10:57:56.774435", "passwordHash": "$2a$10$iAsGHtarbe7WWpbix.0jH.tdg39z46n/jRU1GBVqFQ0n3XkIS3sqq", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', NULL, '0:0:0:0:0:0:0:1', 'curl/8.7.1', '9b66578e21ccc980c523a351574f20f5dff184d601fc570b965df5454e78d14a', '419c409a642adc98f3989e92f656ed0e25ae4f052a9e0cf301f233318e99ca4e', '2025-11-03 10:57:56.689572');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (24, '2025-11-03 10:57:56.9242', 'a70d7134-e6c5-46b5-893a-eb0f09d33f85', '20251103000001', 'USER', '39', 'UPDATE', 'tech.bootstrap', '1bfb935d-5acc-4752-8873-6e9b8c2ab5ad', '{"referer": null, "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}', '{"id": 39, "role": "ADMIN", "email": "tech.bootstrap@system.local", "roles": [1, 3], "enabled": true, "fullName": "Technical Bootstrap Administrator", "username": "tech.bootstrap", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-03T10:46:06.263281", "updatedAt": "2025-11-03T10:46:06.264463", "passwordHash": "$2a$10$iAsGHtarbe7WWpbix.0jH.tdg39z46n/jRU1GBVqFQ0n3XkIS3sqq", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', '{"id": 39, "role": "ADMIN", "email": "tech.bootstrap@system.local", "roles": [1, 3], "enabled": true, "fullName": "Technical Bootstrap Administrator", "username": "tech.bootstrap", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-03T10:57:56.918881", "updatedAt": "2025-11-03T10:57:56.919654", "passwordHash": "$2a$10$iAsGHtarbe7WWpbix.0jH.tdg39z46n/jRU1GBVqFQ0n3XkIS3sqq", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', NULL, '0:0:0:0:0:0:0:1', 'curl/8.7.1', 'd175029bb9f9d7e890b05a2db76e7b52c041ed654a327e149206e8901f77bf5c', '429737fc7838ea1b71093dcc7a2454d3420c912d6b56351eeac26e2fcd7f6c29', '2025-11-03 10:57:56.85233');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (25, '2025-11-03 10:58:07.126121', '65f75f64-53f8-451d-b00f-9a232df5fafc', '20251103000002', 'USER', '38', 'UPDATE', 'business.admin', 'c6681fb7-ef90-4e52-b46a-241874564dce', '{"referer": null, "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}', '{"id": 38, "role": "ADMIN", "email": "business.admin@system.local", "roles": [1, 2], "enabled": true, "fullName": "Business Administrator", "username": "business.admin", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-03T10:57:56.773572", "updatedAt": "2025-11-03T10:57:56.774435", "passwordHash": "$2a$10$iAsGHtarbe7WWpbix.0jH.tdg39z46n/jRU1GBVqFQ0n3XkIS3sqq", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', '{"id": 38, "role": "ADMIN", "email": "business.admin@system.local", "roles": [1, 2], "enabled": true, "fullName": "Business Administrator", "username": "business.admin", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-03T10:58:07.121408", "updatedAt": "2025-11-03T10:58:07.122199", "passwordHash": "$2a$10$iAsGHtarbe7WWpbix.0jH.tdg39z46n/jRU1GBVqFQ0n3XkIS3sqq", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', NULL, '0:0:0:0:0:0:0:1', 'curl/8.7.1', '419c409a642adc98f3989e92f656ed0e25ae4f052a9e0cf301f233318e99ca4e', '297ed081b997bdb0e43e619e0d309529dbc2660cf56ac2120612a2789ad6573e', '2025-11-03 10:58:07.055969');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (26, '2025-11-03 10:58:27.945101', 'd7e6011c-e9eb-4241-89e4-1ebb5bcd9e2d', '20251103000001', 'USER', '39', 'UPDATE', 'tech.bootstrap', '75031593-06b6-463a-b9f8-d88975b57660', '{"referer": null, "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}', '{"id": 39, "role": "ADMIN", "email": "tech.bootstrap@system.local", "roles": [1, 3], "enabled": true, "fullName": "Technical Bootstrap Administrator", "username": "tech.bootstrap", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-03T10:57:56.918881", "updatedAt": "2025-11-03T10:57:56.919654", "passwordHash": "$2a$10$iAsGHtarbe7WWpbix.0jH.tdg39z46n/jRU1GBVqFQ0n3XkIS3sqq", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', '{"id": 39, "role": "ADMIN", "email": "tech.bootstrap@system.local", "roles": [1, 3], "enabled": true, "fullName": "Technical Bootstrap Administrator", "username": "tech.bootstrap", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-03T10:58:27.939390", "updatedAt": "2025-11-03T10:58:27.940055", "passwordHash": "$2a$10$iAsGHtarbe7WWpbix.0jH.tdg39z46n/jRU1GBVqFQ0n3XkIS3sqq", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', NULL, '0:0:0:0:0:0:0:1', 'curl/8.7.1', '429737fc7838ea1b71093dcc7a2454d3420c912d6b56351eeac26e2fcd7f6c29', 'bf0423b06787876974b4e391830d1ec41187ec9a9b4f25ba1874407a3fa153f8', '2025-11-03 10:58:27.874409');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (27, '2025-11-03 10:58:33.769083', 'c8ca5d26-51df-45ba-bb10-cbef0ad6a460', '20251103000001', 'USER', '39', 'UPDATE', 'tech.bootstrap', 'fe82a280-a1f2-40b7-b20e-d08c0a459701', '{"referer": null, "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}', '{"id": 39, "role": "ADMIN", "email": "tech.bootstrap@system.local", "roles": [1, 3], "enabled": true, "fullName": "Technical Bootstrap Administrator", "username": "tech.bootstrap", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-03T10:58:27.939390", "updatedAt": "2025-11-03T10:58:27.940055", "passwordHash": "$2a$10$iAsGHtarbe7WWpbix.0jH.tdg39z46n/jRU1GBVqFQ0n3XkIS3sqq", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', '{"id": 39, "role": "ADMIN", "email": "tech.bootstrap@system.local", "roles": [1, 3], "enabled": true, "fullName": "Technical Bootstrap Administrator", "username": "tech.bootstrap", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-03T10:58:33.765337", "updatedAt": "2025-11-03T10:58:33.766009", "passwordHash": "$2a$10$iAsGHtarbe7WWpbix.0jH.tdg39z46n/jRU1GBVqFQ0n3XkIS3sqq", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', NULL, '0:0:0:0:0:0:0:1', 'curl/8.7.1', 'bf0423b06787876974b4e391830d1ec41187ec9a9b4f25ba1874407a3fa153f8', '725bc4e1e2bfb81ca7fe98c2a1cb01b9aadd61edc79ba3c381855529242d61c7', '2025-11-03 10:58:33.677313');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (28, '2025-11-03 11:00:40.36154', '49f89937-8ce0-4f98-b1fe-888d984323e6', '20251103000002', 'USER', '38', 'UPDATE', 'business.admin', '58b17915-893d-4989-88fc-90e5c1b139a5', '{"referer": null, "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}', '{"id": 38, "role": "ADMIN", "email": "business.admin@system.local", "roles": [1, 2], "enabled": true, "fullName": "Business Administrator", "username": "business.admin", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-03T10:58:07.121408", "updatedAt": "2025-11-03T10:58:07.122199", "passwordHash": "$2a$10$iAsGHtarbe7WWpbix.0jH.tdg39z46n/jRU1GBVqFQ0n3XkIS3sqq", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', '{"id": 38, "role": "ADMIN", "email": "business.admin@system.local", "roles": [1, 2], "enabled": true, "fullName": "Business Administrator", "username": "business.admin", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-03T11:00:40.356442", "updatedAt": "2025-11-03T11:00:40.357122", "passwordHash": "$2a$10$iAsGHtarbe7WWpbix.0jH.tdg39z46n/jRU1GBVqFQ0n3XkIS3sqq", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', NULL, '0:0:0:0:0:0:0:1', 'curl/8.7.1', '297ed081b997bdb0e43e619e0d309529dbc2660cf56ac2120612a2789ad6573e', '7fb1c9f8e77461e2fbcd614d7fe20f2ec3dbdc1a9ce3d96d54da89b63a5d2b3b', '2025-11-03 11:00:40.273049');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (29, '2025-11-03 11:00:40.440845', 'a0ae01bc-ccff-4841-b220-5d9a1b0ce299', '20251103000001', 'USER', '39', 'UPDATE', 'tech.bootstrap', '174da64e-e31f-4c5b-872f-a4cf40d5a40e', '{"referer": null, "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}', '{"id": 39, "role": "ADMIN", "email": "tech.bootstrap@system.local", "roles": [1, 3], "enabled": true, "fullName": "Technical Bootstrap Administrator", "username": "tech.bootstrap", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-03T10:58:33.765337", "updatedAt": "2025-11-03T10:58:33.766009", "passwordHash": "$2a$10$iAsGHtarbe7WWpbix.0jH.tdg39z46n/jRU1GBVqFQ0n3XkIS3sqq", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', '{"id": 39, "role": "ADMIN", "email": "tech.bootstrap@system.local", "roles": [1, 3], "enabled": true, "fullName": "Technical Bootstrap Administrator", "username": "tech.bootstrap", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-03T11:00:40.437135", "updatedAt": "2025-11-03T11:00:40.437837", "passwordHash": "$2a$10$iAsGHtarbe7WWpbix.0jH.tdg39z46n/jRU1GBVqFQ0n3XkIS3sqq", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', NULL, '0:0:0:0:0:0:0:1', 'curl/8.7.1', '725bc4e1e2bfb81ca7fe98c2a1cb01b9aadd61edc79ba3c381855529242d61c7', '190f98fd35f3413d7fb295e9a046b524fd29ca3e83f9da65bdbd3faf6a322e7c', '2025-11-03 11:00:40.37116');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (30, '2025-11-03 11:06:27.070325', 'ce0234ca-0913-46c4-ae93-f57a618fed7b', '20251103000002', 'USER', '38', 'UPDATE', 'business.admin', 'e37c2aed-21fe-4046-a716-81548ca6bf48', '{"referer": null, "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}', '{"id": 38, "role": "ADMIN", "email": "business.admin@system.local", "roles": [1, 2], "enabled": true, "fullName": "Business Administrator", "username": "business.admin", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-03T11:00:40.356442", "updatedAt": "2025-11-03T11:00:40.357122", "passwordHash": "$2a$10$iAsGHtarbe7WWpbix.0jH.tdg39z46n/jRU1GBVqFQ0n3XkIS3sqq", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', '{"id": 38, "role": "ADMIN", "email": "business.admin@system.local", "roles": [1, 2], "enabled": true, "fullName": "Business Administrator", "username": "business.admin", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-03T11:06:27.066775", "updatedAt": "2025-11-03T11:06:27.067393", "passwordHash": "$2a$10$iAsGHtarbe7WWpbix.0jH.tdg39z46n/jRU1GBVqFQ0n3XkIS3sqq", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', NULL, '0:0:0:0:0:0:0:1', 'curl/8.7.1', '7fb1c9f8e77461e2fbcd614d7fe20f2ec3dbdc1a9ce3d96d54da89b63a5d2b3b', '0bad7a1db8d2d6fa25f0f5b0246378da9200904ae70ad9adeb5a6e41aeba5204', '2025-11-03 11:06:27.004686');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (31, '2025-11-03 11:06:46.291728', '64034362-85a9-424d-a0c0-6b90d5590fdd', '20251103000002', 'USER', '38', 'UPDATE', 'business.admin', '6affa017-ccda-4b87-88ff-9a3f8d8e70f7', '{"referer": null, "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}', '{"id": 38, "role": "ADMIN", "email": "business.admin@system.local", "roles": [1, 2], "enabled": true, "fullName": "Business Administrator", "username": "business.admin", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-03T11:06:27.066775", "updatedAt": "2025-11-03T11:06:27.067393", "passwordHash": "$2a$10$iAsGHtarbe7WWpbix.0jH.tdg39z46n/jRU1GBVqFQ0n3XkIS3sqq", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', '{"id": 38, "role": "ADMIN", "email": "business.admin@system.local", "roles": [1, 2], "enabled": true, "fullName": "Business Administrator", "username": "business.admin", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-03T11:06:46.287424", "updatedAt": "2025-11-03T11:06:46.287981", "passwordHash": "$2a$10$iAsGHtarbe7WWpbix.0jH.tdg39z46n/jRU1GBVqFQ0n3XkIS3sqq", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', NULL, '0:0:0:0:0:0:0:1', 'curl/8.7.1', '0bad7a1db8d2d6fa25f0f5b0246378da9200904ae70ad9adeb5a6e41aeba5204', '9f1e9613f46b05a4c423e5f08bf8a9d5ebd14cfd8d0be5ebdb7da475f4bae5f2', '2025-11-03 11:06:46.222445');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (32, '2025-11-03 11:06:53.130192', '56f0248b-a98b-475f-8973-d416f4c59416', '20251103000002', 'USER', '38', 'UPDATE', 'business.admin', '0196dffc-a12f-465a-86b7-f6269518c6b5', '{"referer": null, "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}', '{"id": 38, "role": "ADMIN", "email": "business.admin@system.local", "roles": [1, 2], "enabled": true, "fullName": "Business Administrator", "username": "business.admin", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-03T11:06:46.287424", "updatedAt": "2025-11-03T11:06:46.287981", "passwordHash": "$2a$10$iAsGHtarbe7WWpbix.0jH.tdg39z46n/jRU1GBVqFQ0n3XkIS3sqq", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', '{"id": 38, "role": "ADMIN", "email": "business.admin@system.local", "roles": [1, 2], "enabled": true, "fullName": "Business Administrator", "username": "business.admin", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-03T11:06:53.125323", "updatedAt": "2025-11-03T11:06:53.126284", "passwordHash": "$2a$10$iAsGHtarbe7WWpbix.0jH.tdg39z46n/jRU1GBVqFQ0n3XkIS3sqq", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', NULL, '0:0:0:0:0:0:0:1', 'curl/8.7.1', '9f1e9613f46b05a4c423e5f08bf8a9d5ebd14cfd8d0be5ebdb7da475f4bae5f2', '8efeb224b43ffcd9758d24e08da246f34e69eb859f833dea465a5c4b6cc1837b', '2025-11-03 11:06:53.043233');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (33, '2025-11-03 11:07:06.646685', '22c35878-eced-432c-b79c-a674836beb4e', '20251103000002', 'USER', '38', 'UPDATE', 'business.admin', '112a76f4-c5cd-4175-8577-f9163532568a', '{"referer": null, "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}', '{"id": 38, "role": "ADMIN", "email": "business.admin@system.local", "roles": [1, 2], "enabled": true, "fullName": "Business Administrator", "username": "business.admin", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-03T11:06:53.125323", "updatedAt": "2025-11-03T11:06:53.126284", "passwordHash": "$2a$10$iAsGHtarbe7WWpbix.0jH.tdg39z46n/jRU1GBVqFQ0n3XkIS3sqq", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', '{"id": 38, "role": "ADMIN", "email": "business.admin@system.local", "roles": [1, 2], "enabled": true, "fullName": "Business Administrator", "username": "business.admin", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-03T11:07:06.642606", "updatedAt": "2025-11-03T11:07:06.643165", "passwordHash": "$2a$10$iAsGHtarbe7WWpbix.0jH.tdg39z46n/jRU1GBVqFQ0n3XkIS3sqq", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', NULL, '0:0:0:0:0:0:0:1', 'curl/8.7.1', '8efeb224b43ffcd9758d24e08da246f34e69eb859f833dea465a5c4b6cc1837b', 'b6c0a83e4394a13f32fd33f19c966ef4eed690bbea79ffaff9af6323031aabf8', '2025-11-03 11:07:06.577053');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (34, '2025-11-03 11:11:50.288336', '83a5ae4d-c8b1-4ae9-87a4-be5b68af3f01', '20251103000002', 'USER', '38', 'UPDATE', 'business.admin', 'e9233a31-f890-4b87-b3a2-34cb8e1e9cc7', '{"referer": null, "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}', '{"id": 38, "role": "ADMIN", "email": "business.admin@system.local", "roles": [1, 2], "enabled": true, "fullName": "Business Administrator", "username": "business.admin", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-03T11:07:06.642606", "updatedAt": "2025-11-03T11:07:06.643165", "passwordHash": "$2a$10$iAsGHtarbe7WWpbix.0jH.tdg39z46n/jRU1GBVqFQ0n3XkIS3sqq", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', '{"id": 38, "role": "ADMIN", "email": "business.admin@system.local", "roles": [1, 2], "enabled": true, "fullName": "Business Administrator", "username": "business.admin", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-03T11:11:50.285073", "updatedAt": "2025-11-03T11:11:50.285674", "passwordHash": "$2a$10$iAsGHtarbe7WWpbix.0jH.tdg39z46n/jRU1GBVqFQ0n3XkIS3sqq", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', NULL, '0:0:0:0:0:0:0:1', 'curl/8.7.1', 'b6c0a83e4394a13f32fd33f19c966ef4eed690bbea79ffaff9af6323031aabf8', '40fb1faf91e139de79536858b8f494a4c586c8035daccb31e3fa807efc805e22', '2025-11-03 11:11:50.19773');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (35, '2025-11-03 12:36:10.617891', '93a9e5a4-ae05-4a8c-8e5d-da341eb65c93', '20251103000002', 'USER', '38', 'UPDATE', 'business.admin', 'bf7e1531-e1f2-4358-96ff-a05d58a9388e', '{"referer": "http://localhost:8080/swagger-ui/index.html", "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}', '{"id": 38, "role": "ADMIN", "email": "business.admin@system.local", "roles": [1, 2], "enabled": true, "fullName": "Business Administrator", "username": "business.admin", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-03T11:11:50.285073", "updatedAt": "2025-11-03T07:05:56.708904", "passwordHash": "$2a$10$zxNRGRU4nRpoDD3zJxG/W.9gKV4VroeZh0iga2uYrhMUi2IiHYwFy", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', '{"id": 38, "role": "ADMIN", "email": "business.admin@system.local", "roles": [1, 2], "enabled": true, "fullName": "Business Administrator", "username": "business.admin", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-03T12:36:10.593972", "updatedAt": "2025-11-03T12:36:10.598528", "passwordHash": "$2a$10$zxNRGRU4nRpoDD3zJxG/W.9gKV4VroeZh0iga2uYrhMUi2IiHYwFy", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', NULL, '0:0:0:0:0:0:0:1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36', '40fb1faf91e139de79536858b8f494a4c586c8035daccb31e3fa807efc805e22', '5c6c9677ff19a62dfd25a17bbfab4059678fede06a38cef0dae779254026271a', '2025-11-03 12:36:10.496614');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (36, '2025-11-03 12:39:20.485781', 'd3942a74-6693-4cdf-9024-b7f6095cc1b8', '20251103000001', 'USER', '39', 'UPDATE', 'tech.bootstrap', '9332ff87-56f2-4821-bc94-78e75ddc270d', '{"referer": "http://localhost:8080/swagger-ui/index.html", "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}', '{"id": 39, "role": "ADMIN", "email": "tech.bootstrap@system.local", "roles": [1, 3], "enabled": true, "fullName": "Technical Bootstrap Administrator", "username": "tech.bootstrap", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-03T11:00:40.437135", "updatedAt": "2025-11-03T07:05:56.708904", "passwordHash": "$2a$10$qwblAK4hJlSWWQ8j7FIIueUEQCD/R1k6Lu7Nee5lFQxWFC9KIb2VG", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', '{"id": 39, "role": "ADMIN", "email": "tech.bootstrap@system.local", "roles": [1, 3], "enabled": true, "fullName": "Technical Bootstrap Administrator", "username": "tech.bootstrap", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-03T12:39:20.480521", "updatedAt": "2025-11-03T12:39:20.481572", "passwordHash": "$2a$10$qwblAK4hJlSWWQ8j7FIIueUEQCD/R1k6Lu7Nee5lFQxWFC9KIb2VG", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', NULL, '0:0:0:0:0:0:0:1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36', '190f98fd35f3413d7fb295e9a046b524fd29ca3e83f9da65bdbd3faf6a322e7c', '02013702861079285c377012dfc4f14718f9fb3cb5a2339163c4f584fc4cae7a', '2025-11-03 12:39:20.38798');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (38, '2025-11-03 13:50:47.257699', '45daed0b-c689-48c5-8861-e61ae5c78df5', '20251103000004', 'CAPABILITY', '92', 'CREATE', 'tech.bootstrap', 'f6750360-df24-4296-8147-c270858de736', '{"referer": "http://localhost:8080/swagger-ui/index.html", "tableName": "capabilities", "entityClass": "com.example.userauth.entity.Capability", "requestedWith": null}', NULL, '{"id": 92, "name": "worker.upload.data.read", "action": "READ", "module": "WORKER_OPERATIONS", "isActive": true, "resource": "WORKER_DATA", "createdAt": "2025-11-03T13:50:47.253532", "updatedAt": "2025-11-03T13:50:47.253536", "description": "Upload data read"}', NULL, '0:0:0:0:0:0:0:1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36', '0000000000000000000000000000000000000000000000000000000000000000', '51afe9e7edc72c667fd8caddec9da8e10ab344a86b37a6ee335ba4793c90974b', '2025-11-03 13:50:47.253648');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (39, '2025-11-03 13:57:50.229537', '4f0f5393-ef57-4d73-be7f-c10296dd2759', '20251103000005', 'POLICY', '18', 'CREATE', 'tech.bootstrap', '7a38ecfd-529e-4e3b-a485-fb3fa79be3e0', '{"referer": "http://localhost:8080/swagger-ui/index.html", "tableName": "policies", "entityClass": "com.example.userauth.entity.Policy", "requestedWith": null}', NULL, '{"id": 18, "name": "WORKER_UPLOAD_DATA_READ_POLICY", "type": "RBAC", "isActive": true, "createdAt": "2025-11-03T13:57:50.210621", "updatedAt": "2025-11-03T13:57:50.210625", "expression": "{\"roles\": [\"WORKER_UPLOAD_DATA_VIEW\"]}", "description": "Policy for worker upload data read"}', NULL, '0:0:0:0:0:0:0:1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36', '0000000000000000000000000000000000000000000000000000000000000000', '2adedd80afbbe545f0e8142911071799d582134cec01a219369726ef1352de7c', '2025-11-03 13:57:50.202921');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (40, '2025-11-03 13:57:50.246726', '5fcfc7e5-364b-4393-9f49-fa1988b3307a', '20251103000006', 'POLICY_CAPABILITY', '57', 'CREATE', 'tech.bootstrap', '5c2fa167-9bd8-407c-a10e-5246de88d4c1', '{"referer": "http://localhost:8080/swagger-ui/index.html", "tableName": "policy_capabilities", "entityClass": "com.example.userauth.entity.PolicyCapability", "requestedWith": null}', NULL, '{"id": 57, "policyId": 18, "capabilityId": 92}', NULL, '0:0:0:0:0:0:0:1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36', '0000000000000000000000000000000000000000000000000000000000000000', '719534ebf0ea269b21d96959f1d186eff3952f2124cb7b9879a1db2f63ceb0a8', '2025-11-03 13:57:50.202921');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (41, '2025-11-03 14:07:45.342526', 'ef312ecb-35c3-4376-99f1-18703872387d', '20251103000007', 'ENDPOINT', '73', 'CREATE', 'tech.bootstrap', 'fdacb4b8-df6a-4dd6-bbab-a57bf2d73308', '{"referer": "http://localhost:8080/swagger-ui/index.html", "tableName": "endpoints", "entityClass": "com.example.userauth.entity.Endpoint", "requestedWith": null}', NULL, '{"id": 73, "path": "/api/worker/uploaded-data/secure-paginated", "method": "POST", "uiType": null, "service": "worker", "version": "v1", "isActive": true, "createdAt": "2025-11-03T14:07:45.322513", "policyIds": [], "updatedAt": "2025-11-03T14:07:45.322521", "description": "view uploaded data"}', NULL, '0:0:0:0:0:0:0:1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36', '0000000000000000000000000000000000000000000000000000000000000000', 'b1586d84cc13c0b9916384553343326faa059ba2b2301583758d7a3e61bf6639', '2025-11-03 14:07:45.326675');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (42, '2025-11-03 14:07:45.362096', '435dfb40-0e05-4d6f-95ac-95fe369107b3', '20251103000008', 'ENDPOINT_POLICY', '463', 'CREATE', 'tech.bootstrap', 'b59aeb18-2f42-46d5-a78e-f98e4cde81e5', '{"referer": "http://localhost:8080/swagger-ui/index.html", "tableName": "endpoint_policies", "entityClass": "com.example.userauth.entity.EndpointPolicy", "requestedWith": null}', NULL, '{"id": 463, "policyId": 18, "endpointId": 73}', NULL, '0:0:0:0:0:0:0:1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36', '0000000000000000000000000000000000000000000000000000000000000000', 'c5af9b35d3fd116dc08b1c9115a76a799702bfa14c46dd8b63b206b1d97ef68e', '2025-11-03 14:07:45.326675');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (43, '2025-11-03 14:11:07.711744', 'e92271fc-bafc-492f-82ea-28506f2f47c7', '20251103000009', 'USER', '42', 'CREATE', 'tech.bootstrap', '226f8009-0b23-4bb0-ac5f-8e3bec206a62', '{"referer": "http://localhost:8080/swagger-ui/index.html", "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}', NULL, '{"id": 42, "role": "ADMIN", "email": "bus@gmail.com", "roles": [], "enabled": true, "fullName": "Business User", "username": "business.ops", "createdAt": "2025-11-03T14:11:07.704656", "lastLogin": null, "updatedAt": null, "passwordHash": "$2a$10$iLNVwNPBXFZLYF8qA38FduEpEpHb2JlA16xkeOR0pBomNIfA6Po2m", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', NULL, '0:0:0:0:0:0:0:1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36', '0000000000000000000000000000000000000000000000000000000000000000', '71b4ab3e28d111fb18bdba6717c551f86c2c993779aae417bc701837081e528c', '2025-11-03 14:11:07.616941');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (44, '2025-11-03 14:11:57.265476', '81fe7c2b-cb83-4e4e-bfbc-15e7362bb906', '20251103000009', 'USER', '42', 'UPDATE', 'tech.bootstrap', 'd32f6d80-b420-4747-95ca-6a70f26a26e9', '{"referer": "http://localhost:8080/swagger-ui/index.html", "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}', '{"id": 42, "role": "ADMIN", "email": "bus@gmail.com", "roles": [], "enabled": true, "fullName": "Business User", "username": "business.ops", "createdAt": "2025-11-03T14:11:07.704656", "lastLogin": null, "updatedAt": null, "passwordHash": "$2a$10$iLNVwNPBXFZLYF8qA38FduEpEpHb2JlA16xkeOR0pBomNIfA6Po2m", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}', '{"id": 42, "role": "ADMIN", "email": "bus@gmail.com", "roles": [4], "enabled": true, "fullName": "Business User", "username": "business.ops", "createdAt": "2025-11-03T14:11:07.704656", "lastLogin": null, "updatedAt": "2025-11-03T14:11:57.258122", "passwordHash": "$2a$10$iLNVwNPBXFZLYF8qA38FduEpEpHb2JlA16xkeOR0pBomNIfA6Po2m", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 2, "credentialsNonExpired": true}', NULL, '0:0:0:0:0:0:0:1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36', '71b4ab3e28d111fb18bdba6717c551f86c2c993779aae417bc701837081e528c', '73cf34ebea291df6ed6ae98d7bdf87409344bc0c88c8c7f44d775aba2404cd93', '2025-11-03 14:11:57.253306');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (45, '2025-11-03 14:12:38.002968', 'f42104c3-175f-4185-8efc-e7c54e55f8b5', '20251103000009', 'USER', '42', 'UPDATE', 'business.ops', '45580cda-1c9b-4d76-879e-fc8661940d5e', '{"referer": "http://localhost:8080/swagger-ui/index.html", "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}', '{"id": 42, "role": "ADMIN", "email": "bus@gmail.com", "roles": [4], "enabled": true, "fullName": "Business User", "username": "business.ops", "createdAt": "2025-11-03T14:11:07.704656", "lastLogin": null, "updatedAt": "2025-11-03T14:11:57.258122", "passwordHash": "$2a$10$iLNVwNPBXFZLYF8qA38FduEpEpHb2JlA16xkeOR0pBomNIfA6Po2m", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 2, "credentialsNonExpired": true}', '{"id": 42, "role": "ADMIN", "email": "bus@gmail.com", "roles": [4], "enabled": true, "fullName": "Business User", "username": "business.ops", "createdAt": "2025-11-03T14:11:07.704656", "lastLogin": "2025-11-03T14:12:37.998525", "updatedAt": "2025-11-03T14:12:37.999339", "passwordHash": "$2a$10$iLNVwNPBXFZLYF8qA38FduEpEpHb2JlA16xkeOR0pBomNIfA6Po2m", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 2, "credentialsNonExpired": true}', NULL, '0:0:0:0:0:0:0:1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36', '73cf34ebea291df6ed6ae98d7bdf87409344bc0c88c8c7f44d775aba2404cd93', 'ecf6fa64167c533b1faf1fb6c4e5f51f76128e68c03597ad934174fdef3872bd', '2025-11-03 14:12:37.913085');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (46, '2025-11-03 14:13:41.698455', '4fa5efa4-c74c-4b89-8e15-b6b3c65d9711', '20251103000009', 'USER', '42', 'UPDATE', 'tech.bootstrap', 'c58598a2-640f-48d7-bc21-f7b14a53e4af', '{"referer": "http://localhost:8080/swagger-ui/index.html", "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}', '{"id": 42, "role": "ADMIN", "email": "bus@gmail.com", "roles": [4], "enabled": true, "fullName": "Business User", "username": "business.ops", "createdAt": "2025-11-03T14:11:07.704656", "lastLogin": "2025-11-03T14:12:37.998525", "updatedAt": "2025-11-03T14:12:37.999339", "passwordHash": "$2a$10$iLNVwNPBXFZLYF8qA38FduEpEpHb2JlA16xkeOR0pBomNIfA6Po2m", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 2, "credentialsNonExpired": true}', '{"id": 42, "role": "ADMIN", "email": "bus@gmail.com", "roles": [4, 1], "enabled": true, "fullName": "Business User", "username": "business.ops", "createdAt": "2025-11-03T14:11:07.704656", "lastLogin": "2025-11-03T14:12:37.998525", "updatedAt": "2025-11-03T14:13:41.695255", "passwordHash": "$2a$10$iLNVwNPBXFZLYF8qA38FduEpEpHb2JlA16xkeOR0pBomNIfA6Po2m", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 3, "credentialsNonExpired": true}', NULL, '0:0:0:0:0:0:0:1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36', 'ecf6fa64167c533b1faf1fb6c4e5f51f76128e68c03597ad934174fdef3872bd', '2aedc4ece4d18dd03078fd0200df6a7d3d2f0bd2b86fac344ac376398a1eb328', '2025-11-03 14:13:41.690342');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (47, '2025-11-03 14:16:26.151723', '03bf3e49-4f4d-4cf4-ade6-c9f4e24fc9f9', '20251103000009', 'USER', '42', 'UPDATE', 'business.ops', '9871ab92-0343-46c0-b334-5f510e0695b9', '{"referer": "http://localhost:8080/swagger-ui/index.html", "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}', '{"id": 42, "role": "ADMIN", "email": "bus@gmail.com", "roles": [4, 1], "enabled": true, "fullName": "Business User", "username": "business.ops", "createdAt": "2025-11-03T14:11:07.704656", "lastLogin": "2025-11-03T14:12:37.998525", "updatedAt": "2025-11-03T14:13:41.695255", "passwordHash": "$2a$10$iLNVwNPBXFZLYF8qA38FduEpEpHb2JlA16xkeOR0pBomNIfA6Po2m", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 3, "credentialsNonExpired": true}', '{"id": 42, "role": "ADMIN", "email": "bus@gmail.com", "roles": [4, 1], "enabled": true, "fullName": "Business User", "username": "business.ops", "createdAt": "2025-11-03T14:11:07.704656", "lastLogin": "2025-11-03T14:16:26.147607", "updatedAt": "2025-11-03T14:16:26.148600", "passwordHash": "$2a$10$iLNVwNPBXFZLYF8qA38FduEpEpHb2JlA16xkeOR0pBomNIfA6Po2m", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 3, "credentialsNonExpired": true}', NULL, '0:0:0:0:0:0:0:1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36', '2aedc4ece4d18dd03078fd0200df6a7d3d2f0bd2b86fac344ac376398a1eb328', '7abd9a6c3452f499ac705e5502dd67f8c607ce1f6e389276a139232babb0540e', '2025-11-03 14:16:26.055446');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (48, '2025-11-03 14:58:37.471814', '31dbc07c-0270-4354-b91a-26d59f94d8f9', '20251103000009', 'USER', '42', 'UPDATE', 'business.ops', 'b30be2c6-6ad5-4999-92c1-a42df933725a', '{"referer": "http://localhost:8080/swagger-ui/index.html", "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}', '{"id": 42, "role": "ADMIN", "email": "bus@gmail.com", "roles": [4, 1], "enabled": true, "fullName": "Business User", "username": "business.ops", "createdAt": "2025-11-03T14:11:07.704656", "lastLogin": "2025-11-03T14:16:26.147607", "updatedAt": "2025-11-03T14:16:26.148600", "passwordHash": "$2a$10$iLNVwNPBXFZLYF8qA38FduEpEpHb2JlA16xkeOR0pBomNIfA6Po2m", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 3, "credentialsNonExpired": true}', '{"id": 42, "role": "ADMIN", "email": "bus@gmail.com", "roles": [4, 1], "enabled": true, "fullName": "Business User", "username": "business.ops", "createdAt": "2025-11-03T14:11:07.704656", "lastLogin": "2025-11-03T14:58:37.450092", "updatedAt": "2025-11-03T14:58:37.452571", "passwordHash": "$2a$10$iLNVwNPBXFZLYF8qA38FduEpEpHb2JlA16xkeOR0pBomNIfA6Po2m", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 3, "credentialsNonExpired": true}', NULL, '0:0:0:0:0:0:0:1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36', '7abd9a6c3452f499ac705e5502dd67f8c607ce1f6e389276a139232babb0540e', '489a63bbbe7a6354f8de9fcdde05a0f5fdf291da52bea2429a6312e12d1d94e8', '2025-11-03 14:58:37.372135');
-INSERT INTO auth.entity_audit_event (id, occurred_at, audit_number, record_number, entity_type, entity_id, operation, performed_by, trace_id, metadata, old_values, new_values, change_summary, client_ip, user_agent, prev_hash, hash, created_at) VALUES (49, '2025-11-03 15:10:19.991359', '1c52c0e9-0837-419d-8dce-940ba01f80d3', '20251103000009', 'USER', '42', 'UPDATE', 'business.ops', 'e565c96f-b898-41b1-a9d6-03d9226d447c', '{"referer": "http://localhost:8080/swagger-ui/index.html", "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}', '{"id": 42, "role": "ADMIN", "email": "bus@gmail.com", "roles": [4, 1], "enabled": true, "fullName": "Business User", "username": "business.ops", "createdAt": "2025-11-03T14:11:07.704656", "lastLogin": "2025-11-03T14:58:37.450092", "updatedAt": "2025-11-03T14:58:37.452571", "passwordHash": "$2a$10$iLNVwNPBXFZLYF8qA38FduEpEpHb2JlA16xkeOR0pBomNIfA6Po2m", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 3, "credentialsNonExpired": true}', '{"id": 42, "role": "ADMIN", "email": "bus@gmail.com", "roles": [4, 1], "enabled": true, "fullName": "Business User", "username": "business.ops", "createdAt": "2025-11-03T14:11:07.704656", "lastLogin": "2025-11-03T15:10:19.970238", "updatedAt": "2025-11-03T15:10:19.972794", "passwordHash": "$2a$10$iLNVwNPBXFZLYF8qA38FduEpEpHb2JlA16xkeOR0pBomNIfA6Po2m", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 3, "credentialsNonExpired": true}', NULL, '0:0:0:0:0:0:0:1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36', '489a63bbbe7a6354f8de9fcdde05a0f5fdf291da52bea2429a6312e12d1d94e8', 'b6d54db8aea5084a2b4f1c86039e09d3f1074d66b88efec14b2b2459fc43fe5a', '2025-11-03 15:10:19.890301');
-
-
---
--- Name: entity_audit_event_id_seq; Type: SEQUENCE SET; Schema: auth; Owner: -
---
-
-SELECT pg_catalog.setval('auth.entity_audit_event_id_seq', 49, true);
-
-
---
--- PostgreSQL database dump complete
---
-
-
---
--- PostgreSQL database dump
---
-
-
--- Dumped from database version 18.0 (Debian 18.0-1.pgdg13+3)
--- Dumped by pg_dump version 18.0 (Debian 18.0-1.pgdg13+3)
-
-SET statement_timeout = 0;
-SET lock_timeout = 0;
-SET idle_in_transaction_session_timeout = 0;
-SET transaction_timeout = 0;
-SET client_encoding = 'UTF8';
-SET standard_conforming_strings = on;
-SELECT pg_catalog.set_config('search_path', '', false);
-SET check_function_bodies = false;
-SET xmloption = content;
-SET client_min_messages = warning;
-SET row_security = off;
-
---
--- Data for Name: notification_templates; Type: TABLE DATA; Schema: auth; Owner: -
---
-
-INSERT INTO auth.notification_templates (id, template_key, template_name, template_type, subject_template, body_template, is_active, created_by, created_at, updated_by, updated_at) VALUES (1, 'WORKER_PAYMENT_PROCESSED', 'Worker Payment Processed', 'EMAIL', 'Payment Processed - {{workerName}}', 'Dear {{workerName}},
-
-Your payment of {{amount}} has been processed successfully.
-
-Transaction Reference: {{transactionRef}}
-Date: {{processedDate}}
-
-Thank you.', true, 'SYSTEM', '2025-10-09 07:27:45', NULL, '2025-10-09 07:27:45');
-INSERT INTO auth.notification_templates (id, template_key, template_name, template_type, subject_template, body_template, is_active, created_by, created_at, updated_by, updated_at) VALUES (2, 'EMPLOYER_RECEIPT_VALIDATED', 'Employer Receipt Validated', 'EMAIL', 'Receipt Validated - {{receiptNumber}}', 'Dear {{employerName}},
-
-Your receipt {{receiptNumber}} has been validated successfully.
-
-Amount: {{amount}}
-Validated Date: {{validatedDate}}
-
-Thank you.', true, 'SYSTEM', '2025-10-09 07:27:45', NULL, '2025-10-09 07:27:45');
-INSERT INTO auth.notification_templates (id, template_key, template_name, template_type, subject_template, body_template, is_active, created_by, created_at, updated_by, updated_at) VALUES (3, 'FILE_PROCESSING_COMPLETED', 'File Processing Completed', 'SYSTEM', 'File Processing Status', 'File {{fileName}} processing completed.
-Total Records: {{totalRecords}}
-Success: {{successCount}}
-Failures: {{failureCount}}', true, 'SYSTEM', '2025-10-09 07:27:45', NULL, '2025-10-09 07:27:45');
-INSERT INTO auth.notification_templates (id, template_key, template_name, template_type, subject_template, body_template, is_active, created_by, created_at, updated_by, updated_at) VALUES (4, 'ACCOUNT_LOCKED', 'Account Locked', 'EMAIL', 'Account Security Alert', 'Dear User,
-
-Your account has been locked due to multiple failed login attempts.
-It will be unlocked after {{lockDuration}} minutes.
-
-If this was not you, please contact support.', true, 'SYSTEM', '2025-10-09 07:27:45', NULL, '2025-10-09 07:27:45');
-
-
---
--- Name: notification_templates_id_seq; Type: SEQUENCE SET; Schema: auth; Owner: -
---
-
-SELECT pg_catalog.setval('auth.notification_templates_id_seq', 1, false);
-
-
---
--- PostgreSQL database dump complete
---
-
-
---
--- PostgreSQL database dump
---
-
-
--- Dumped from database version 18.0 (Debian 18.0-1.pgdg13+3)
--- Dumped by pg_dump version 18.0 (Debian 18.0-1.pgdg13+3)
-
-SET statement_timeout = 0;
-SET lock_timeout = 0;
-SET idle_in_transaction_session_timeout = 0;
-SET transaction_timeout = 0;
-SET client_encoding = 'UTF8';
-SET standard_conforming_strings = on;
-SELECT pg_catalog.set_config('search_path', '', false);
-SET check_function_bodies = false;
-SET xmloption = content;
-SET client_min_messages = warning;
-SET row_security = off;
-
---
--- Data for Name: page_actions; Type: TABLE DATA; Schema: auth; Owner: -
---
-
-INSERT INTO auth.page_actions (id, label, action, page_id, display_order, is_active, created_at, updated_at, endpoint_id, icon, variant) VALUES (17, 'View Dashboard', 'VIEW', 1, 0, true, '2025-11-04 23:22:42.742311', '2025-11-04 23:22:42.742311', 63, '', 'default');
-INSERT INTO auth.page_actions (id, label, action, page_id, display_order, is_active, created_at, updated_at, endpoint_id, icon, variant) VALUES (18, 'View Policies', 'VIEW', 4, 1, true, '2025-11-05 11:05:53.396361', '2025-11-05 14:51:52.219145', 20, '', 'default');
-INSERT INTO auth.page_actions (id, label, action, page_id, display_order, is_active, created_at, updated_at, endpoint_id, icon, variant) VALUES (19, 'Create Policies', 'CREATE', 4, 2, true, '2025-11-05 11:11:02.479784', '2025-11-05 14:52:02.934303', 84, '', 'default');
-INSERT INTO auth.page_actions (id, label, action, page_id, display_order, is_active, created_at, updated_at, endpoint_id, icon, variant) VALUES (20, 'View Uploaded Data', 'View', 17, 1, true, '2025-11-05 15:10:50.924924', '2025-11-05 15:10:50.92493', 73, '', 'default');
-
-
---
--- Name: page_actions_id_seq; Type: SEQUENCE SET; Schema: auth; Owner: -
---
-
-SELECT pg_catalog.setval('auth.page_actions_id_seq', 20, true);
-
-
---
--- PostgreSQL database dump complete
---
-
-
---
--- PostgreSQL database dump
---
-
-
 -- Dumped from database version 18.0 (Debian 18.0-1.pgdg13+3)
 -- Dumped by pg_dump version 18.0 (Debian 18.0-1.pgdg13+3)
 
@@ -536,9 +175,6 @@ INSERT INTO auth.policies (id, name, description, type, expression_deprecated, i
 SELECT pg_catalog.setval('auth.policies_id_seq', 21, true);
 
 
---
--- PostgreSQL database dump complete
---
 
 
 --
@@ -562,22 +198,199 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Data for Name: revoked_tokens; Type: TABLE DATA; Schema: auth; Owner: -
+-- Data for Name: roles; Type: TABLE DATA; Schema: auth; Owner: -
 --
 
-INSERT INTO auth.revoked_tokens (id, token_id, user_id, expires_at, created_at) VALUES (17, 'db5d527e-7180-4f9b-98c2-029655bf1a02', 39, '2025-11-17 15:43:31', '2025-11-17 05:24:10.156303');
+INSERT INTO auth.roles (id, name, description, created_at, updated_at, is_active) VALUES (1, 'BASIC_USER', 'Baseline role assigned to ALL authenticated users. Grants fundamental access to authorization APIs and service catalog. Required for basic system operations and user authentication. Every user must have this role.', '2025-11-03 05:00:10.390007', '2025-11-03 05:00:10.390007', true);
+INSERT INTO auth.roles (id, name, description, created_at, updated_at, is_active) VALUES (2, 'BUSINESS_ADMIN', 'Business-facing administrator. Can create users, assign roles, and manage user accounts. Limited to user management operations. All other roles and system configuration are managed by TECHNICAL_BOOTSTRAP user. Must also be assigned BASIC_USER role.', '2025-11-03 05:00:10.390007', '2025-11-03 05:00:10.390007', true);
+INSERT INTO auth.roles (id, name, description, created_at, updated_at, is_active) VALUES (3, 'TECHNICAL_BOOTSTRAP', 'Technical bootstrap administrator. Full system configuration access for initial setup. Can create roles, policies, capabilities, UI pages, endpoints, and all system configuration. Used during onboarding phase only. Must also be assigned BASIC_USER role.', '2025-11-03 05:00:10.390007', '2025-11-03 05:00:10.390007', true);
+INSERT INTO auth.roles (id, name, description, created_at, updated_at, is_active) VALUES (4, 'WORKER_UPLOAD_DATA_MANAGE', 'Read only role of view uploaded data', '2025-11-03 13:47:57.996975', '2025-11-06 11:37:30.008774', true);
+INSERT INTO auth.roles (id, name, description, created_at, updated_at, is_active) VALUES (5, 'WORKER_RECEIPT_MANAGE', 'Worker receipt management', '2025-11-06 12:05:31.05924', '2025-11-06 12:05:31.05924', true);
 
 
 --
--- Name: revoked_tokens_id_seq; Type: SEQUENCE SET; Schema: auth; Owner: -
+-- Name: roles_id_seq; Type: SEQUENCE SET; Schema: auth; Owner: -
 --
 
-SELECT pg_catalog.setval('auth.revoked_tokens_id_seq', 17, true);
+SELECT pg_catalog.setval('auth.roles_id_seq', 5, true);
 
 
 --
 -- PostgreSQL database dump complete
 --
+
+
+-- Dumped from database version 18.0 (Debian 18.0-1.pgdg13+3)
+-- Dumped by pg_dump version 18.0 (Debian 18.0-1.pgdg13+3)
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET transaction_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- Data for Name: users; Type: TABLE DATA; Schema: auth; Owner: -
+--
+
+INSERT INTO auth.users (id, username, email, password, full_name, role, is_enabled, is_account_non_expired, is_account_non_locked, is_credentials_non_expired, created_at, updated_at, last_login, permission_version) VALUES (38, 'business.admin', 'business.admin@system.local', '$2a$10$zxNRGRU4nRpoDD3zJxG/W.9gKV4VroeZh0iga2uYrhMUi2IiHYwFy', 'Business Administrator', 'ADMIN', true, true, true, true, '2025-11-03 05:03:38.142121', '2025-11-03 12:36:10.598528', '2025-11-03 12:36:10.593972', 1);
+INSERT INTO auth.users (id, username, email, password, full_name, role, is_enabled, is_account_non_expired, is_account_non_locked, is_credentials_non_expired, created_at, updated_at, last_login, permission_version) VALUES (3, 'WORKER', 'ram@gmail.com', '$2a$10$u1NYF1njJbIm8Dy3uOlCC.m1bJ3AdalTq7/Q7uGnnBGRepc8tjFI6', 'Ram', 'USER', true, true, true, true, '2025-10-30 08:23:17', '2025-11-14 19:58:28.895285', '2025-11-14 19:58:28.894267', 5);
+INSERT INTO auth.users (id, username, email, password, full_name, role, is_enabled, is_account_non_expired, is_account_non_locked, is_credentials_non_expired, created_at, updated_at, last_login, permission_version) VALUES (37, 'test.user', 'test.user@system.local', '$2a$10$OyCA1lgOZBk/qb8dahYeD.UrSyuY2urN2eC1IHYgOzuSOaBhBoD4u', 'Test User For QA', 'USER', true, true, true, true, '2025-11-02 14:08:14.722667', '2025-11-02 14:08:14.722667', NULL, 1);
+INSERT INTO auth.users (id, username, email, password, full_name, role, is_enabled, is_account_non_expired, is_account_non_locked, is_credentials_non_expired, created_at, updated_at, last_login, permission_version) VALUES (34, 'board1', 'board1@company.local', '$2a$10$97nkDtl5VXGUWs6jd7XOV.gjtGe3bwS/NgDFuykUZka/2kWTjWxbC', 'Board Member One', 'BOARD', false, true, true, true, '2025-11-02 14:08:14.722667', '2025-11-05 00:33:24.46589', '2025-11-02 19:44:44.144484', 2);
+INSERT INTO auth.users (id, username, email, password, full_name, role, is_enabled, is_account_non_expired, is_account_non_locked, is_credentials_non_expired, created_at, updated_at, last_login, permission_version) VALUES (8, 'test', 'test@tets.com', '$2a$10$h0.i.5ftglB76teVZANaqOnaSzyZXojfMRkB.3N/vXk5CrYChZvqK', 'test user', 'USER', true, true, true, true, '2025-11-02 10:34:40.364349', '2025-11-03 20:46:44.718335', NULL, 4);
+INSERT INTO auth.users (id, username, email, password, full_name, role, is_enabled, is_account_non_expired, is_account_non_locked, is_credentials_non_expired, created_at, updated_at, last_login, permission_version) VALUES (36, 'worker1', 'worker1@company.local', '$2a$10$aTm0BsUSwGerSrNrOau8..lV8V7Z5VQO0mnaa1txPLLLgX3A8xRbW', 'Worker User One', 'WORKER', true, true, true, true, '2025-11-02 14:08:14.722667', '2025-11-02 14:08:14.722667', NULL, 1);
+INSERT INTO auth.users (id, username, email, password, full_name, role, is_enabled, is_account_non_expired, is_account_non_locked, is_credentials_non_expired, created_at, updated_at, last_login, permission_version) VALUES (31, 'platform.bootstrap', 'bootstrap@system.local', '$2a$10$K7ZdK4muqK0KrXwcTwV/auNw6C8AF0VYPtrUlB8IGIeByIWFJ1ie6', 'Platform Bootstrap', 'ADMIN', true, true, true, true, '2025-11-02 14:08:14.722667', '2025-11-02 14:08:14.722667', NULL, 1);
+INSERT INTO auth.users (id, username, email, password, full_name, role, is_enabled, is_account_non_expired, is_account_non_locked, is_credentials_non_expired, created_at, updated_at, last_login, permission_version) VALUES (6, 'sysadmin', 'sysadmin@hotmail.com', '$2a$10$L6/AjFAS7QjMJHWvKekii.NIb7hGzCmnfl.zW0B9JEx264Iv6GRB6', 'SYS', 'ADMIN', true, true, true, true, '2025-10-31 06:04:41', '2025-11-05 09:38:05.78236', '2025-10-31 06:07:39', 4);
+INSERT INTO auth.users (id, username, email, password, full_name, role, is_enabled, is_account_non_expired, is_account_non_locked, is_credentials_non_expired, created_at, updated_at, last_login, permission_version) VALUES (35, 'employer1', 'employer1@company.local', '$2a$10$zFVoBF9dPxD01NoD6srsIeU4I2fHeQxJBzZxlMVPc9ZKIqFJ1FSyG', 'Employer Staff One', 'EMPLOYER', true, true, true, true, '2025-11-02 14:08:14.722667', '2025-11-02 14:08:14.722667', NULL, 1);
+INSERT INTO auth.users (id, username, email, password, full_name, role, is_enabled, is_account_non_expired, is_account_non_locked, is_credentials_non_expired, created_at, updated_at, last_login, permission_version) VALUES (42, 'business.ops', 'bus@gmail.com', '$2a$10$iLNVwNPBXFZLYF8qA38FduEpEpHb2JlA16xkeOR0pBomNIfA6Po2m', 'Business User', 'ADMIN', true, true, true, true, '2025-11-03 14:11:07.704656', '2025-11-03 18:01:49.202923', '2025-11-03 18:01:49.199595', 3);
+INSERT INTO auth.users (id, username, email, password, full_name, role, is_enabled, is_account_non_expired, is_account_non_locked, is_credentials_non_expired, created_at, updated_at, last_login, permission_version) VALUES (4, 'Ram1', 'ram1@gmail.com', '$2a$10$zINvAmN0YsUJmnft.IKv2.aYYHDnaBBtNu3gHWG2nTXX/GBi5ZDYO', 'Ram1', 'EMPLOYER', false, true, true, true, '2025-10-30 10:15:17', '2025-11-04 09:23:02.882972', NULL, 2);
+INSERT INTO auth.users (id, username, email, password, full_name, role, is_enabled, is_account_non_expired, is_account_non_locked, is_credentials_non_expired, created_at, updated_at, last_login, permission_version) VALUES (33, 'admin.ops', 'admin.ops@system.local', '$2a$10$RsCl4r3u43sTIToUOsjKyOKYh.lmix.hWMCAhRgwDHVdPratagQRW', 'Operations Administrator', 'ADMIN', true, true, true, true, '2025-11-02 14:08:14.722667', '2025-11-02 20:27:34.51013', '2025-11-02 20:27:34.507889', 1);
+INSERT INTO auth.users (id, username, email, password, full_name, role, is_enabled, is_account_non_expired, is_account_non_locked, is_credentials_non_expired, created_at, updated_at, last_login, permission_version) VALUES (7, 'techadmin', 'techadmin@hotmail.com', '$2a$10$rARXHknkkq5552y3Ae.WyextQ5a3Z24c66ybQ4Zqg3AODFptTqWu2', 'SYS', 'ADMIN', true, true, true, true, '2025-10-31 09:27:00', '2025-11-05 09:41:15.999897', NULL, 5);
+INSERT INTO auth.users (id, username, email, password, full_name, role, is_enabled, is_account_non_expired, is_account_non_locked, is_credentials_non_expired, created_at, updated_at, last_login, permission_version) VALUES (32, 'admin.tech', 'admin.tech@system.local', '$2a$10$m2WyB7vO.wPiScT1Dm.gw.64oC2Eq4lOzEy798QR0ktIg4jdBgaT.', 'Tech Administrator', 'ADMIN', true, true, true, true, '2025-11-02 14:08:14.722667', '2025-11-02 20:44:20.804625', '2025-11-02 20:44:20.803854', 1);
+INSERT INTO auth.users (id, username, email, password, full_name, role, is_enabled, is_account_non_expired, is_account_non_locked, is_credentials_non_expired, created_at, updated_at, last_login, permission_version) VALUES (39, 'tech.bootstrap', 'tech.bootstrap@system.local', '$2a$10$qwblAK4hJlSWWQ8j7FIIueUEQCD/R1k6Lu7Nee5lFQxWFC9KIb2VG', 'Technical Bootstrap Administrator', 'ADMIN', true, true, true, true, '2025-11-03 05:03:38.142121', '2025-11-17 15:31:38.947113', '2025-11-17 15:31:38.944518', 1);
+INSERT INTO auth.users (id, username, email, password, full_name, role, is_enabled, is_account_non_expired, is_account_non_locked, is_credentials_non_expired, created_at, updated_at, last_login, permission_version) VALUES (1, 'admin', 'admin@example.com', '$2b$10$ZuNPpWnsWE/DVaHFzPGnHuh0ANT7.ZlT8YeSCnY3W8pInAOKk/vwu', 'System Administrator', 'ADMIN', false, true, true, true, '2025-10-09 15:23:20', '2025-11-05 10:01:51.008601', '2025-11-02 10:27:03.960444', 12);
+INSERT INTO auth.users (id, username, email, password, full_name, role, is_enabled, is_account_non_expired, is_account_non_locked, is_credentials_non_expired, created_at, updated_at, last_login, permission_version) VALUES (2, 'rahul', 'rahul@hotmail.com', '$2a$10$9KbZe.9oH.ybQl03KyOcKu9GqsVfib6l9J5aHnRmPIjVUrTlfbOGi', 'rahul c', 'ADMIN', false, true, true, true, '2025-10-29 06:23:05', '2025-11-04 15:54:54.744435', '2025-10-29 06:27:48', 8);
+INSERT INTO auth.users (id, username, email, password, full_name, role, is_enabled, is_account_non_expired, is_account_non_locked, is_credentials_non_expired, created_at, updated_at, last_login, permission_version) VALUES (5, 'Ram2', 'ram2@gmail.com', '$2a$10$1mYbHoutHH5O3XcsyyQrheoEIhfj7C552lfgRA7ybDp12ij00QdUe', 'Ram1', 'EMPLOYER', false, true, true, true, '2025-10-30 10:26:55', '2025-11-04 15:54:57.878647', NULL, 6);
+
+
+--
+-- Name: users_id_seq; Type: SEQUENCE SET; Schema: auth; Owner: -
+--
+
+SELECT pg_catalog.setval('auth.users_id_seq', 42, true);
+
+
+--
+-- PostgreSQL database dump complete
+--
+
+-- Dumped from database version 18.0 (Debian 18.0-1.pgdg13+3)
+-- Dumped by pg_dump version 18.0 (Debian 18.0-1.pgdg13+3)
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET transaction_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- Data for Name: endpoint_policies; Type: TABLE DATA; Schema: auth; Owner: -
+--
+
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (521, 35, 11);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (522, 99, 11);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (523, 102, 9);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (532, 100, 18);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (533, 73, 18);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (534, 107, 18);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (535, 108, 18);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (536, 109, 18);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (537, 112, 20);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (538, 110, 20);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (539, 111, 20);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (547, 113, 21);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (548, 114, 21);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (403, 5, 2);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (404, 6, 2);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (405, 7, 2);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (406, 8, 2);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (407, 9, 2);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (408, 3, 2);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (409, 10, 3);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (410, 11, 3);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (411, 12, 3);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (412, 13, 3);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (413, 14, 3);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (549, 115, 21);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (550, 116, 21);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (551, 64, 19);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (552, 74, 19);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (553, 75, 19);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (419, 20, 8);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (554, 76, 19);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (555, 77, 19);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (556, 78, 19);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (557, 79, 19);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (558, 80, 19);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (559, 81, 19);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (560, 83, 19);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (561, 84, 19);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (428, 29, 6);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (429, 30, 6);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (430, 31, 7);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (431, 32, 7);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (432, 33, 7);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (433, 34, 7);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (562, 85, 19);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (563, 86, 19);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (564, 87, 19);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (437, 37, 11);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (438, 38, 11);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (439, 39, 11);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (440, 40, 11);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (441, 42, 11);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (442, 43, 11);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (443, 44, 11);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (444, 45, 12);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (445, 46, 12);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (446, 47, 12);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (447, 53, 12);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (448, 48, 13);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (449, 49, 13);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (450, 50, 13);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (451, 51, 13);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (452, 52, 13);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (453, 54, 14);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (454, 55, 14);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (455, 56, 14);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (456, 57, 15);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (457, 58, 15);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (458, 59, 15);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (459, 60, 15);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (460, 61, 15);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (461, 71, 2);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (462, 72, 2);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (565, 93, 19);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (502, 18, 4);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (503, 19, 4);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (504, 16, 5);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (505, 17, 5);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (506, 91, 5);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (507, 15, 5);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (516, 69, 1);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (517, 70, 1);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (518, 62, 1);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (519, 95, 1);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (520, 63, 1);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (512, 66, 1);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (513, 67, 1);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (514, 4, 1);
+INSERT INTO auth.endpoint_policies (id, endpoint_id, policy_id) VALUES (515, 68, 1);
+
+
+--
+-- Name: endpoint_policies_id_seq; Type: SEQUENCE SET; Schema: auth; Owner: -
+--
+
+SELECT pg_catalog.setval('auth.endpoint_policies_id_seq', 565, true);
+
+
+--
+-- PostgreSQL database dump complete
+--
+
 
 
 --
@@ -664,21 +477,41 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Data for Name: roles; Type: TABLE DATA; Schema: auth; Owner: -
+-- Data for Name: user_roles; Type: TABLE DATA; Schema: auth; Owner: -
 --
 
-INSERT INTO auth.roles (id, name, description, created_at, updated_at, is_active) VALUES (1, 'BASIC_USER', 'Baseline role assigned to ALL authenticated users. Grants fundamental access to authorization APIs and service catalog. Required for basic system operations and user authentication. Every user must have this role.', '2025-11-03 05:00:10.390007', '2025-11-03 05:00:10.390007', true);
-INSERT INTO auth.roles (id, name, description, created_at, updated_at, is_active) VALUES (2, 'BUSINESS_ADMIN', 'Business-facing administrator. Can create users, assign roles, and manage user accounts. Limited to user management operations. All other roles and system configuration are managed by TECHNICAL_BOOTSTRAP user. Must also be assigned BASIC_USER role.', '2025-11-03 05:00:10.390007', '2025-11-03 05:00:10.390007', true);
-INSERT INTO auth.roles (id, name, description, created_at, updated_at, is_active) VALUES (3, 'TECHNICAL_BOOTSTRAP', 'Technical bootstrap administrator. Full system configuration access for initial setup. Can create roles, policies, capabilities, UI pages, endpoints, and all system configuration. Used during onboarding phase only. Must also be assigned BASIC_USER role.', '2025-11-03 05:00:10.390007', '2025-11-03 05:00:10.390007', true);
-INSERT INTO auth.roles (id, name, description, created_at, updated_at, is_active) VALUES (4, 'WORKER_UPLOAD_DATA_MANAGE', 'Read only role of view uploaded data', '2025-11-03 13:47:57.996975', '2025-11-06 11:37:30.008774', true);
-INSERT INTO auth.roles (id, name, description, created_at, updated_at, is_active) VALUES (5, 'WORKER_RECEIPT_MANAGE', 'Worker receipt management', '2025-11-06 12:05:31.05924', '2025-11-06 12:05:31.05924', true);
+INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (58, 38, 1, '2025-11-03 05:04:15.925411');
+INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (59, 38, 2, '2025-11-03 05:04:15.925411');
+INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (60, 39, 1, '2025-11-03 05:04:15.925411');
+INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (61, 39, 3, '2025-11-03 05:04:15.925411');
+INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (66, 42, 4, '2025-11-03 14:11:57.253306');
+INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (67, 42, 1, '2025-11-03 14:13:41.690342');
+INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (70, 37, 1, '2025-11-03 14:58:03.873824');
+INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (71, 36, 1, '2025-11-03 14:58:03.873824');
+INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (72, 4, 2, '2025-11-03 14:58:03.882106');
+INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (73, 5, 2, '2025-11-03 14:58:03.882106');
+INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (74, 6, 2, '2025-11-03 14:58:03.882106');
+INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (75, 7, 2, '2025-11-03 14:58:03.882106');
+INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (76, 1, 2, '2025-11-03 14:58:03.882106');
+INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (77, 39, 2, '2025-11-03 14:58:03.882106');
+INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (78, 31, 2, '2025-11-03 14:58:03.882106');
+INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (79, 35, 2, '2025-11-03 14:58:03.882106');
+INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (80, 42, 2, '2025-11-03 14:58:03.882106');
+INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (81, 33, 2, '2025-11-03 14:58:03.882106');
+INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (82, 32, 2, '2025-11-03 14:58:03.882106');
+INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (83, 2, 2, '2025-11-03 14:58:03.882106');
+INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (84, 6, 3, '2025-11-03 14:58:03.883539');
+INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (85, 7, 3, '2025-11-03 14:58:03.883539');
+INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (86, 31, 3, '2025-11-03 14:58:03.883539');
+INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (87, 3, 4, '2025-11-04 15:55:55.360676');
+INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (88, 3, 5, '2025-11-06 12:15:21.092394');
 
 
 --
--- Name: roles_id_seq; Type: SEQUENCE SET; Schema: auth; Owner: -
+-- Name: user_roles_id_seq; Type: SEQUENCE SET; Schema: auth; Owner: -
 --
 
-SELECT pg_catalog.setval('auth.roles_id_seq', 5, true);
+SELECT pg_catalog.setval('auth.user_roles_id_seq', 88, true);
 
 
 --
@@ -689,7 +522,6 @@ SELECT pg_catalog.setval('auth.roles_id_seq', 5, true);
 --
 -- PostgreSQL database dump
 --
-
 
 -- Dumped from database version 18.0 (Debian 18.0-1.pgdg13+3)
 -- Dumped by pg_dump version 18.0 (Debian 18.0-1.pgdg13+3)
@@ -707,26 +539,42 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Data for Name: system_config; Type: TABLE DATA; Schema: auth; Owner: -
+-- Data for Name: notification_templates; Type: TABLE DATA; Schema: auth; Owner: -
 --
 
-INSERT INTO auth.system_config (id, config_key, config_value, config_type, description, is_encrypted, is_active, created_by, created_at, updated_by, updated_at) VALUES (1, 'MAX_FILE_UPLOAD_SIZE_MB', '50', 'INTEGER', 'Maximum file upload size in MB', false, true, 'SYSTEM', '2025-10-09 07:27:44', NULL, '2025-10-09 07:27:44');
-INSERT INTO auth.system_config (id, config_key, config_value, config_type, description, is_encrypted, is_active, created_by, created_at, updated_by, updated_at) VALUES (2, 'MAX_RECORDS_PER_FILE', '5000', 'INTEGER', 'Maximum records allowed per uploaded file', false, true, 'SYSTEM', '2025-10-09 07:27:44', NULL, '2025-10-09 07:27:44');
-INSERT INTO auth.system_config (id, config_key, config_value, config_type, description, is_encrypted, is_active, created_by, created_at, updated_by, updated_at) VALUES (3, 'API_RATE_LIMIT_PER_MINUTE', '100', 'INTEGER', 'Maximum API requests per minute per user', false, true, 'SYSTEM', '2025-10-09 07:27:44', NULL, '2025-10-09 07:27:44');
-INSERT INTO auth.system_config (id, config_key, config_value, config_type, description, is_encrypted, is_active, created_by, created_at, updated_by, updated_at) VALUES (4, 'SESSION_TIMEOUT_HOURS', '8', 'INTEGER', 'User session timeout in hours', false, true, 'SYSTEM', '2025-10-09 07:27:44', NULL, '2025-10-09 07:27:44');
-INSERT INTO auth.system_config (id, config_key, config_value, config_type, description, is_encrypted, is_active, created_by, created_at, updated_by, updated_at) VALUES (5, 'PASSWORD_MIN_LENGTH', '8', 'INTEGER', 'Minimum password length', false, true, 'SYSTEM', '2025-10-09 07:27:44', NULL, '2025-10-09 07:27:44');
-INSERT INTO auth.system_config (id, config_key, config_value, config_type, description, is_encrypted, is_active, created_by, created_at, updated_by, updated_at) VALUES (6, 'MAX_LOGIN_ATTEMPTS', '5', 'INTEGER', 'Maximum failed login attempts before account lock', false, true, 'SYSTEM', '2025-10-09 07:27:44', NULL, '2025-10-09 07:27:44');
-INSERT INTO auth.system_config (id, config_key, config_value, config_type, description, is_encrypted, is_active, created_by, created_at, updated_by, updated_at) VALUES (7, 'ACCOUNT_LOCK_DURATION_MINUTES', '30', 'INTEGER', 'Account lock duration in minutes after max failed attempts', false, true, 'SYSTEM', '2025-10-09 07:27:44', NULL, '2025-10-09 07:27:44');
-INSERT INTO auth.system_config (id, config_key, config_value, config_type, description, is_encrypted, is_active, created_by, created_at, updated_by, updated_at) VALUES (8, 'ENABLE_EMAIL_NOTIFICATIONS', 'true', 'BOOLEAN', 'Enable email notifications for important events', false, true, 'SYSTEM', '2025-10-09 07:27:44', NULL, '2025-10-09 07:27:44');
-INSERT INTO auth.system_config (id, config_key, config_value, config_type, description, is_encrypted, is_active, created_by, created_at, updated_by, updated_at) VALUES (9, 'ENABLE_SMS_NOTIFICATIONS', 'false', 'BOOLEAN', 'Enable SMS notifications for important events', false, true, 'SYSTEM', '2025-10-09 07:27:44', NULL, '2025-10-09 07:27:44');
-INSERT INTO auth.system_config (id, config_key, config_value, config_type, description, is_encrypted, is_active, created_by, created_at, updated_by, updated_at) VALUES (10, 'MAINTENANCE_MODE', 'false', 'BOOLEAN', 'Enable maintenance mode to block user access', false, true, 'SYSTEM', '2025-10-09 07:27:44', NULL, '2025-10-09 07:27:44');
+INSERT INTO auth.notification_templates (id, template_key, template_name, template_type, subject_template, body_template, is_active, created_by, created_at, updated_by, updated_at) VALUES (1, 'WORKER_PAYMENT_PROCESSED', 'Worker Payment Processed', 'EMAIL', 'Payment Processed - {{workerName}}', 'Dear {{workerName}},
+
+Your payment of {{amount}} has been processed successfully.
+
+Transaction Reference: {{transactionRef}}
+Date: {{processedDate}}
+
+Thank you.', true, 'SYSTEM', '2025-10-09 07:27:45', NULL, '2025-10-09 07:27:45');
+INSERT INTO auth.notification_templates (id, template_key, template_name, template_type, subject_template, body_template, is_active, created_by, created_at, updated_by, updated_at) VALUES (2, 'EMPLOYER_RECEIPT_VALIDATED', 'Employer Receipt Validated', 'EMAIL', 'Receipt Validated - {{receiptNumber}}', 'Dear {{employerName}},
+
+Your receipt {{receiptNumber}} has been validated successfully.
+
+Amount: {{amount}}
+Validated Date: {{validatedDate}}
+
+Thank you.', true, 'SYSTEM', '2025-10-09 07:27:45', NULL, '2025-10-09 07:27:45');
+INSERT INTO auth.notification_templates (id, template_key, template_name, template_type, subject_template, body_template, is_active, created_by, created_at, updated_by, updated_at) VALUES (3, 'FILE_PROCESSING_COMPLETED', 'File Processing Completed', 'SYSTEM', 'File Processing Status', 'File {{fileName}} processing completed.
+Total Records: {{totalRecords}}
+Success: {{successCount}}
+Failures: {{failureCount}}', true, 'SYSTEM', '2025-10-09 07:27:45', NULL, '2025-10-09 07:27:45');
+INSERT INTO auth.notification_templates (id, template_key, template_name, template_type, subject_template, body_template, is_active, created_by, created_at, updated_by, updated_at) VALUES (4, 'ACCOUNT_LOCKED', 'Account Locked', 'EMAIL', 'Account Security Alert', 'Dear User,
+
+Your account has been locked due to multiple failed login attempts.
+It will be unlocked after {{lockDuration}} minutes.
+
+If this was not you, please contact support.', true, 'SYSTEM', '2025-10-09 07:27:45', NULL, '2025-10-09 07:27:45');
 
 
 --
--- Name: system_config_id_seq; Type: SEQUENCE SET; Schema: auth; Owner: -
+-- Name: notification_templates_id_seq; Type: SEQUENCE SET; Schema: auth; Owner: -
 --
 
-SELECT pg_catalog.setval('auth.system_config_id_seq', 1, false);
+SELECT pg_catalog.setval('auth.notification_templates_id_seq', 1, false);
 
 
 --
@@ -783,6 +631,7 @@ SELECT pg_catalog.setval('auth.ui_pages_id_seq', 19, true);
 --
 
 
+
 --
 -- PostgreSQL database dump
 --
@@ -804,46 +653,120 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Data for Name: user_roles; Type: TABLE DATA; Schema: auth; Owner: -
+-- Data for Name: page_actions; Type: TABLE DATA; Schema: auth; Owner: -
 --
 
-INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (58, 38, 1, '2025-11-03 05:04:15.925411');
-INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (59, 38, 2, '2025-11-03 05:04:15.925411');
-INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (60, 39, 1, '2025-11-03 05:04:15.925411');
-INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (61, 39, 3, '2025-11-03 05:04:15.925411');
-INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (66, 42, 4, '2025-11-03 14:11:57.253306');
-INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (67, 42, 1, '2025-11-03 14:13:41.690342');
-INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (70, 37, 1, '2025-11-03 14:58:03.873824');
-INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (71, 36, 1, '2025-11-03 14:58:03.873824');
-INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (72, 4, 2, '2025-11-03 14:58:03.882106');
-INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (73, 5, 2, '2025-11-03 14:58:03.882106');
-INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (74, 6, 2, '2025-11-03 14:58:03.882106');
-INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (75, 7, 2, '2025-11-03 14:58:03.882106');
-INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (76, 1, 2, '2025-11-03 14:58:03.882106');
-INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (77, 39, 2, '2025-11-03 14:58:03.882106');
-INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (78, 31, 2, '2025-11-03 14:58:03.882106');
-INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (79, 35, 2, '2025-11-03 14:58:03.882106');
-INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (80, 42, 2, '2025-11-03 14:58:03.882106');
-INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (81, 33, 2, '2025-11-03 14:58:03.882106');
-INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (82, 32, 2, '2025-11-03 14:58:03.882106');
-INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (83, 2, 2, '2025-11-03 14:58:03.882106');
-INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (84, 6, 3, '2025-11-03 14:58:03.883539');
-INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (85, 7, 3, '2025-11-03 14:58:03.883539');
-INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (86, 31, 3, '2025-11-03 14:58:03.883539');
-INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (87, 3, 4, '2025-11-04 15:55:55.360676');
-INSERT INTO auth.user_roles (id, user_id, role_id, assigned_at) VALUES (88, 3, 5, '2025-11-06 12:15:21.092394');
+INSERT INTO auth.page_actions (id, label, action, page_id, display_order, is_active, created_at, updated_at, endpoint_id, icon, variant) VALUES (17, 'View Dashboard', 'VIEW', 1, 0, true, '2025-11-04 23:22:42.742311', '2025-11-04 23:22:42.742311', 63, '', 'default');
+INSERT INTO auth.page_actions (id, label, action, page_id, display_order, is_active, created_at, updated_at, endpoint_id, icon, variant) VALUES (18, 'View Policies', 'VIEW', 4, 1, true, '2025-11-05 11:05:53.396361', '2025-11-05 14:51:52.219145', 20, '', 'default');
+INSERT INTO auth.page_actions (id, label, action, page_id, display_order, is_active, created_at, updated_at, endpoint_id, icon, variant) VALUES (19, 'Create Policies', 'CREATE', 4, 2, true, '2025-11-05 11:11:02.479784', '2025-11-05 14:52:02.934303', 84, '', 'default');
+INSERT INTO auth.page_actions (id, label, action, page_id, display_order, is_active, created_at, updated_at, endpoint_id, icon, variant) VALUES (20, 'View Uploaded Data', 'View', 17, 1, true, '2025-11-05 15:10:50.924924', '2025-11-05 15:10:50.92493', 73, '', 'default');
 
 
 --
--- Name: user_roles_id_seq; Type: SEQUENCE SET; Schema: auth; Owner: -
+-- Name: page_actions_id_seq; Type: SEQUENCE SET; Schema: auth; Owner: -
 --
 
-SELECT pg_catalog.setval('auth.user_roles_id_seq', 88, true);
+SELECT pg_catalog.setval('auth.page_actions_id_seq', 20, true);
 
 
 --
 -- PostgreSQL database dump complete
 --
+
+
+--
+-- PostgreSQL database dump
+--
+
+
+
+--
+-- PostgreSQL database dump complete
+--
+
+
+--
+-- PostgreSQL database dump
+--
+
+
+-- Dumped from database version 18.0 (Debian 18.0-1.pgdg13+3)
+-- Dumped by pg_dump version 18.0 (Debian 18.0-1.pgdg13+3)
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET transaction_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- Data for Name: revoked_tokens; Type: TABLE DATA; Schema: auth; Owner: -
+--
+
+INSERT INTO auth.revoked_tokens (id, token_id, user_id, expires_at, created_at) VALUES (17, 'db5d527e-7180-4f9b-98c2-029655bf1a02', 39, '2025-11-17 15:43:31', '2025-11-17 05:24:10.156303');
+
+
+--
+-- Name: revoked_tokens_id_seq; Type: SEQUENCE SET; Schema: auth; Owner: -
+--
+
+SELECT pg_catalog.setval('auth.revoked_tokens_id_seq', 17, true);
+
+
+--
+-- PostgreSQL database dump complete
+--
+
+
+
+-- Dumped from database version 18.0 (Debian 18.0-1.pgdg13+3)
+-- Dumped by pg_dump version 18.0 (Debian 18.0-1.pgdg13+3)
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET transaction_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- Data for Name: system_config; Type: TABLE DATA; Schema: auth; Owner: -
+--
+
+INSERT INTO auth.system_config (id, config_key, config_value, config_type, description, is_encrypted, is_active, created_by, created_at, updated_by, updated_at) VALUES (1, 'MAX_FILE_UPLOAD_SIZE_MB', '50', 'INTEGER', 'Maximum file upload size in MB', false, true, 'SYSTEM', '2025-10-09 07:27:44', NULL, '2025-10-09 07:27:44');
+INSERT INTO auth.system_config (id, config_key, config_value, config_type, description, is_encrypted, is_active, created_by, created_at, updated_by, updated_at) VALUES (2, 'MAX_RECORDS_PER_FILE', '5000', 'INTEGER', 'Maximum records allowed per uploaded file', false, true, 'SYSTEM', '2025-10-09 07:27:44', NULL, '2025-10-09 07:27:44');
+INSERT INTO auth.system_config (id, config_key, config_value, config_type, description, is_encrypted, is_active, created_by, created_at, updated_by, updated_at) VALUES (3, 'API_RATE_LIMIT_PER_MINUTE', '100', 'INTEGER', 'Maximum API requests per minute per user', false, true, 'SYSTEM', '2025-10-09 07:27:44', NULL, '2025-10-09 07:27:44');
+INSERT INTO auth.system_config (id, config_key, config_value, config_type, description, is_encrypted, is_active, created_by, created_at, updated_by, updated_at) VALUES (4, 'SESSION_TIMEOUT_HOURS', '8', 'INTEGER', 'User session timeout in hours', false, true, 'SYSTEM', '2025-10-09 07:27:44', NULL, '2025-10-09 07:27:44');
+INSERT INTO auth.system_config (id, config_key, config_value, config_type, description, is_encrypted, is_active, created_by, created_at, updated_by, updated_at) VALUES (5, 'PASSWORD_MIN_LENGTH', '8', 'INTEGER', 'Minimum password length', false, true, 'SYSTEM', '2025-10-09 07:27:44', NULL, '2025-10-09 07:27:44');
+INSERT INTO auth.system_config (id, config_key, config_value, config_type, description, is_encrypted, is_active, created_by, created_at, updated_by, updated_at) VALUES (6, 'MAX_LOGIN_ATTEMPTS', '5', 'INTEGER', 'Maximum failed login attempts before account lock', false, true, 'SYSTEM', '2025-10-09 07:27:44', NULL, '2025-10-09 07:27:44');
+INSERT INTO auth.system_config (id, config_key, config_value, config_type, description, is_encrypted, is_active, created_by, created_at, updated_by, updated_at) VALUES (7, 'ACCOUNT_LOCK_DURATION_MINUTES', '30', 'INTEGER', 'Account lock duration in minutes after max failed attempts', false, true, 'SYSTEM', '2025-10-09 07:27:44', NULL, '2025-10-09 07:27:44');
+INSERT INTO auth.system_config (id, config_key, config_value, config_type, description, is_encrypted, is_active, created_by, created_at, updated_by, updated_at) VALUES (8, 'ENABLE_EMAIL_NOTIFICATIONS', 'true', 'BOOLEAN', 'Enable email notifications for important events', false, true, 'SYSTEM', '2025-10-09 07:27:44', NULL, '2025-10-09 07:27:44');
+INSERT INTO auth.system_config (id, config_key, config_value, config_type, description, is_encrypted, is_active, created_by, created_at, updated_by, updated_at) VALUES (9, 'ENABLE_SMS_NOTIFICATIONS', 'false', 'BOOLEAN', 'Enable SMS notifications for important events', false, true, 'SYSTEM', '2025-10-09 07:27:44', NULL, '2025-10-09 07:27:44');
+INSERT INTO auth.system_config (id, config_key, config_value, config_type, description, is_encrypted, is_active, created_by, created_at, updated_by, updated_at) VALUES (10, 'MAINTENANCE_MODE', 'false', 'BOOLEAN', 'Enable maintenance mode to block user access', false, true, 'SYSTEM', '2025-10-09 07:27:44', NULL, '2025-10-09 07:27:44');
+
+
+--
+-- Name: system_config_id_seq; Type: SEQUENCE SET; Schema: auth; Owner: -
+--
+
+SELECT pg_catalog.setval('auth.system_config_id_seq', 1, false);
+
+
+--
+-- PostgreSQL database dump complete
+--
+
 
 
 --
@@ -981,56 +904,6 @@ SELECT pg_catalog.setval('auth.user_tenant_acl_audit_id_seq', 1, false);
 -- PostgreSQL database dump
 --
 
-
--- Dumped from database version 18.0 (Debian 18.0-1.pgdg13+3)
--- Dumped by pg_dump version 18.0 (Debian 18.0-1.pgdg13+3)
-
-SET statement_timeout = 0;
-SET lock_timeout = 0;
-SET idle_in_transaction_session_timeout = 0;
-SET transaction_timeout = 0;
-SET client_encoding = 'UTF8';
-SET standard_conforming_strings = on;
-SELECT pg_catalog.set_config('search_path', '', false);
-SET check_function_bodies = false;
-SET xmloption = content;
-SET client_min_messages = warning;
-SET row_security = off;
-
---
--- Data for Name: users; Type: TABLE DATA; Schema: auth; Owner: -
---
-
-INSERT INTO auth.users (id, username, email, password, full_name, role, is_enabled, is_account_non_expired, is_account_non_locked, is_credentials_non_expired, created_at, updated_at, last_login, permission_version) VALUES (38, 'business.admin', 'business.admin@system.local', '$2a$10$zxNRGRU4nRpoDD3zJxG/W.9gKV4VroeZh0iga2uYrhMUi2IiHYwFy', 'Business Administrator', 'ADMIN', true, true, true, true, '2025-11-03 05:03:38.142121', '2025-11-03 12:36:10.598528', '2025-11-03 12:36:10.593972', 1);
-INSERT INTO auth.users (id, username, email, password, full_name, role, is_enabled, is_account_non_expired, is_account_non_locked, is_credentials_non_expired, created_at, updated_at, last_login, permission_version) VALUES (3, 'WORKER', 'ram@gmail.com', '$2a$10$u1NYF1njJbIm8Dy3uOlCC.m1bJ3AdalTq7/Q7uGnnBGRepc8tjFI6', 'Ram', 'USER', true, true, true, true, '2025-10-30 08:23:17', '2025-11-14 19:58:28.895285', '2025-11-14 19:58:28.894267', 5);
-INSERT INTO auth.users (id, username, email, password, full_name, role, is_enabled, is_account_non_expired, is_account_non_locked, is_credentials_non_expired, created_at, updated_at, last_login, permission_version) VALUES (37, 'test.user', 'test.user@system.local', '$2a$10$OyCA1lgOZBk/qb8dahYeD.UrSyuY2urN2eC1IHYgOzuSOaBhBoD4u', 'Test User For QA', 'USER', true, true, true, true, '2025-11-02 14:08:14.722667', '2025-11-02 14:08:14.722667', NULL, 1);
-INSERT INTO auth.users (id, username, email, password, full_name, role, is_enabled, is_account_non_expired, is_account_non_locked, is_credentials_non_expired, created_at, updated_at, last_login, permission_version) VALUES (34, 'board1', 'board1@company.local', '$2a$10$97nkDtl5VXGUWs6jd7XOV.gjtGe3bwS/NgDFuykUZka/2kWTjWxbC', 'Board Member One', 'BOARD', false, true, true, true, '2025-11-02 14:08:14.722667', '2025-11-05 00:33:24.46589', '2025-11-02 19:44:44.144484', 2);
-INSERT INTO auth.users (id, username, email, password, full_name, role, is_enabled, is_account_non_expired, is_account_non_locked, is_credentials_non_expired, created_at, updated_at, last_login, permission_version) VALUES (8, 'test', 'test@tets.com', '$2a$10$h0.i.5ftglB76teVZANaqOnaSzyZXojfMRkB.3N/vXk5CrYChZvqK', 'test user', 'USER', true, true, true, true, '2025-11-02 10:34:40.364349', '2025-11-03 20:46:44.718335', NULL, 4);
-INSERT INTO auth.users (id, username, email, password, full_name, role, is_enabled, is_account_non_expired, is_account_non_locked, is_credentials_non_expired, created_at, updated_at, last_login, permission_version) VALUES (36, 'worker1', 'worker1@company.local', '$2a$10$aTm0BsUSwGerSrNrOau8..lV8V7Z5VQO0mnaa1txPLLLgX3A8xRbW', 'Worker User One', 'WORKER', true, true, true, true, '2025-11-02 14:08:14.722667', '2025-11-02 14:08:14.722667', NULL, 1);
-INSERT INTO auth.users (id, username, email, password, full_name, role, is_enabled, is_account_non_expired, is_account_non_locked, is_credentials_non_expired, created_at, updated_at, last_login, permission_version) VALUES (31, 'platform.bootstrap', 'bootstrap@system.local', '$2a$10$K7ZdK4muqK0KrXwcTwV/auNw6C8AF0VYPtrUlB8IGIeByIWFJ1ie6', 'Platform Bootstrap', 'ADMIN', true, true, true, true, '2025-11-02 14:08:14.722667', '2025-11-02 14:08:14.722667', NULL, 1);
-INSERT INTO auth.users (id, username, email, password, full_name, role, is_enabled, is_account_non_expired, is_account_non_locked, is_credentials_non_expired, created_at, updated_at, last_login, permission_version) VALUES (6, 'sysadmin', 'sysadmin@hotmail.com', '$2a$10$L6/AjFAS7QjMJHWvKekii.NIb7hGzCmnfl.zW0B9JEx264Iv6GRB6', 'SYS', 'ADMIN', true, true, true, true, '2025-10-31 06:04:41', '2025-11-05 09:38:05.78236', '2025-10-31 06:07:39', 4);
-INSERT INTO auth.users (id, username, email, password, full_name, role, is_enabled, is_account_non_expired, is_account_non_locked, is_credentials_non_expired, created_at, updated_at, last_login, permission_version) VALUES (35, 'employer1', 'employer1@company.local', '$2a$10$zFVoBF9dPxD01NoD6srsIeU4I2fHeQxJBzZxlMVPc9ZKIqFJ1FSyG', 'Employer Staff One', 'EMPLOYER', true, true, true, true, '2025-11-02 14:08:14.722667', '2025-11-02 14:08:14.722667', NULL, 1);
-INSERT INTO auth.users (id, username, email, password, full_name, role, is_enabled, is_account_non_expired, is_account_non_locked, is_credentials_non_expired, created_at, updated_at, last_login, permission_version) VALUES (42, 'business.ops', 'bus@gmail.com', '$2a$10$iLNVwNPBXFZLYF8qA38FduEpEpHb2JlA16xkeOR0pBomNIfA6Po2m', 'Business User', 'ADMIN', true, true, true, true, '2025-11-03 14:11:07.704656', '2025-11-03 18:01:49.202923', '2025-11-03 18:01:49.199595', 3);
-INSERT INTO auth.users (id, username, email, password, full_name, role, is_enabled, is_account_non_expired, is_account_non_locked, is_credentials_non_expired, created_at, updated_at, last_login, permission_version) VALUES (4, 'Ram1', 'ram1@gmail.com', '$2a$10$zINvAmN0YsUJmnft.IKv2.aYYHDnaBBtNu3gHWG2nTXX/GBi5ZDYO', 'Ram1', 'EMPLOYER', false, true, true, true, '2025-10-30 10:15:17', '2025-11-04 09:23:02.882972', NULL, 2);
-INSERT INTO auth.users (id, username, email, password, full_name, role, is_enabled, is_account_non_expired, is_account_non_locked, is_credentials_non_expired, created_at, updated_at, last_login, permission_version) VALUES (33, 'admin.ops', 'admin.ops@system.local', '$2a$10$RsCl4r3u43sTIToUOsjKyOKYh.lmix.hWMCAhRgwDHVdPratagQRW', 'Operations Administrator', 'ADMIN', true, true, true, true, '2025-11-02 14:08:14.722667', '2025-11-02 20:27:34.51013', '2025-11-02 20:27:34.507889', 1);
-INSERT INTO auth.users (id, username, email, password, full_name, role, is_enabled, is_account_non_expired, is_account_non_locked, is_credentials_non_expired, created_at, updated_at, last_login, permission_version) VALUES (7, 'techadmin', 'techadmin@hotmail.com', '$2a$10$rARXHknkkq5552y3Ae.WyextQ5a3Z24c66ybQ4Zqg3AODFptTqWu2', 'SYS', 'ADMIN', true, true, true, true, '2025-10-31 09:27:00', '2025-11-05 09:41:15.999897', NULL, 5);
-INSERT INTO auth.users (id, username, email, password, full_name, role, is_enabled, is_account_non_expired, is_account_non_locked, is_credentials_non_expired, created_at, updated_at, last_login, permission_version) VALUES (32, 'admin.tech', 'admin.tech@system.local', '$2a$10$m2WyB7vO.wPiScT1Dm.gw.64oC2Eq4lOzEy798QR0ktIg4jdBgaT.', 'Tech Administrator', 'ADMIN', true, true, true, true, '2025-11-02 14:08:14.722667', '2025-11-02 20:44:20.804625', '2025-11-02 20:44:20.803854', 1);
-INSERT INTO auth.users (id, username, email, password, full_name, role, is_enabled, is_account_non_expired, is_account_non_locked, is_credentials_non_expired, created_at, updated_at, last_login, permission_version) VALUES (39, 'tech.bootstrap', 'tech.bootstrap@system.local', '$2a$10$qwblAK4hJlSWWQ8j7FIIueUEQCD/R1k6Lu7Nee5lFQxWFC9KIb2VG', 'Technical Bootstrap Administrator', 'ADMIN', true, true, true, true, '2025-11-03 05:03:38.142121', '2025-11-17 15:31:38.947113', '2025-11-17 15:31:38.944518', 1);
-INSERT INTO auth.users (id, username, email, password, full_name, role, is_enabled, is_account_non_expired, is_account_non_locked, is_credentials_non_expired, created_at, updated_at, last_login, permission_version) VALUES (1, 'admin', 'admin@example.com', '$2b$10$ZuNPpWnsWE/DVaHFzPGnHuh0ANT7.ZlT8YeSCnY3W8pInAOKk/vwu', 'System Administrator', 'ADMIN', false, true, true, true, '2025-10-09 15:23:20', '2025-11-05 10:01:51.008601', '2025-11-02 10:27:03.960444', 12);
-INSERT INTO auth.users (id, username, email, password, full_name, role, is_enabled, is_account_non_expired, is_account_non_locked, is_credentials_non_expired, created_at, updated_at, last_login, permission_version) VALUES (2, 'rahul', 'rahul@hotmail.com', '$2a$10$9KbZe.9oH.ybQl03KyOcKu9GqsVfib6l9J5aHnRmPIjVUrTlfbOGi', 'rahul c', 'ADMIN', false, true, true, true, '2025-10-29 06:23:05', '2025-11-04 15:54:54.744435', '2025-10-29 06:27:48', 8);
-INSERT INTO auth.users (id, username, email, password, full_name, role, is_enabled, is_account_non_expired, is_account_non_locked, is_credentials_non_expired, created_at, updated_at, last_login, permission_version) VALUES (5, 'Ram2', 'ram2@gmail.com', '$2a$10$1mYbHoutHH5O3XcsyyQrheoEIhfj7C552lfgRA7ybDp12ij00QdUe', 'Ram1', 'EMPLOYER', false, true, true, true, '2025-10-30 10:26:55', '2025-11-04 15:54:57.878647', NULL, 6);
-
-
---
--- Name: users_id_seq; Type: SEQUENCE SET; Schema: auth; Owner: -
---
-
-SELECT pg_catalog.setval('auth.users_id_seq', 42, true);
-
-
---
--- PostgreSQL database dump complete
---
 
 
 --

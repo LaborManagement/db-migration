@@ -176,3 +176,13 @@ CREATE INDEX idx_entity_audit_source_schema ON audit.entity_audit_event USING bt
 CREATE INDEX idx_entity_audit_source_table ON audit.entity_audit_event USING btree (source_table);
 
 CREATE INDEX idx_entity_audit_trace_id ON audit.entity_audit_event USING btree (trace_id);
+
+-- Grant schema usage for audit consumers
+GRANT USAGE ON SCHEMA audit TO app_auth, app_payment_flow, app_reconciliation;
+
+-- Grant SELECT/INSERT on audit tables/views to app users
+GRANT SELECT, INSERT ON audit.audit_event TO app_auth, app_payment_flow, app_reconciliation;
+GRANT SELECT, INSERT ON audit.entity_audit_event TO app_auth, app_payment_flow, app_reconciliation;
+GRANT SELECT ON audit.v_recent_events TO app_auth, app_payment_flow, app_reconciliation;
+GRANT SELECT ON audit.v_entity_changes_today TO app_auth, app_payment_flow, app_reconciliation;
+GRANT SELECT ON audit.v_activity_summary TO app_auth, app_payment_flow, app_reconciliation;
