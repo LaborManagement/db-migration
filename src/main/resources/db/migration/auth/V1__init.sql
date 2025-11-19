@@ -2,6 +2,8 @@
 -- Utility: Apply standard RLS policies for tables with custom board/employer column names
 -- p_board_col: name of the board column, or NULL if not present
 -- p_employer_col: name of the employer column, or NULL if not present
+CREATE SCHEMA IF NOT EXISTS auth;
+
 CREATE OR REPLACE FUNCTION auth.apply_std_rls_policy(
     p_schema text,
     p_table text,
@@ -856,3 +858,28 @@ GRANT SELECT ON audit.audit_event TO app_auth, app_payment_flow, app_reconciliat
 -- Cross-schema INSERT for audit logs
 GRANT INSERT ON audit.entity_audit_event TO app_auth, app_payment_flow, app_reconciliation;
 GRANT INSERT ON audit.audit_event TO app_auth, app_payment_flow, app_reconciliation;
+
+
+
+-- Grant EXECUTE on auth schema functions to app roles
+
+GRANT EXECUTE ON FUNCTION auth.set_user_context(text) TO app_payment_flow;
+GRANT EXECUTE ON FUNCTION auth.get_user_context() TO app_payment_flow;
+GRANT EXECUTE ON FUNCTION auth.can_read_row(character varying, character varying) TO app_payment_flow;
+GRANT EXECUTE ON FUNCTION auth.can_write_row(character varying, character varying) TO app_payment_flow;
+GRANT EXECUTE ON FUNCTION auth.validate_rls_policies(text) TO app_payment_flow;
+GRANT EXECUTE ON FUNCTION auth.user_accessible_tenants() TO app_payment_flow;
+GRANT EXECUTE ON FUNCTION auth.safe_policy_capability_link(text, text) TO app_payment_flow;
+GRANT EXECUTE ON FUNCTION auth.safe_endpoint_policy_link(text, text, text) TO app_payment_flow;
+
+GRANT EXECUTE ON FUNCTION auth.set_user_context(text) TO app_reconciliation;
+GRANT EXECUTE ON FUNCTION auth.get_user_context() TO app_reconciliation;
+GRANT EXECUTE ON FUNCTION auth.can_read_row(character varying, character varying) TO app_reconciliation;
+GRANT EXECUTE ON FUNCTION auth.can_write_row(character varying, character varying) TO app_reconciliation;
+GRANT EXECUTE ON FUNCTION auth.validate_rls_policies(text) TO app_reconciliation;
+GRANT EXECUTE ON FUNCTION auth.user_accessible_tenants() TO app_reconciliation;
+GRANT EXECUTE ON FUNCTION auth.safe_policy_capability_link(text, text) TO app_reconciliation;
+GRANT EXECUTE ON FUNCTION auth.safe_endpoint_policy_link(text, text, text) TO app_reconciliation;
+
+GRANT USAGE ON SCHEMA auth TO app_payment_flow;
+GRANT USAGE ON SCHEMA auth TO app_reconciliation;
