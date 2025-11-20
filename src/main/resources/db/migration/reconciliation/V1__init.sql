@@ -384,51 +384,51 @@ ALTER TABLE ONLY reconciliation.van_transaction
 
 ALTER TABLE reconciliation.bank_account ENABLE ROW LEVEL SECURITY;
 
-CREATE POLICY bank_account_std_read ON reconciliation.bank_account FOR SELECT USING (auth.can_read_row(board_id, employer_id));
+CREATE POLICY bank_account_std_read ON reconciliation.bank_account FOR SELECT USING (auth.can_read_row(board_id::bigint, employer_id::bigint));
 
-CREATE POLICY bank_account_std_write ON reconciliation.bank_account USING (auth.can_write_row(board_id, employer_id)) WITH CHECK (auth.can_write_row(board_id, employer_id));
+CREATE POLICY bank_account_std_write ON reconciliation.bank_account USING (auth.can_write_row(board_id::bigint, employer_id::bigint)) WITH CHECK (auth.can_write_row(board_id::bigint, employer_id::bigint));
 
 ALTER TABLE reconciliation.file_processing_queue ENABLE ROW LEVEL SECURITY;
 
-CREATE POLICY file_processing_queue_std_read ON reconciliation.file_processing_queue FOR SELECT USING (auth.can_read_row(board_id, employer_id));
+CREATE POLICY file_processing_queue_std_read ON reconciliation.file_processing_queue FOR SELECT USING (auth.can_read_row(board_id::bigint, employer_id::bigint));
 
-CREATE POLICY file_processing_queue_std_write ON reconciliation.file_processing_queue USING (auth.can_write_row(board_id, employer_id)) WITH CHECK (auth.can_write_row(board_id, employer_id));
+CREATE POLICY file_processing_queue_std_write ON reconciliation.file_processing_queue USING (auth.can_write_row(board_id::bigint, employer_id::bigint)) WITH CHECK (auth.can_write_row(board_id::bigint, employer_id::bigint));
 
 ALTER TABLE reconciliation.import_error ENABLE ROW LEVEL SECURITY;
 
-CREATE POLICY import_error_std_read ON reconciliation.import_error FOR SELECT USING (auth.can_read_row(board_id, employer_id));
+CREATE POLICY import_error_std_read ON reconciliation.import_error FOR SELECT USING (auth.can_read_row(board_id::bigint, employer_id::bigint));
 
-CREATE POLICY import_error_std_write ON reconciliation.import_error USING (auth.can_write_row(board_id, employer_id)) WITH CHECK (auth.can_write_row(board_id, employer_id));
+CREATE POLICY import_error_std_write ON reconciliation.import_error USING (auth.can_write_row(board_id::bigint, employer_id::bigint)) WITH CHECK (auth.can_write_row(board_id::bigint, employer_id::bigint));
 
 ALTER TABLE reconciliation.import_run ENABLE ROW LEVEL SECURITY;
 
-CREATE POLICY import_run_std_read ON reconciliation.import_run FOR SELECT USING (auth.can_read_row(board_id, employer_id));
+CREATE POLICY import_run_std_read ON reconciliation.import_run FOR SELECT USING (auth.can_read_row(board_id::bigint, employer_id::bigint));
 
-CREATE POLICY import_run_std_write ON reconciliation.import_run USING (auth.can_write_row(board_id, employer_id)) WITH CHECK (auth.can_write_row(board_id, employer_id));
+CREATE POLICY import_run_std_write ON reconciliation.import_run USING (auth.can_write_row(board_id::bigint, employer_id::bigint)) WITH CHECK (auth.can_write_row(board_id::bigint, employer_id::bigint));
 
 ALTER TABLE reconciliation.raw_statement_line ENABLE ROW LEVEL SECURITY;
 
-CREATE POLICY raw_statement_line_std_read ON reconciliation.raw_statement_line FOR SELECT USING (auth.can_read_row(board_id, employer_id));
+CREATE POLICY raw_statement_line_std_read ON reconciliation.raw_statement_line FOR SELECT USING (auth.can_read_row(board_id::bigint, employer_id::bigint));
 
-CREATE POLICY raw_statement_line_std_write ON reconciliation.raw_statement_line USING (auth.can_write_row(board_id, employer_id)) WITH CHECK (auth.can_write_row(board_id, employer_id));
+CREATE POLICY raw_statement_line_std_write ON reconciliation.raw_statement_line USING (auth.can_write_row(board_id::bigint, employer_id::bigint)) WITH CHECK (auth.can_write_row(board_id::bigint, employer_id::bigint));
 
 ALTER TABLE reconciliation.statement_balance ENABLE ROW LEVEL SECURITY;
 
-CREATE POLICY statement_balance_std_read ON reconciliation.statement_balance FOR SELECT USING (auth.can_read_row(board_id, employer_id));
+CREATE POLICY statement_balance_std_read ON reconciliation.statement_balance FOR SELECT USING (auth.can_read_row(board_id::bigint, employer_id::bigint));
 
-CREATE POLICY statement_balance_std_write ON reconciliation.statement_balance USING (auth.can_write_row(board_id, employer_id)) WITH CHECK (auth.can_write_row(board_id, employer_id));
+CREATE POLICY statement_balance_std_write ON reconciliation.statement_balance USING (auth.can_write_row(board_id::bigint, employer_id::bigint)) WITH CHECK (auth.can_write_row(board_id::bigint, employer_id::bigint));
 
 ALTER TABLE reconciliation.statement_file ENABLE ROW LEVEL SECURITY;
 
-CREATE POLICY statement_file_std_read ON reconciliation.statement_file FOR SELECT USING (auth.can_read_row(board_id, employer_id));
+CREATE POLICY statement_file_std_read ON reconciliation.statement_file FOR SELECT USING (auth.can_read_row(board_id::bigint, employer_id::bigint));
 
-CREATE POLICY statement_file_std_write ON reconciliation.statement_file USING (auth.can_write_row(board_id, employer_id)) WITH CHECK (auth.can_write_row(board_id, employer_id));
+CREATE POLICY statement_file_std_write ON reconciliation.statement_file USING (auth.can_write_row(board_id::bigint, employer_id::bigint)) WITH CHECK (auth.can_write_row(board_id::bigint, employer_id::bigint));
 
 ALTER TABLE reconciliation.statement_transaction ENABLE ROW LEVEL SECURITY;
 
-CREATE POLICY statement_transaction_std_read ON reconciliation.statement_transaction FOR SELECT USING (auth.can_read_row(board_id, employer_id));
+CREATE POLICY statement_transaction_std_read ON reconciliation.statement_transaction FOR SELECT USING (auth.can_read_row(board_id::bigint, employer_id::bigint));
 
-CREATE POLICY statement_transaction_std_write ON reconciliation.statement_transaction USING (auth.can_write_row(board_id, employer_id)) WITH CHECK (auth.can_write_row(board_id, employer_id));
+CREATE POLICY statement_transaction_std_write ON reconciliation.statement_transaction USING (auth.can_write_row(board_id::bigint, employer_id::bigint)) WITH CHECK (auth.can_write_row(board_id::bigint, employer_id::bigint));
 
 --
 -- PostgreSQL database dump complete
@@ -467,18 +467,7 @@ GRANT SELECT ON auth.user_tenant_acl TO app_reconciliation;
 
 -- Grant schema usage
 GRANT USAGE ON SCHEMA reconciliation TO app_reconciliation;
-GRANT USAGE ON SCHEMA audit TO app_reconciliation;
+-- GRANT USAGE ON SCHEMA audit TO app_reconciliation;
 
 -- Grant all table privileges in schema
 GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA reconciliation TO app_reconciliation;
-
--- Cross-schema SELECT grants
-GRANT SELECT ON audit.v_recent_events TO app_reconciliation;
-GRANT SELECT ON audit.v_entity_changes_today TO app_reconciliation;
-GRANT SELECT ON audit.v_activity_summary TO app_reconciliation;
-GRANT SELECT ON audit.entity_audit_event TO app_reconciliation;
-GRANT SELECT ON audit.audit_event TO app_reconciliation;
-
--- Cross-schema INSERT for audit logs
-GRANT INSERT ON audit.entity_audit_event TO app_reconciliation;
-GRANT INSERT ON audit.audit_event TO app_reconciliation;
