@@ -40,4 +40,9 @@ DROP TABLE IF EXISTS payment_flow.attendance_data;
 --create table to store attendance information mentioned in worker_uploaded_data
 
 CREATE TABLE payment_flow.attendance_data (worker_id BIGINT, toli_id BIGINT, employer_id BIGINT, month VARCHAR(50),
+
                                                                                                        day1 INT, day2 INT, day3 INT, day4 INT, day5 INT, day6 INT, day7 INT, day8 INT, day9 INT, day10 INT, day11 INT, day12 INT, day13 INT, day14 INT, day15 INT, day16 INT, day17 INT, day18 INT, day19 INT, day20 INT, day21 INT, day22 INT, day23 INT, day24 INT, day25 INT, day26 INT, day27 INT, day28 INT, day29 INT, day30 INT, day31 INT, total_days INT);
+
+
+GRANT INSERT, SELECT, UPDATE, DELETE ON payment_flow.worker_uploaded_data TO app_payment_flow;
+GRANT INSERT, SELECT, UPDATE, DELETE ON payment_flow.attendance_data TO app_payment_flow;

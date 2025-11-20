@@ -202,9 +202,9 @@ CREATE TABLE payment_flow.uploaded_files (
     failure_count integer DEFAULT 0 NOT NULL,
     status character varying(50) NOT NULL,
     file_reference_number character varying(100),
-    board_id character varying(64) DEFAULT NULL::character varying,
-    employer_id character varying(64) DEFAULT NULL::character varying,
-    toli_id character varying(64) DEFAULT NULL::character varying
+    board_id bigint DEFAULT NULL,
+    employer_id bigint DEFAULT NULL,
+    toli_id bigint DEFAULT NULL
 );
 
 ALTER TABLE ONLY payment_flow.uploaded_files FORCE ROW LEVEL SECURITY;
