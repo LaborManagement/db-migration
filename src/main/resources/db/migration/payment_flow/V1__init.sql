@@ -343,7 +343,10 @@ CREATE TABLE payment_flow.worker_uploaded_data (
     created_at timestamp without time zone NOT NULL,
     validated_at timestamp without time zone,
     processed_at timestamp without time zone,
-    receipt_number character varying(40)
+    receipt_number character varying(40),
+    board_id bigint DEFAULT NULL,
+    employer_id bigint DEFAULT NULL,
+    toli_id bigint DEFAULT NULL
 );
 
 ALTER TABLE ONLY payment_flow.worker_uploaded_data FORCE ROW LEVEL SECURITY;
