@@ -45,7 +45,9 @@ CREATE TABLE payment_flow.worker_uploaded_data (
     advance DECIMAL(10, 2),
     net_payable DECIMAL(10, 2),
     payment_type VARCHAR(100),
-    txn_ref VARCHAR(255)
+    txn_ref VARCHAR(255),
+    status VARCHAR(50),
+    rejection_reason VARCHAR(500)
 );
 
 
