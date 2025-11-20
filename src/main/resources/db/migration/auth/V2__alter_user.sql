@@ -21,3 +21,5 @@ ALTER TABLE auth.user_tenant_acl
 ALTER TABLE auth.user_tenant_acl
     DROP CONSTRAINT user_tenant_acl_user_id_board_id_employer_id_key,
     ADD CONSTRAINT user_tenant_acl_user_id_board_id_employer_id_toli_id_key UNIQUE (user_id, board_id, employer_id, toli_id);
+
+ALTER TABLE auth.user_tenant_acl ALTER COLUMN toli_id TYPE BIGINT USING toli_id::bigint;
