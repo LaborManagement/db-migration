@@ -57,3 +57,10 @@ Alter TABLE ONLY payment_flow.worker_payments FORCE ROW LEVEL SECURITY;
 SELECT auth.apply_std_rls_policy('payment_flow', 'worker_uploaded_data', true, true, 'board_id', 'employer_id', 'toli_id');
 SELECT auth.apply_std_rls_policy('payment_flow', 'attendance_data', true, true, 'board_id', 'employer_id', 'toli_id');
 SELECT auth.apply_std_rls_policy('payment_flow', 'worker_payments', true, true, 'board_id', 'employer_id', 'toli_id');
+
+GRANT USAGE, SELECT ON SEQUENCE payment_flow.worker_payment_receipts_id_seq TO app_payment_flow;
+GRANT USAGE, SELECT ON SEQUENCE payment_flow.worker_payments_id_seq TO app_payment_flow;
+
+
+ALTER TABLE payment_flow.worker_uploaded_data ADD COLUMN status_id INTEGER;
+ALTER TABLE payment_flow.worker_uploaded_data DROP COLUMN status;

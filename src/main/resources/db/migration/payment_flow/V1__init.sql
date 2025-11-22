@@ -423,6 +423,10 @@ ALTER TABLE ONLY payment_flow.worker_toli_relation
 ALTER TABLE ONLY payment_flow.toli_master
     ADD CONSTRAINT toli_master_pkey PRIMARY KEY (id);
 
+ALTER TABLE payment_flow.worker_toli_relation
+    ADD CONSTRAINT unique_wrkr_emp_brd_toli
+    UNIQUE (worker_id, employer_id, board_id, toli_id);
+
 ALTER TABLE ONLY payment_flow.toli_master
     ADD CONSTRAINT toli_master_registration_number UNIQUE (registration_number);
 
