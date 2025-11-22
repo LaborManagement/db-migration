@@ -2,7 +2,7 @@
 -- PostgreSQL database cluster dump
 --
 
-\restrict ocaMK5ozShHMs38ci1rjkPFBIc5sg08wGTfMB2c48e8ZUYKsmOgmCyPV2qRb4Og
+\restrict hqQkYnbZpprSewykUR4SbvVf9BzafXYEYrzr61jKG9WcydA5cs4aSJba1okAWoU
 
 SET default_transaction_read_only = off;
 
@@ -43,7 +43,7 @@ ALTER ROLE root WITH SUPERUSER INHERIT CREATEROLE CREATEDB LOGIN REPLICATION BYP
 
 
 
-\unrestrict ocaMK5ozShHMs38ci1rjkPFBIc5sg08wGTfMB2c48e8ZUYKsmOgmCyPV2qRb4Og
+\unrestrict hqQkYnbZpprSewykUR4SbvVf9BzafXYEYrzr61jKG9WcydA5cs4aSJba1okAWoU
 
 --
 -- Databases
@@ -59,7 +59,7 @@ ALTER ROLE root WITH SUPERUSER INHERIT CREATEROLE CREATEDB LOGIN REPLICATION BYP
 -- PostgreSQL database dump
 --
 
-\restrict uUhxrc90ZdqpWok28hJjzKpfloA82pIxGFJAL5hEV8C3soQu3pMJLgoOiofdoKH
+\restrict uN1Kd0yW67kMNwWySc8LKYm3oc6RaReU1n7frVBZDUjitlyx2VOQYFaFCa3bDFn
 
 -- Dumped from database version 18.0 (Debian 18.0-1.pgdg13+3)
 -- Dumped by pg_dump version 18.0 (Debian 18.0-1.pgdg13+3)
@@ -80,7 +80,7 @@ SET row_security = off;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict uUhxrc90ZdqpWok28hJjzKpfloA82pIxGFJAL5hEV8C3soQu3pMJLgoOiofdoKH
+\unrestrict uN1Kd0yW67kMNwWySc8LKYm3oc6RaReU1n7frVBZDUjitlyx2VOQYFaFCa3bDFn
 
 --
 -- Database "labormanagement" dump
@@ -90,7 +90,7 @@ SET row_security = off;
 -- PostgreSQL database dump
 --
 
-\restrict aleyZLeg7PVqB6J6dbKAxkkYNP4TFiWv4wuWwCbpF8eV4rbIHfC8QvP8xgO2EQz
+\restrict 1UadIg9MP8ZzAtENG3aeagrKOb9RMBWDuiWgrjmzEYWxHZsOrEExzQdGkPZSlDA
 
 -- Dumped from database version 18.0 (Debian 18.0-1.pgdg13+3)
 -- Dumped by pg_dump version 18.0 (Debian 18.0-1.pgdg13+3)
@@ -116,9 +116,9 @@ CREATE DATABASE labormanagement WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCA
 
 ALTER DATABASE labormanagement OWNER TO root;
 
-\unrestrict aleyZLeg7PVqB6J6dbKAxkkYNP4TFiWv4wuWwCbpF8eV4rbIHfC8QvP8xgO2EQz
+\unrestrict 1UadIg9MP8ZzAtENG3aeagrKOb9RMBWDuiWgrjmzEYWxHZsOrEExzQdGkPZSlDA
 \connect labormanagement
-\restrict aleyZLeg7PVqB6J6dbKAxkkYNP4TFiWv4wuWwCbpF8eV4rbIHfC8QvP8xgO2EQz
+\restrict 1UadIg9MP8ZzAtENG3aeagrKOb9RMBWDuiWgrjmzEYWxHZsOrEExzQdGkPZSlDA
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -8791,7 +8791,7 @@ ALTER DEFAULT PRIVILEGES FOR ROLE root IN SCHEMA reconciliation GRANT SELECT,INS
 -- PostgreSQL database dump complete
 --
 
-\unrestrict aleyZLeg7PVqB6J6dbKAxkkYNP4TFiWv4wuWwCbpF8eV4rbIHfC8QvP8xgO2EQz
+\unrestrict 1UadIg9MP8ZzAtENG3aeagrKOb9RMBWDuiWgrjmzEYWxHZsOrEExzQdGkPZSlDA
 
 --
 -- Database "lbe" dump
@@ -8801,7 +8801,7 @@ ALTER DEFAULT PRIVILEGES FOR ROLE root IN SCHEMA reconciliation GRANT SELECT,INS
 -- PostgreSQL database dump
 --
 
-\restrict wsqzCcfonaz0Uj1BenNZImq9BQWOCi9EBanyx9Uhu2AIRPC7nhSj5fZ37WSFQlP
+\restrict SamKShIcs1TGpzXA4usQOFuCNRIbxlCGOgzjMtlikDleBrcJ4bhQfyywgWy2crB
 
 -- Dumped from database version 18.0 (Debian 18.0-1.pgdg13+3)
 -- Dumped by pg_dump version 18.0 (Debian 18.0-1.pgdg13+3)
@@ -8827,9 +8827,9 @@ CREATE DATABASE lbe WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCALE_PROVIDER 
 
 ALTER DATABASE lbe OWNER TO root;
 
-\unrestrict wsqzCcfonaz0Uj1BenNZImq9BQWOCi9EBanyx9Uhu2AIRPC7nhSj5fZ37WSFQlP
+\unrestrict SamKShIcs1TGpzXA4usQOFuCNRIbxlCGOgzjMtlikDleBrcJ4bhQfyywgWy2crB
 \connect lbe
-\restrict wsqzCcfonaz0Uj1BenNZImq9BQWOCi9EBanyx9Uhu2AIRPC7nhSj5fZ37WSFQlP
+\restrict SamKShIcs1TGpzXA4usQOFuCNRIbxlCGOgzjMtlikDleBrcJ4bhQfyywgWy2crB
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -9324,12 +9324,32 @@ $$;
 ALTER PROCEDURE payment_flow.create_payments(IN file_id_input bigint, OUT receipt_number_out text) OWNER TO root;
 
 --
+-- Name: get_status_code(integer); Type: FUNCTION; Schema: payment_flow; Owner: root
+--
+
+CREATE FUNCTION payment_flow.get_status_code(p_id integer) RETURNS text
+    LANGUAGE plpgsql STABLE
+    AS $$
+DECLARE
+    v_status_code TEXT;
+BEGIN
+    SELECT status_code INTO v_status_code
+    FROM payment_flow.status_master
+    WHERE id = p_id;
+    RETURN v_status_code;
+END;
+$$;
+
+
+ALTER FUNCTION payment_flow.get_status_code(p_id integer) OWNER TO root;
+
+--
 -- Name: validate_uploaded_data(bigint); Type: PROCEDURE; Schema: payment_flow; Owner: root
 --
 
 CREATE PROCEDURE payment_flow.validate_uploaded_data(IN file_id_input bigint, OUT validation_result json)
     LANGUAGE plpgsql
-    AS $$
+    AS $_$
 DECLARE
     rec RECORD;
     total_records int := 0;
@@ -9341,28 +9361,45 @@ BEGIN
         SELECT * FROM payment_flow.worker_uploaded_data
         WHERE file_id = file_id_input
     LOOP
-        v_rejection_reason := NULL;
+        SELECT string_agg(reason, '; ') INTO v_rejection_reason
+        FROM (
+            SELECT CASE WHEN rec.worker_regno IS NULL THEN 'worker_regno is NULL' END AS reason
+            UNION ALL
+            SELECT CASE WHEN rec.amount IS NOT NULL AND rec.amount < 0 THEN 'amount is negative' END
+            UNION ALL
+            SELECT CASE
+                WHEN rec.worker_regno IS NOT NULL AND NOT EXISTS (
+                    SELECT 1 FROM payment_flow.worker_master wm WHERE wm.registration_number = rec.worker_regno)
+                THEN 'worker_regno not found in worker_master' END
+            UNION ALL
+            SELECT CASE WHEN rec.employer_reg_no IS NULL OR trim(rec.employer_reg_no) = '' THEN 'employer_reg_no is NULL or empty' END
+            UNION ALL
+            SELECT CASE
+                WHEN rec.employer_reg_no IS NOT NULL AND NOT EXISTS (
+                    SELECT 1 FROM payment_flow.employer_master em WHERE em.registration_number = rec.employer_reg_no)
+                THEN 'employer_reg_no not found in employer_master' END
+            UNION ALL
+            SELECT CASE WHEN rec.toli_reg_no IS NULL OR trim(rec.toli_reg_no) = '' THEN 'toli_reg_no is NULL or empty' END
+            UNION ALL
+            SELECT CASE
+                WHEN rec.toli_reg_no IS NOT NULL AND NOT EXISTS (
+                    SELECT 1 FROM payment_flow.toli_master tm WHERE tm.registration_number = rec.toli_reg_no)
+                THEN 'toli_reg_no not found in toli_master' END
+            UNION ALL
+            SELECT CASE WHEN rec.employee_name IS NULL OR trim(rec.employee_name) = '' THEN 'employee_name is NULL or empty' END
+            UNION ALL
+            SELECT CASE WHEN rec.year_month IS NOT NULL AND rec.year_month !~ '^\d{4}-\d{2}$' THEN 'year_month format invalid' END
+            UNION ALL
+            SELECT CASE WHEN rec.advance IS NOT NULL AND rec.advance < 0 THEN 'advance is negative' END
+            UNION ALL
+            SELECT CASE WHEN rec.net_payable IS NOT NULL AND rec.net_payable < 0 THEN 'net_payable is negative' END
+            UNION ALL
+            SELECT CASE WHEN rec.total_days IS NOT NULL AND (rec.total_days < 0 OR rec.total_days > 31) THEN 'total_days out of range' END
+            UNION ALL
+            SELECT CASE WHEN rec.payment_type IS NULL OR trim(rec.payment_type) = '' THEN 'payment_type is NULL or empty' END
+        ) AS reasons
+        WHERE reason IS NOT NULL;
 
-        -- Null worker_id
-        IF rec.worker_id IS NULL THEN
-            v_rejection_reason := 'worker_id is NULL';
-        END IF;
-
-        -- Negative amount
-        IF v_rejection_reason IS NULL AND rec.amount IS NOT NULL AND rec.amount < 0 THEN
-            v_rejection_reason := 'amount is negative';
-        END IF;
-
-        -- Missing worker in master
-        IF v_rejection_reason IS NULL AND rec.worker_id IS NOT NULL THEN
-            IF NOT EXISTS (
-                SELECT 1 FROM payment_flow.worker_master wm WHERE wm.id = rec.worker_id
-            ) THEN
-                v_rejection_reason := 'worker_id not found in worker_master';
-            END IF;
-        END IF;
-
-        -- Update and count
         IF v_rejection_reason IS NULL THEN
             UPDATE payment_flow.worker_uploaded_data
             SET status_id = '1', rejection_reason = NULL, updated_at = NOW()
@@ -9377,7 +9414,6 @@ BEGIN
         total_records := total_records + 1;
     END LOOP;
 
-    -- Compose JSON result
     validation_result := json_build_object(
         'file_id', file_id_input,
         'total_records', total_records,
@@ -9385,7 +9421,7 @@ BEGIN
         'invalid_count', invalid_count
     );
 END;
-$$;
+$_$;
 
 
 ALTER PROCEDURE payment_flow.validate_uploaded_data(IN file_id_input bigint, OUT validation_result json) OWNER TO root;
@@ -10854,11 +10890,10 @@ ALTER SEQUENCE payment_flow.worker_toli_relation_id_seq OWNED BY payment_flow.wo
 CREATE TABLE payment_flow.worker_uploaded_data (
     id bigint NOT NULL,
     file_id bigint,
-    worker_id bigint,
     employee_name character varying(255),
     employer_reg_no character varying(255),
     toli_reg_no character varying(255),
-    month character varying(50),
+    year_month character varying(50),
     day1 integer,
     day2 integer,
     day3 integer,
@@ -10903,7 +10938,8 @@ CREATE TABLE payment_flow.worker_uploaded_data (
     employer_id bigint,
     toli_id bigint,
     request_nmbr character varying(40),
-    status_id integer
+    status_id integer,
+    worker_regno character varying(50)
 );
 
 ALTER TABLE ONLY payment_flow.worker_uploaded_data FORCE ROW LEVEL SECURITY;
@@ -11492,6 +11528,10 @@ COPY audit.audit_event (id, trace_id, action, resource_type, resource_id, servic
 36	849b518f-9d2b-45f7-b534-409c36641299	GET_EMPLOYERS	EMPLOYER_MASTER	\N	payment-flow-service	payment_flow	tech.bootstrap	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	http://localhost:5173/	\N	\N	SUCCESS	{"result": {"body": [{"id": 1, "boardId": 1, "registrationNumber": "EMP-0001"}, {"id": 2, "boardId": 1, "registrationNumber": "EMP-0002"}, {"id": 6, "boardId": 1, "registrationNumber": "REG001"}], "headers": {}, "statusCode": "OK", "statusCodeValue": 200}}	276e5bd0448ff076a7e184920ad443bf7da2d0170fa7948a8d7ac846fc073378	4f7d747d4dcb205f6c0e00f5047edc94422bfd11f12f4a5529a4ecc43f77a4c6	d41bb638c4659900a83335222ebda755e2225c446e8844856477d4e207113379	2025-11-20 22:40:56.969296
 38	495439d3-bdc4-4c60-94f0-9eee6e15a953	GET_BOARDS	BOARD_MASTER	\N	payment-flow-service	payment_flow	tech.bootstrap	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	http://localhost:5173/	\N	\N	SUCCESS	{"result": {"body": [{"id": 1, "boardId": 1, "boardCode": "DEF001", "boardName": "Default Board"}], "headers": {}, "statusCode": "OK", "statusCodeValue": 200}}	276e5bd0448ff076a7e184920ad443bf7da2d0170fa7948a8d7ac846fc073378	77a4246bde5d9c714ca030bc59911532062f6377bd5def40a4dd8556421c6a19	b65b82bbe203bb9cc042656401afe5016e23149e6df4b547dc87b5e8b8156492	2025-11-20 22:40:56.969222
 37	357336b2-b2e1-406c-8b62-b9b094a6d83d	GET_TOLI	TOLI_MASTER	\N	payment-flow-service	payment_flow	tech.bootstrap	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	http://localhost:5173/	\N	\N	SUCCESS	{"result": {"body": [{"id": 1, "boardId": 1, "employerId": "1", "registrationNumber": "TOLI-001"}, {"id": 2, "boardId": 1, "employerId": "1", "registrationNumber": "TOLI-002"}], "headers": {}, "statusCode": "OK", "statusCodeValue": 200}}	276e5bd0448ff076a7e184920ad443bf7da2d0170fa7948a8d7ac846fc073378	a48139f8214d36504c5ae10f311d63114cb9116cf2b0ab6dccd36e6b6a7b4293	517e1fdca776baefdab9af65b62cf52cfd7f1a2873b522aadb91f4d8e257eb8b	2025-11-20 22:40:56.969752
+40	b2c80837-1bf5-4ccf-a527-a277b1efa057	GET_TOLI	TOLI_MASTER	\N	payment-flow-service	payment_flow	tech.bootstrap	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	http://localhost:5173/	\N	\N	SUCCESS	{"result": {"body": [{"id": 1, "boardId": 1, "employerId": "1", "registrationNumber": "TOLI-001"}, {"id": 2, "boardId": 1, "employerId": "1", "registrationNumber": "TOLI-002"}], "headers": {}, "statusCode": "OK", "statusCodeValue": 200}}	a48139f8214d36504c5ae10f311d63114cb9116cf2b0ab6dccd36e6b6a7b4293	424e0125e3ea715fb097a6cee07a19d239e095da74bf990c51cc1f511b2af276	6537480decbe8f081417090c5fa0628c83ea613e32b3c3eac431f4bf5c916e2f	2025-11-22 15:44:41.892754
+39	6083e493-89bb-4141-af17-c577da309978	GET_EMPLOYERS	EMPLOYER_MASTER	\N	payment-flow-service	payment_flow	tech.bootstrap	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	http://localhost:5173/	\N	\N	SUCCESS	{"result": {"body": [{"id": 1, "boardId": 1, "registrationNumber": "EMP-0001"}, {"id": 2, "boardId": 1, "registrationNumber": "EMP-0002"}, {"id": 6, "boardId": 1, "registrationNumber": "REG001"}], "headers": {}, "statusCode": "OK", "statusCodeValue": 200}}	a48139f8214d36504c5ae10f311d63114cb9116cf2b0ab6dccd36e6b6a7b4293	190550f4052294bf0dfa1250891f1c8ef7eec2b2d2152ac7c87cb9907196b45d	c2328e02d8c55ee71c8064bb6dcddd19b0dc9e2f246e271dae3c397a4ed841a6	2025-11-22 15:44:41.892977
+41	026e264d-4ad4-4c0f-9a6d-06cb529102ba	GET_BOARDS	BOARD_MASTER	\N	payment-flow-service	payment_flow	tech.bootstrap	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	http://localhost:5173/	\N	\N	SUCCESS	{"result": {"body": [{"id": 1, "boardId": 1, "boardCode": "DEF001", "boardName": "Default Board"}], "headers": {}, "statusCode": "OK", "statusCodeValue": 200}}	a48139f8214d36504c5ae10f311d63114cb9116cf2b0ab6dccd36e6b6a7b4293	2b6dc337f9d086ab84f9de5f905ac99e411a055c3485ed2196fbe0983f65fa26	c9e04fa611522692e45d5b31ea277c2152a310cf27e95e2bb3fa4acbbb48948c	2025-11-22 15:44:41.892945
+42	45f3fe5f-d1f4-4bf3-8d3a-cb277d0d94e2	FETCH_SECURE_PAGINATED_UPLOADED_DATA	WORKER_UPLOADED_DATA	\N	payment-flow-service	payment_flow	WORKER	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	http://localhost:8081/swagger-ui/index.html	\N	\N	SUCCESS	{"result": {"body": {"last": true, "first": true, "content": [{"id": 85, "day1": 1, "day2": 1, "day3": 1, "day4": 1, "day5": 1, "day6": 1, "day7": 1, "day8": 1, "day9": 1, "day10": 1, "day11": 1, "day12": 1, "day13": 1, "day14": 1, "day15": 1, "day16": 1, "day17": 1, "day18": 0, "day19": 0, "day20": 0, "day21": 0, "day22": 0, "day23": 0, "day24": 0, "day25": 0, "day26": 0, "day27": 0, "day28": 0, "day29": 0, "day30": 0, "day31": 0, "month": "2025-01", "amount": 15.00, "fileId": 48, "toliId": 1, "txnRef": "CASH", "advance": 1500.00, "boardId": 1, "statusId": 1, "createdAt": "2025-11-22T22:40:05.421726", "toliRegNo": "TOLI-002", "totalDays": 0, "updatedAt": "2025-11-22T22:40:05.44474", "employerId": 2, "netPayable": 0.00, "paymentType": "1500.00", "workerRegno": "WRK-0002", "employeeName": "Bob Builder", "employerRegNo": "EMP-0002", "rejectionReason": null}, {"id": 84, "day1": 1, "day2": 1, "day3": 1, "day4": 1, "day5": 1, "day6": 1, "day7": 1, "day8": 1, "day9": 1, "day10": 1, "day11": 1, "day12": 1, "day13": 1, "day14": 1, "day15": 1, "day16": 1, "day17": 1, "day18": 1, "day19": 1, "day20": 1, "day21": 1, "day22": 1, "day23": 1, "day24": 0, "day25": 0, "day26": 0, "day27": 0, "day28": 0, "day29": 0, "day30": 0, "day31": 0, "month": "2025-01", "amount": 22.00, "fileId": 48, "toliId": 1, "txnRef": "BANK_TRANSFER", "advance": 2200.00, "boardId": 1, "statusId": 1, "createdAt": "2025-11-22T22:40:05.421563", "toliRegNo": "TOLI-001", "totalDays": 0, "updatedAt": "2025-11-22T22:40:05.44474", "employerId": 2, "netPayable": 200.00, "paymentType": "2000.00", "workerRegno": "WRK-0001", "employeeName": "Alice Worker", "employerRegNo": "EMP-0001", "rejectionReason": null}], "hasNext": false, "pageSize": 20, "sortInfo": {"sortBy": "id", "sortDir": "desc"}, "dateRange": {"endDate": "2025-12-31", "startDate": "2025-01-01"}, "totalPages": 1, "currentPage": 0, "hasPrevious": false, "nextPageToken": null, "totalElements": 2, "previousPageToken": null}, "headers": {"ETag": ["\\"e5c7bf02f292497d9372c8e7bec565fe\\""]}, "statusCode": "OK", "statusCodeValue": 200}}	190550f4052294bf0dfa1250891f1c8ef7eec2b2d2152ac7c87cb9907196b45d	93ca0f29c42d43953a0bdf2d2c9c319a70e7fd8c19567c101cfbec227accd367	4b6aa174cbf4913577330ab1b636ad211a7f99d6fe274bf3b34d625292e431b5	2025-11-22 22:40:29.748194
 \.
 
 
@@ -11543,6 +11583,8 @@ COPY audit.entity_audit_event (id, audit_number, record_number, entity_type, ent
 44	870f1a74-7735-4fab-be29-3f868e54d7f5	20251121000002	WORKER_PAYMENT	2	CREATE	payment-flow-service	payment_flow	worker_payments	WORKER	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	\N	{"id": 2, "month": "1", "amount": 15, "toliId": 1, "txnRef": "CASH", "advance": 1500.00, "boardId": 1, "workerId": 1002, "totalDays": 0, "employerId": 1, "netPayable": 0.00, "paymentType": "1500.00", "receiptNmbr": "RCP-20251121-222903-074"}	\N	{"referer": "http://localhost:8081/swagger-ui/index.html", "tableName": "worker_payments", "entityClass": "com.example.paymentflow.worker.entity.WorkerPayment", "requestedWith": null}	16c5c1df-e1de-49dd-b00c-a9fa313798f5	0                                                               	293ac1774fce9e4365514651279179ee68c9528209d47b9cc6ad5d37edb79c9a	2025-11-21 22:29:03.05365	2025-11-21 22:29:03.032867
 45	053bc023-8a4b-49cf-9279-25ee31b084b7	20251120000001	USER	39	UPDATE	auth-service	auth	users	tech.bootstrap	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	{"id": 39, "role": "ADMIN", "email": "tech.bootstrap@system.local", "roles": [1, 2, 3], "enabled": true, "fullName": "Technical Bootstrap Administrator", "username": "tech.bootstrap", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-20T20:36:33.584678", "updatedAt": "2025-11-20T20:36:33.585977", "passwordHash": "$2a$10$qwblAK4hJlSWWQ8j7FIIueUEQCD/R1k6Lu7Nee5lFQxWFC9KIb2VG", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}	{"id": 39, "role": "ADMIN", "email": "tech.bootstrap@system.local", "roles": [1, 2, 3], "enabled": true, "fullName": "Technical Bootstrap Administrator", "username": "tech.bootstrap", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-21T22:50:10.956516", "updatedAt": "2025-11-21T22:50:10.969654", "passwordHash": "$2a$10$qwblAK4hJlSWWQ8j7FIIueUEQCD/R1k6Lu7Nee5lFQxWFC9KIb2VG", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}	\N	{"referer": "http://localhost:8080/swagger-ui/index.html", "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}	8058cdc0-c539-4f66-b75e-5b1aad7b9420	b24d184d5c8cefad6b83631b6315c4d586f0b12f3adafb891677269fdc53fa42	34cdb7f8ffacf6b162504c9d2ed08916ae9ed974c85b899d51e2710e23accee2	2025-11-21 22:50:10.991214	2025-11-21 22:50:10.853476
 46	0c16f9ca-ef72-4733-984c-a64c1e256220	20251120000002	USER	3	UPDATE	auth-service	auth	users	WORKER	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	{"id": 3, "role": "USER", "email": "ram@gmail.com", "roles": [5, 4], "enabled": true, "fullName": "Ram", "username": "WORKER", "createdAt": "2025-10-30T08:23:17", "lastLogin": "2025-11-21T22:05:15.352588", "updatedAt": "2025-11-21T22:05:15.365774", "passwordHash": "$2a$10$u1NYF1njJbIm8Dy3uOlCC.m1bJ3AdalTq7/Q7uGnnBGRepc8tjFI6", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 5, "credentialsNonExpired": true}	{"id": 3, "role": "USER", "email": "ram@gmail.com", "roles": [5, 4], "enabled": true, "fullName": "Ram", "username": "WORKER", "createdAt": "2025-10-30T08:23:17", "lastLogin": "2025-11-22T08:14:53.710501", "updatedAt": "2025-11-22T08:14:53.724689", "passwordHash": "$2a$10$u1NYF1njJbIm8Dy3uOlCC.m1bJ3AdalTq7/Q7uGnnBGRepc8tjFI6", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 5, "credentialsNonExpired": true}	\N	{"referer": "http://localhost:8080/swagger-ui/index.html", "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}	7b9e3288-a02b-4506-a50d-3ef7bbe72797	a88e6eef49e2db3fa0184daf939d2a72220ce118cf41a7bdc3b8700312d2d7d4	31c93fe0d10b9bcf3a672b0eec8a9606b836bd2af4cb9669be5169fcce8aed93	2025-11-22 08:14:53.75175	2025-11-22 08:14:53.600179
+47	d84968fe-dfd6-492c-ac7c-38d4eb7d7e85	20251120000001	USER	39	UPDATE	auth-service	auth	users	tech.bootstrap	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	{"id": 39, "role": "ADMIN", "email": "tech.bootstrap@system.local", "roles": [1, 2, 3], "enabled": true, "fullName": "Technical Bootstrap Administrator", "username": "tech.bootstrap", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-21T22:50:10.956516", "updatedAt": "2025-11-21T22:50:10.969654", "passwordHash": "$2a$10$qwblAK4hJlSWWQ8j7FIIueUEQCD/R1k6Lu7Nee5lFQxWFC9KIb2VG", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}	{"id": 39, "role": "ADMIN", "email": "tech.bootstrap@system.local", "roles": [1, 2, 3], "enabled": true, "fullName": "Technical Bootstrap Administrator", "username": "tech.bootstrap", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-22T15:41:07.195163", "updatedAt": "2025-11-22T15:41:07.198161", "passwordHash": "$2a$10$qwblAK4hJlSWWQ8j7FIIueUEQCD/R1k6Lu7Nee5lFQxWFC9KIb2VG", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}	\N	{"referer": "http://localhost:5173/", "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}	0b1f74c4-a715-426a-b69a-ba87c808a735	34cdb7f8ffacf6b162504c9d2ed08916ae9ed974c85b899d51e2710e23accee2	c4cac549659a3e026353c63a6ad750b6a295a6b7b1763019f80d597e57d23b6d	2025-11-22 15:41:07.221381	2025-11-22 15:41:07.128108
+48	5fc47728-b73c-40ae-b889-4590d0e6857b	20251120000002	USER	3	UPDATE	auth-service	auth	users	WORKER	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	{"id": 3, "role": "USER", "email": "ram@gmail.com", "roles": [5, 4], "enabled": true, "fullName": "Ram", "username": "WORKER", "createdAt": "2025-10-30T08:23:17", "lastLogin": "2025-11-22T08:14:53.710501", "updatedAt": "2025-11-22T08:14:53.724689", "passwordHash": "$2a$10$u1NYF1njJbIm8Dy3uOlCC.m1bJ3AdalTq7/Q7uGnnBGRepc8tjFI6", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 5, "credentialsNonExpired": true}	{"id": 3, "role": "USER", "email": "ram@gmail.com", "roles": [5, 4], "enabled": true, "fullName": "Ram", "username": "WORKER", "createdAt": "2025-10-30T08:23:17", "lastLogin": "2025-11-22T22:18:10.507869", "updatedAt": "2025-11-22T22:18:10.521487", "passwordHash": "$2a$10$u1NYF1njJbIm8Dy3uOlCC.m1bJ3AdalTq7/Q7uGnnBGRepc8tjFI6", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 5, "credentialsNonExpired": true}	\N	{"referer": "http://localhost:8080/swagger-ui/index.html", "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}	4056c00e-a9c3-4258-8681-bc32a866d1af	31c93fe0d10b9bcf3a672b0eec8a9606b836bd2af4cb9669be5169fcce8aed93	3b5fb647871178dbe3ae81fae64511a9e67c86730a922cd21d6a64c74abe0599	2025-11-22 22:18:10.549687	2025-11-22 22:18:10.404561
 \.
 
 
@@ -11986,7 +12028,7 @@ COPY auth.user_tenant_acl (id, user_id, board_id, employer_id, can_read, can_wri
 21	39	1	\N	t	t	2025-11-15 16:38:23.001689+00	2025-11-15 16:38:23.001689+00	1
 22	39	1	\N	t	t	2025-11-15 16:51:52.880631+00	2025-11-15 16:51:52.880631+00	1
 7	1	1	\N	t	t	2025-11-01 16:44:02.765559+00	2025-11-01 16:44:02.765559+00	1
-2	3	1	1	t	t	2025-11-01 16:44:02.765559+00	2025-11-01 16:44:02.765559+00	1
+2	3	1	2	t	t	2025-11-01 16:44:02.765559+00	2025-11-01 16:44:02.765559+00	1
 \.
 
 
@@ -12019,8 +12061,8 @@ COPY auth.users (id, username, email, password, full_name, role, is_enabled, is_
 1	admin	admin@example.com	$2b$10$ZuNPpWnsWE/DVaHFzPGnHuh0ANT7.ZlT8YeSCnY3W8pInAOKk/vwu	System Administrator	ADMIN	f	t	t	t	2025-10-09 15:23:20	2025-11-05 10:01:51.008601	2025-11-02 10:27:03.960444	12	ADMIN
 2	rahul	rahul@hotmail.com	$2a$10$9KbZe.9oH.ybQl03KyOcKu9GqsVfib6l9J5aHnRmPIjVUrTlfbOGi	rahul c	ADMIN	f	t	t	t	2025-10-29 06:23:05	2025-11-04 15:54:54.744435	2025-10-29 06:27:48	8	ADMIN
 5	Ram2	ram2@gmail.com	$2a$10$1mYbHoutHH5O3XcsyyQrheoEIhfj7C552lfgRA7ybDp12ij00QdUe	Ram1	EMPLOYER	f	t	t	t	2025-10-30 10:26:55	2025-11-04 15:54:57.878647	\N	6	ADMIN
-39	tech.bootstrap	tech.bootstrap@system.local	$2a$10$qwblAK4hJlSWWQ8j7FIIueUEQCD/R1k6Lu7Nee5lFQxWFC9KIb2VG	Technical Bootstrap Administrator	ADMIN	t	t	t	t	2025-11-03 05:03:38.142121	2025-11-21 22:50:10.969654	2025-11-21 22:50:10.956516	1	ADMIN
-3	WORKER	ram@gmail.com	$2a$10$u1NYF1njJbIm8Dy3uOlCC.m1bJ3AdalTq7/Q7uGnnBGRepc8tjFI6	Ram	USER	t	t	t	t	2025-10-30 08:23:17	2025-11-22 08:14:53.724689	2025-11-22 08:14:53.710501	5	ADMIN
+39	tech.bootstrap	tech.bootstrap@system.local	$2a$10$qwblAK4hJlSWWQ8j7FIIueUEQCD/R1k6Lu7Nee5lFQxWFC9KIb2VG	Technical Bootstrap Administrator	ADMIN	t	t	t	t	2025-11-03 05:03:38.142121	2025-11-22 15:41:07.198161	2025-11-22 15:41:07.195163	1	ADMIN
+3	WORKER	ram@gmail.com	$2a$10$u1NYF1njJbIm8Dy3uOlCC.m1bJ3AdalTq7/Q7uGnnBGRepc8tjFI6	Ram	USER	t	t	t	t	2025-10-30 08:23:17	2025-11-22 22:18:10.521487	2025-11-22 22:18:10.507869	5	ADMIN
 \.
 
 
@@ -12129,7 +12171,8 @@ COPY payment_flow.toli_master (id, registration_number, employer_name_marathi, a
 --
 
 COPY payment_flow.uploaded_files (id, filename, stored_path, file_hash, file_type, created_at, uploaded_by, total_records, success_count, failure_count, status, file_reference_number, board_id, employer_id, toli_id) FROM stdin;
-40	worker_uploaded_data_entity_format_sample.csv	/Users/rahulcharvekar/Documents/Repos/LBE/PaymentReconciliation/payment-flow-service/API/workerpayments/f7ea7fb2-cdaf-4dbc-b610-e463729bc093_worker_uploaded_data_entity_format_sample.csv	917be25cca597163656f3957f638f2639d3cd66fefac9600043fbe4fbc135b76	workerpayments	2025-11-22 14:39:57.5582	\N	2	2	0	REQUEST_GENERATED	REQ-20251122-143957-560	1	1	1
+48	worker_uploaded_data_entity_format_sample.csv	/Users/rahulcharvekar/Documents/Repos/LBE/PaymentReconciliation/payment-flow-service/API/workerpayments/da0f3057-e074-49eb-9c49-94f78b984b64_worker_uploaded_data_entity_format_sample.csv	2f2096c9e297595adf47cb1ccbfba91ca1dfe6f704f508a90a1c419e75c80ca6	workerpayments	2025-11-22 22:40:05.402031	\N	2	2	0	VALIDATED	REQ-20251122-224005-403	1	2	1
+49	worker_uploaded_data_entity_format_sample copy.csv	/Users/rahulcharvekar/Documents/Repos/LBE/PaymentReconciliation/payment-flow-service/API/workerpayments/49adbf95-a47f-43a6-b92f-d0a9ab5dec89_worker_uploaded_data_entity_format_sample copy.csv	b94911214a75cecfe3f78ad09334a0fbf050e5c9c23eeec3d646a4ccbb646856	workerpayments	2025-11-22 22:43:32.454889	\N	2	1	1	VALIDATION_FAILED	REQ-20251122-224332-456	1	2	1
 \.
 
 
@@ -12148,7 +12191,6 @@ COPY payment_flow.worker_master (id, worker_name_marathi, worker_name_english, w
 --
 
 COPY payment_flow.worker_payment_receipts (id, receipt_number, employer_id, toli_id, board_id, created_at, total_records, total_amount, status_id) FROM stdin;
-10	WR-40-1763802640.792907	1	1	1	2025-11-22 14:40:40.792907	2	37.00	1
 \.
 
 
@@ -12157,8 +12199,6 @@ COPY payment_flow.worker_payment_receipts (id, receipt_number, employer_id, toli
 --
 
 COPY payment_flow.worker_payments (id, worker_id, toli_id, employer_id, board_id, month, total_days, basic_wages, advance, gross_wages, payment_type, txn_ref, receipt_nmbr, levy, net_wages_payable, status_id) FROM stdin;
-9	4	1	1	1	1	0	22.00	2200.00	28.60	2000.00	BANK_TRANSFER	WR-40-1763802640.792907	6.60	-2171.40	\N
-10	5	1	1	1	1	0	15.00	1500.00	19.50	1500.00	CASH	WR-40-1763802640.792907	4.50	-1480.50	\N
 \.
 
 
@@ -12174,9 +12214,11 @@ COPY payment_flow.worker_toli_relation (id, worker_id, toli_id, board_id, employ
 -- Data for Name: worker_uploaded_data; Type: TABLE DATA; Schema: payment_flow; Owner: admin_lbe
 --
 
-COPY payment_flow.worker_uploaded_data (id, file_id, worker_id, employee_name, employer_reg_no, toli_reg_no, month, day1, day2, day3, day4, day5, day6, day7, day8, day9, day10, day11, day12, day13, day14, day15, day16, day17, day18, day19, day20, day21, day22, day23, day24, day25, day26, day27, day28, day29, day30, day31, total_days, amount, advance, net_payable, payment_type, txn_ref, rejection_reason, created_at, updated_at, board_id, employer_id, toli_id, request_nmbr, status_id) FROM stdin;
-68	40	4	Alice Worker	1	1	1	\N	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	22.00	2200.00	200.00	2000.00	BANK_TRANSFER	\N	2025-11-22 14:39:57.576379	2025-11-22 14:39:57.593646	1	1	1	WR-40-1763802640.792907	1
-69	40	5	Bob Builder	1	1	1	\N	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	15.00	1500.00	0.00	1500.00	CASH	\N	2025-11-22 14:39:57.576597	2025-11-22 14:39:57.593646	1	1	1	WR-40-1763802640.792907	1
+COPY payment_flow.worker_uploaded_data (id, file_id, employee_name, employer_reg_no, toli_reg_no, year_month, day1, day2, day3, day4, day5, day6, day7, day8, day9, day10, day11, day12, day13, day14, day15, day16, day17, day18, day19, day20, day21, day22, day23, day24, day25, day26, day27, day28, day29, day30, day31, total_days, amount, advance, net_payable, payment_type, txn_ref, rejection_reason, created_at, updated_at, board_id, employer_id, toli_id, request_nmbr, status_id, worker_regno) FROM stdin;
+86	49	Alice Worker	EMP-0001	TOLI-001	2025-01	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	22.00	2200.00	200.00	2000.00	BANK_TRANSFER	\N	2025-11-22 22:43:32.458552	2025-11-22 22:43:32.465335	1	2	1	\N	1	WRK-0001
+87	49	Bob Builder	EMP-0002	TOLI-002	2025-01	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	15.00	1500.00	0.00	1500.00	CASH	worker_regno not found in worker_master	2025-11-22 22:43:32.458621	2025-11-22 22:43:32.465335	1	2	1	\N	2	WRK-0004
+84	48	Alice Worker	EMP-0001	TOLI-001	2025-01	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	22.00	2200.00	200.00	2000.00	BANK_TRANSFER	\N	2025-11-22 22:40:05.421563	2025-11-22 22:40:05.44474	1	2	1	\N	1	WRK-0001
+85	48	Bob Builder	EMP-0002	TOLI-002	2025-01	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	15.00	1500.00	0.00	1500.00	CASH	\N	2025-11-22 22:40:05.421726	2025-11-22 22:40:05.44474	1	2	1	\N	1	WRK-0002
 \.
 
 
@@ -12318,14 +12360,14 @@ COPY reconciliation.van_transaction (id, import_run_id, main_account_number, vir
 -- Name: audit_event_id_seq; Type: SEQUENCE SET; Schema: audit; Owner: admin_lbe
 --
 
-SELECT pg_catalog.setval('audit.audit_event_id_seq', 38, true);
+SELECT pg_catalog.setval('audit.audit_event_id_seq', 42, true);
 
 
 --
 -- Name: entity_audit_event_id_seq; Type: SEQUENCE SET; Schema: audit; Owner: admin_lbe
 --
 
-SELECT pg_catalog.setval('audit.entity_audit_event_id_seq', 46, true);
+SELECT pg_catalog.setval('audit.entity_audit_event_id_seq', 48, true);
 
 
 --
@@ -12493,7 +12535,7 @@ SELECT pg_catalog.setval('payment_flow.toli_master_id_seq', 3, true);
 -- Name: uploaded_files_id_seq; Type: SEQUENCE SET; Schema: payment_flow; Owner: admin_lbe
 --
 
-SELECT pg_catalog.setval('payment_flow.uploaded_files_id_seq', 40, true);
+SELECT pg_catalog.setval('payment_flow.uploaded_files_id_seq', 49, true);
 
 
 --
@@ -12507,14 +12549,14 @@ SELECT pg_catalog.setval('payment_flow.worker_master_id_seq', 6, true);
 -- Name: worker_payment_receipts_id_seq; Type: SEQUENCE SET; Schema: payment_flow; Owner: admin_lbe
 --
 
-SELECT pg_catalog.setval('payment_flow.worker_payment_receipts_id_seq', 10, true);
+SELECT pg_catalog.setval('payment_flow.worker_payment_receipts_id_seq', 11, true);
 
 
 --
 -- Name: worker_payments_id_seq; Type: SEQUENCE SET; Schema: payment_flow; Owner: admin_lbe
 --
 
-SELECT pg_catalog.setval('payment_flow.worker_payments_id_seq', 10, true);
+SELECT pg_catalog.setval('payment_flow.worker_payments_id_seq', 12, true);
 
 
 --
@@ -12528,7 +12570,7 @@ SELECT pg_catalog.setval('payment_flow.worker_toli_relation_id_seq', 1, false);
 -- Name: worker_uploaded_data_id_seq; Type: SEQUENCE SET; Schema: payment_flow; Owner: admin_lbe
 --
 
-SELECT pg_catalog.setval('payment_flow.worker_uploaded_data_id_seq', 69, true);
+SELECT pg_catalog.setval('payment_flow.worker_uploaded_data_id_seq', 87, true);
 
 
 --
@@ -14301,6 +14343,13 @@ GRANT ALL ON PROCEDURE payment_flow.create_payments(IN file_id_input bigint, OUT
 
 
 --
+-- Name: FUNCTION get_status_code(p_id integer); Type: ACL; Schema: payment_flow; Owner: root
+--
+
+GRANT ALL ON FUNCTION payment_flow.get_status_code(p_id integer) TO app_payment_flow;
+
+
+--
 -- Name: PROCEDURE validate_uploaded_data(IN file_id_input bigint, OUT validation_result json); Type: ACL; Schema: payment_flow; Owner: root
 --
 
@@ -14680,7 +14729,7 @@ GRANT SELECT,INSERT,DELETE,UPDATE ON TABLE reconciliation.van_transaction TO app
 -- PostgreSQL database dump complete
 --
 
-\unrestrict wsqzCcfonaz0Uj1BenNZImq9BQWOCi9EBanyx9Uhu2AIRPC7nhSj5fZ37WSFQlP
+\unrestrict SamKShIcs1TGpzXA4usQOFuCNRIbxlCGOgzjMtlikDleBrcJ4bhQfyywgWy2crB
 
 --
 -- Database "postgres" dump
@@ -14692,7 +14741,7 @@ GRANT SELECT,INSERT,DELETE,UPDATE ON TABLE reconciliation.van_transaction TO app
 -- PostgreSQL database dump
 --
 
-\restrict vuiF2s6UDDIryfgFRyWL5Q4B2ln5Mt3dchetxnY3d3FFyjCckxyBE8wdkVmPyV3
+\restrict mxREM7vMxRjSeNOdmbPigKyppSVgh1fsTFYG7XLgMtdBHkza4b7tSMXTUnhicKE
 
 -- Dumped from database version 18.0 (Debian 18.0-1.pgdg13+3)
 -- Dumped by pg_dump version 18.0 (Debian 18.0-1.pgdg13+3)
@@ -14713,7 +14762,7 @@ SET row_security = off;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict vuiF2s6UDDIryfgFRyWL5Q4B2ln5Mt3dchetxnY3d3FFyjCckxyBE8wdkVmPyV3
+\unrestrict mxREM7vMxRjSeNOdmbPigKyppSVgh1fsTFYG7XLgMtdBHkza4b7tSMXTUnhicKE
 
 --
 -- PostgreSQL database cluster dump complete

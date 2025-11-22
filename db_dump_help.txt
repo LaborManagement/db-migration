@@ -1,0 +1,54 @@
+--export full dump 
+docker exec -t labormanagement \
+  pg_dumpall -U root -f /tmp/lbe_full_cluster.sql
+
+--export full grants
+docker exec -t labormanagement \
+  pg_dumpall --globals-only -U root -f /tmp/global.sql
+
+--copy form docker to local
+docker cp labormanagement:/tmp/lbe_full_cluster.sql lbe_full_cluster.sql
+docker cp labormanagement:/tmp/global.sql global.sql
+
+
+--Table and View
+SELECT 
+  'GRANT ' || privilege_type || ' ON ' || table_schema || '.' || table_name || ' TO ' || grantee || ';'
+FROM information_schema.table_privileges
+WHERE grantee IN ('app_auth', 'app_payment_flow', 'app_reconciliation', 'data_ops')
+  AND table_catalog = current_database();
+
+
+--Sequences
+SELECT 
+  'GRANT ' || privilege_type || ' ON SEQUENCE ' || sequence_schema || '.' || sequence_name || ' TO ' || grantee || ';'
+FROM information_schema.sequence_privileges
+WHERE grantee IN ('app_auth', 'app_payment_flow', 'app_reconciliation', 'data_ops')
+  AND sequence_catalog = current_database();
+
+
+--Schema usage
+SELECT 
+  'GRANT USAGE ON SCHEMA ' || nspname || ' TO ' || r.rolname || ';'
+FROM pg_namespace n
+JOIN pg_roles r ON has_schema_privilege(r.rolname, n.oid, 'USAGE')
+WHERE r.rolname IN ('app_auth', 'app_payment_flow', 'app_reconciliation', 'data_ops');
+
+--Function/procedures
+SELECT 
+  'GRANT ' || p.privilege_type || ' ON FUNCTION ' || n.nspname || '.' || p.routine_name || '(' ||
+    pg_get_function_identity_arguments(pr.oid) || ') TO ' || p.grantee || ';'
+FROM information_schema.routine_privileges p
+JOIN pg_namespace n ON n.nspname = p.routine_schema
+JOIN pg_proc pr ON pr.proname = p.routine_name AND pr.pronamespace = n.oid
+WHERE p.grantee IN ('app_auth', 'app_payment_flow', 'app_reconciliation', 'data_ops')
+  AND p.routine_catalog = current_database();
+
+
+--Types
+SELECT 
+  'GRANT USAGE ON TYPE ' || n.nspname || '.' || t.typname || ' TO ' || r.rolname || ';'
+FROM pg_type t
+JOIN pg_namespace n ON n.oid = t.typnamespace
+JOIN pg_roles r ON has_type_privilege(r.rolname, t.oid, 'USAGE')
+WHERE r.rolname IN ('app_auth', 'app_payment_flow', 'app_reconciliation', 'data_ops');
