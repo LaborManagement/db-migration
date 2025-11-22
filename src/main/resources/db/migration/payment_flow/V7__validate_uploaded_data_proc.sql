@@ -15,9 +15,9 @@ BEGIN
     LOOP
         v_rejection_reason := NULL;
 
-        -- Null worker_id
-        IF rec.worker_id IS NULL THEN
-            v_rejection_reason := 'worker_id is NULL';
+        -- Null worker_regno
+        IF rec.worker_regno IS NULL THEN
+            v_rejection_reason := 'worker_regno is NULL';
         END IF;
 
         -- Negative amount
@@ -26,11 +26,11 @@ BEGIN
         END IF;
 
         -- Missing worker in master
-        IF v_rejection_reason IS NULL AND rec.worker_id IS NOT NULL THEN
+        IF v_rejection_reason IS NULL AND rec.worker_regno IS NOT NULL THEN
             IF NOT EXISTS (
-                SELECT 1 FROM payment_flow.worker_master wm WHERE wm.id = rec.worker_id
+                SELECT 1 FROM payment_flow.worker_master wm WHERE wm.registration_number = rec.worker_regno
             ) THEN
-                v_rejection_reason := 'worker_id not found in worker_master';
+                v_rejection_reason := 'worker_regno not found in worker_master';
             END IF;
         END IF;
 
