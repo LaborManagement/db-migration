@@ -2,7 +2,7 @@
 -- PostgreSQL database cluster dump
 --
 
-\restrict Qs1rw4q0wkcaGCOUJA10H9cv8jr2mqilbbDyD8JyaoWqJOnUk80UNAaGZCcoJR1
+\restrict IlGuQuGTOw90Nk4aem8zaQrRiIShl76JzFHQIdw8vrcpP1SbfGeCgaAa5T3k32h
 
 SET default_transaction_read_only = off;
 
@@ -43,7 +43,7 @@ ALTER ROLE root WITH SUPERUSER INHERIT CREATEROLE CREATEDB LOGIN REPLICATION BYP
 
 
 
-\unrestrict Qs1rw4q0wkcaGCOUJA10H9cv8jr2mqilbbDyD8JyaoWqJOnUk80UNAaGZCcoJR1
+\unrestrict IlGuQuGTOw90Nk4aem8zaQrRiIShl76JzFHQIdw8vrcpP1SbfGeCgaAa5T3k32h
 
 --
 -- Databases
@@ -59,7 +59,7 @@ ALTER ROLE root WITH SUPERUSER INHERIT CREATEROLE CREATEDB LOGIN REPLICATION BYP
 -- PostgreSQL database dump
 --
 
-\restrict HnC0Zz7RqKL57NVfZM0sZfbK7y3AYfcXDOFnMhMTspGw7gCUg5XV8HPvS0MbeyZ
+\restrict cOGAYmrlC4pSBcT5g6vxRMEawAaXGJZ6U38PCgVZnkUWF23rhw3St3W48wb0Sdl
 
 -- Dumped from database version 18.0 (Debian 18.0-1.pgdg13+3)
 -- Dumped by pg_dump version 18.0 (Debian 18.0-1.pgdg13+3)
@@ -80,7 +80,7 @@ SET row_security = off;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict HnC0Zz7RqKL57NVfZM0sZfbK7y3AYfcXDOFnMhMTspGw7gCUg5XV8HPvS0MbeyZ
+\unrestrict cOGAYmrlC4pSBcT5g6vxRMEawAaXGJZ6U38PCgVZnkUWF23rhw3St3W48wb0Sdl
 
 --
 -- Database "labormanagement" dump
@@ -90,7 +90,7 @@ SET row_security = off;
 -- PostgreSQL database dump
 --
 
-\restrict MUqcda4miYXHITxheHOSKFxs9vnBwsVm4h57uuawaw5lHMmlwkvu8BT3Li3y01u
+\restrict 8QoutNFtVocXlH8oE14eKafpokc3nefpBVMtYg9TsioCY9NFTghU1wFdSmxVW0l
 
 -- Dumped from database version 18.0 (Debian 18.0-1.pgdg13+3)
 -- Dumped by pg_dump version 18.0 (Debian 18.0-1.pgdg13+3)
@@ -116,9 +116,9 @@ CREATE DATABASE labormanagement WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCA
 
 ALTER DATABASE labormanagement OWNER TO root;
 
-\unrestrict MUqcda4miYXHITxheHOSKFxs9vnBwsVm4h57uuawaw5lHMmlwkvu8BT3Li3y01u
+\unrestrict 8QoutNFtVocXlH8oE14eKafpokc3nefpBVMtYg9TsioCY9NFTghU1wFdSmxVW0l
 \connect labormanagement
-\restrict MUqcda4miYXHITxheHOSKFxs9vnBwsVm4h57uuawaw5lHMmlwkvu8BT3Li3y01u
+\restrict 8QoutNFtVocXlH8oE14eKafpokc3nefpBVMtYg9TsioCY9NFTghU1wFdSmxVW0l
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -8791,7 +8791,7 @@ ALTER DEFAULT PRIVILEGES FOR ROLE root IN SCHEMA reconciliation GRANT SELECT,INS
 -- PostgreSQL database dump complete
 --
 
-\unrestrict MUqcda4miYXHITxheHOSKFxs9vnBwsVm4h57uuawaw5lHMmlwkvu8BT3Li3y01u
+\unrestrict 8QoutNFtVocXlH8oE14eKafpokc3nefpBVMtYg9TsioCY9NFTghU1wFdSmxVW0l
 
 --
 -- Database "lbe" dump
@@ -8801,7 +8801,7 @@ ALTER DEFAULT PRIVILEGES FOR ROLE root IN SCHEMA reconciliation GRANT SELECT,INS
 -- PostgreSQL database dump
 --
 
-\restrict cOZuSWT8XZwEvIR8Q9U7sdRhge258Q6Q9M49CbhpiDOmzLx8YuvN87JwZdiqfds
+\restrict uxBtQllX3NKedVLJBvuccWEfSWPdEI6PrfUPlPxuvyKeqbhnThl4utOu8crBoMe
 
 -- Dumped from database version 18.0 (Debian 18.0-1.pgdg13+3)
 -- Dumped by pg_dump version 18.0 (Debian 18.0-1.pgdg13+3)
@@ -8827,9 +8827,9 @@ CREATE DATABASE lbe WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCALE_PROVIDER 
 
 ALTER DATABASE lbe OWNER TO root;
 
-\unrestrict cOZuSWT8XZwEvIR8Q9U7sdRhge258Q6Q9M49CbhpiDOmzLx8YuvN87JwZdiqfds
+\unrestrict uxBtQllX3NKedVLJBvuccWEfSWPdEI6PrfUPlPxuvyKeqbhnThl4utOu8crBoMe
 \connect lbe
-\restrict cOZuSWT8XZwEvIR8Q9U7sdRhge258Q6Q9M49CbhpiDOmzLx8YuvN87JwZdiqfds
+\restrict uxBtQllX3NKedVLJBvuccWEfSWPdEI6PrfUPlPxuvyKeqbhnThl4utOu8crBoMe
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -9404,12 +9404,12 @@ BEGIN
         IF v_rejection_reason IS NULL THEN
             UPDATE payment_flow.worker_uploaded_data
             SET status_id = '1', rejection_reason = NULL, updated_at = NOW()
-            WHERE id = rec.id;
+            WHERE id = rec.id AND file_id = file_id_input;
             valid_count := valid_count + 1;
         ELSE
             UPDATE payment_flow.worker_uploaded_data
             SET status_id = '2', rejection_reason = v_rejection_reason, updated_at = NOW()
-            WHERE id = rec.id;
+            WHERE id = rec.id AND file_id = file_id_input;
             invalid_count := invalid_count + 1;
         END IF;
         total_records := total_records + 1;
@@ -10971,20 +10971,6 @@ ALTER TABLE ONLY payment_flow.worker_uploaded_data FORCE ROW LEVEL SECURITY;
 ALTER TABLE payment_flow.worker_uploaded_data OWNER TO admin_lbe;
 
 --
--- Name: worker_uploaded_data_id_seq; Type: SEQUENCE; Schema: payment_flow; Owner: admin_lbe
---
-
-ALTER TABLE payment_flow.worker_uploaded_data ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY (
-    SEQUENCE NAME payment_flow.worker_uploaded_data_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1
-);
-
-
---
 -- Name: bank_account; Type: TABLE; Schema: reconciliation; Owner: admin_lbe
 --
 
@@ -12230,8 +12216,8 @@ COPY payment_flow.toli_master (id, registration_number, employer_name_marathi, a
 --
 
 COPY payment_flow.uploaded_files (id, filename, stored_path, file_hash, file_type, created_at, uploaded_by, total_records, success_count, failure_count, status, file_reference_number, board_id, employer_id, toli_id) FROM stdin;
-57	worker_payment_all_success.csv	/Users/rahulcharvekar/Documents/Repos/LBE/PaymentReconciliation/payment-flow-service/API/workerpayments/f861630d-c6d2-4dd0-9325-7eb8e1ed93b8_worker_payment_all_success.csv	2f2096c9e297595adf47cb1ccbfba91ca1dfe6f704f508a90a1c419e75c80ca6	workerpayments	2025-11-23 08:53:43.025202	\N	2	2	0	VALIDATED	REQ-20251123-085343-025	1	2	1
-56	worker_payment_partial_success.csv	/Users/rahulcharvekar/Documents/Repos/LBE/PaymentReconciliation/payment-flow-service/API/workerpayments/e46fd716-8962-4639-b220-9bcb4b5c1247_worker_payment_partial_success.csv	b94911214a75cecfe3f78ad09334a0fbf050e5c9c23eeec3d646a4ccbb646856	workerpayments	2025-11-23 08:42:56.505462	\N	2	2	0	VALIDATED	REQ-20251123-084256-507	1	2	1
+67	worker_payment_all_success.csv	/Users/rahulcharvekar/Documents/Repos/LBE/PaymentReconciliation/payment-flow-service/API/workerpayments/cffdca5d-2313-44eb-93f7-3c9f06ffc5cd_worker_payment_all_success.csv	2f2096c9e297595adf47cb1ccbfba91ca1dfe6f704f508a90a1c419e75c80ca6	workerpayments	2025-11-23 09:39:54.514066	\N	2	2	0	VALIDATED	REQ-20251123-093954-514	1	2	1
+66	worker_payment_partial_success.csv	/Users/rahulcharvekar/Documents/Repos/LBE/PaymentReconciliation/payment-flow-service/API/workerpayments/11324d05-19ca-41e7-9289-cfc2f8ab39bf_worker_payment_partial_success.csv	b94911214a75cecfe3f78ad09334a0fbf050e5c9c23eeec3d646a4ccbb646856	workerpayments	2025-11-23 09:39:47.411428	\N	2	2	0	VALIDATED	REQ-20251123-093947-412	1	2	1
 \.
 
 
@@ -12274,10 +12260,10 @@ COPY payment_flow.worker_toli_relation (id, worker_id, toli_id, board_id, employ
 --
 
 COPY payment_flow.worker_uploaded_data (id, file_id, employee_name, employer_reg_no, toli_reg_no, year_month, day1, day2, day3, day4, day5, day6, day7, day8, day9, day10, day11, day12, day13, day14, day15, day16, day17, day18, day19, day20, day21, day22, day23, day24, day25, day26, day27, day28, day29, day30, day31, total_days, amount, advance, net_payable, payment_type, txn_ref, rejection_reason, created_at, updated_at, board_id, employer_id, toli_id, request_nmbr, status_id, worker_regno) FROM stdin;
-100	56	Alice Worker	EMP-0001	TOLI-001	2025-01	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	22.00	2200.00	200.00	2000.00	BANK_TRANSFER	\N	2025-11-23 08:42:56.525255	2025-11-23 08:42:56.54711	1	2	1	\N	1	WRK-0001
-101	56	Bob Builder	EMP-0002	TOLI-002	2025-01	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	15.00	1500.00	0.00	1500.00	CASH	\N	2025-11-23 08:42:56.525411	2025-11-23 08:43:29.175624	1	2	1	\N	1	WRK-0002
-102	57	Alice Worker	EMP-0001	TOLI-001	2025-01	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	22.00	2200.00	200.00	2000.00	BANK_TRANSFER	\N	2025-11-23 08:53:43.028051	2025-11-23 08:53:43.035188	1	2	1	\N	1	WRK-0001
-103	57	Bob Builder	EMP-0002	TOLI-002	2025-01	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	15.00	1500.00	0.00	1500.00	CASH	\N	2025-11-23 08:53:43.02813	2025-11-23 08:53:43.035188	1	2	1	\N	1	WRK-0002
+1	66	Alice Worker	EMP-0001	TOLI-001	2025-01	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	22.00	2200.00	200.00	2000.00	BANK_TRANSFER	\N	2025-11-23 09:39:47.414497	2025-11-23 09:39:47.424331	1	2	1	\N	1	WRK-0001
+1	67	Alice Worker	EMP-0001	TOLI-001	2025-01	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	22.00	2200.00	200.00	2000.00	BANK_TRANSFER	\N	2025-11-23 09:39:54.5173	2025-11-23 09:39:54.525438	1	2	1	\N	1	WRK-0001
+2	67	Bob Builder	EMP-0002	TOLI-002	2025-01	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	15.00	1500.00	0.00	1500.00	CASH	\N	2025-11-23 09:39:54.517393	2025-11-23 09:39:54.525438	1	2	1	\N	1	WRK-0002
+2	66	Bob Builder	EMP-0002	TOLI-002	2025-01	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	15.00	1500.00	0.00	1500.00	CASH	\N	2025-11-23 09:39:47.41458	2025-11-23 09:40:52.049566	1	2	1	\N	1	WRK-0002
 \.
 
 
@@ -12594,7 +12580,7 @@ SELECT pg_catalog.setval('payment_flow.toli_master_id_seq', 3, true);
 -- Name: uploaded_files_id_seq; Type: SEQUENCE SET; Schema: payment_flow; Owner: admin_lbe
 --
 
-SELECT pg_catalog.setval('payment_flow.uploaded_files_id_seq', 57, true);
+SELECT pg_catalog.setval('payment_flow.uploaded_files_id_seq', 67, true);
 
 
 --
@@ -12623,13 +12609,6 @@ SELECT pg_catalog.setval('payment_flow.worker_payments_id_seq', 12, true);
 --
 
 SELECT pg_catalog.setval('payment_flow.worker_toli_relation_id_seq', 1, false);
-
-
---
--- Name: worker_uploaded_data_id_seq; Type: SEQUENCE SET; Schema: payment_flow; Owner: admin_lbe
---
-
-SELECT pg_catalog.setval('payment_flow.worker_uploaded_data_id_seq', 103, true);
 
 
 --
@@ -13234,6 +13213,14 @@ ALTER TABLE ONLY payment_flow.worker_payments
 
 ALTER TABLE ONLY payment_flow.worker_toli_relation
     ADD CONSTRAINT worker_toli_relation_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: worker_uploaded_data worker_uploaded_data_pk; Type: CONSTRAINT; Schema: payment_flow; Owner: admin_lbe
+--
+
+ALTER TABLE ONLY payment_flow.worker_uploaded_data
+    ADD CONSTRAINT worker_uploaded_data_pk PRIMARY KEY (file_id, id);
 
 
 --
@@ -14780,7 +14767,7 @@ GRANT SELECT,INSERT,DELETE,UPDATE ON TABLE reconciliation.van_transaction TO app
 -- PostgreSQL database dump complete
 --
 
-\unrestrict cOZuSWT8XZwEvIR8Q9U7sdRhge258Q6Q9M49CbhpiDOmzLx8YuvN87JwZdiqfds
+\unrestrict uxBtQllX3NKedVLJBvuccWEfSWPdEI6PrfUPlPxuvyKeqbhnThl4utOu8crBoMe
 
 --
 -- Database "postgres" dump
@@ -14792,7 +14779,7 @@ GRANT SELECT,INSERT,DELETE,UPDATE ON TABLE reconciliation.van_transaction TO app
 -- PostgreSQL database dump
 --
 
-\restrict 6xZuTsNpJBeLRNdIjkq6mfmXE14M69eDlSjiZHYME3qeGGA1VXl3fHdggNCIb3I
+\restrict EuRppoqfObHR0Uc5U3gcUELVaVSbq2oyx3RcVNnWPwKa3MR2kf8bsmX9VZkdNEI
 
 -- Dumped from database version 18.0 (Debian 18.0-1.pgdg13+3)
 -- Dumped by pg_dump version 18.0 (Debian 18.0-1.pgdg13+3)
@@ -14813,7 +14800,7 @@ SET row_security = off;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict 6xZuTsNpJBeLRNdIjkq6mfmXE14M69eDlSjiZHYME3qeGGA1VXl3fHdggNCIb3I
+\unrestrict EuRppoqfObHR0Uc5U3gcUELVaVSbq2oyx3RcVNnWPwKa3MR2kf8bsmX9VZkdNEI
 
 --
 -- PostgreSQL database cluster dump complete
