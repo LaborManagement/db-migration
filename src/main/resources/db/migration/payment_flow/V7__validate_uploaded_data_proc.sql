@@ -82,7 +82,7 @@ FROM (
             WHERE status_id = 1
         ) AS success_count,
         COUNT(*) FILTER (
-            WHERE status_id = 2 AND rejection_reason IS NULL
+            WHERE status_id = 2 AND rejection_reason IS NOT NULL
         ) AS failure_count
     FROM payment_flow.worker_uploaded_data
     WHERE file_id = file_id_input

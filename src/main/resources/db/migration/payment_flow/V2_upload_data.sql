@@ -129,3 +129,15 @@ ALTER TABLE payment_flow.worker_uploaded_data
 -- Add composite primary key on (file_id, id)
 ALTER TABLE payment_flow.worker_uploaded_data
     ADD CONSTRAINT worker_uploaded_data_pk PRIMARY KEY (file_id, id);
+
+ALTER TABLE payment_flow.worker_payments
+    RENAME COLUMN worker_id TO worker_regno;
+
+ALTER TABLE payment_flow.worker_payments
+    ALTER COLUMN worker_regno TYPE varchar;
+
+ALTER TABLE payment_flow.worker_payments
+    RENAME COLUMN month TO year_month;
+
+ALTER TABLE payment_flow.worker_payments
+    ALTER COLUMN year_month TYPE varchar;

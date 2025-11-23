@@ -55,12 +55,12 @@ BEGIN
     net_wages_payable_val := gross_wages_val - COALESCE(valid_row.advance, 0);
 
     INSERT INTO payment_flow.worker_payments (
-        worker_id, toli_id, employer_id, board_id, month, total_days,
+        worker_regno, toli_id, employer_id, board_id, year_month, total_days,
         basic_wages, advance, levy, gross_wages, net_wages_payable,
         payment_type, txn_ref, receipt_nmbr
     ) VALUES (
-        valid_row.worker_id, valid_row.toli_id, valid_row.employer_id, valid_row.board_id,
-        valid_row.month, valid_row.total_days,
+        valid_row.worker_regno, valid_row.toli_id, valid_row.employer_id, valid_row.board_id,
+        valid_row.year_month, valid_row.total_days,
         valid_row.amount, valid_row.advance,
         levy_val, gross_wages_val, net_wages_payable_val,
         valid_row.payment_type, valid_row.txn_ref, new_receipt_number
@@ -68,7 +68,8 @@ BEGIN
         -- Update receipt_nmbr in worker_uploaded_data
         UPDATE payment_flow.worker_uploaded_data
            SET request_nmbr = new_receipt_number
-         WHERE id = valid_row.id;
+         WHERE file_id = file_id_input
+           AND id = valid_row.id;
     END LOOP;
 
     receipt_number_out := new_receipt_number;
