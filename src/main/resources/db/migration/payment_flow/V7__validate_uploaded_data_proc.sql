@@ -2,7 +2,7 @@ DROP PROCEDURE IF EXISTS payment_flow.validate_uploaded_data(bigint, OUT json);
 
 -- PL/pgSQL
 
-CREATE OR REPLACE PROCEDURE payment_flow.validate_uploaded_data(IN file_id_input bigint, OUT validation_result json) LANGUAGE plpgsql AS $BODY$
+CREATE OR REPLACE PROCEDURE payment_flow.validate_uploaded_data(OUT validation_result json, IN file_id_input bigint, IN id_input bigint) LANGUAGE plpgsql AS $BODY$
 DECLARE
     rec RECORD;
     total_records int := 0;
@@ -13,6 +13,7 @@ BEGIN
     FOR rec IN
         SELECT * FROM payment_flow.worker_uploaded_data
         WHERE file_id = file_id_input
+        AND (id_input IS NULL OR id = id_input)
     LOOP
         SELECT string_agg(reason, '; ') INTO v_rejection_reason
         FROM (
@@ -67,6 +68,28 @@ BEGIN
         total_records := total_records + 1;
     END LOOP;
 
+UPDATE payment_flow.uploaded_files uf
+SET
+    total_records = sub.total_records,
+    success_count = sub.success_count,
+    failure_count = sub.failure_count,
+    status = CASE WHEN sub.success_count = sub.total_records THEN 'VALIDATED' ELSE 'VALIDATION_FAILED' END
+FROM (
+    SELECT
+        file_id,
+        COUNT(*) AS total_records,
+        COUNT(*) FILTER (
+            WHERE status_id = 1
+        ) AS success_count,
+        COUNT(*) FILTER (
+            WHERE status_id = 2 AND rejection_reason IS NULL
+        ) AS failure_count
+    FROM payment_flow.worker_uploaded_data
+    WHERE file_id = file_id_input
+    GROUP BY file_id
+) sub
+WHERE uf.id = sub.file_id;
+
     validation_result := json_build_object(
         'file_id', file_id_input,
         'total_records', total_records,
@@ -76,4 +99,4 @@ BEGIN
 END;
 $BODY$;
 
-grant execute on procedure payment_flow.validate_uploaded_data(bigint, OUT json) to app_payment_flow;
+grant execute on procedure payment_flow.validate_uploaded_data(OUT validation_result json, IN file_id_input bigint, IN id_input bigint) to app_payment_flow;
