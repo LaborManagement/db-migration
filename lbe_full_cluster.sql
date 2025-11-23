@@ -2,7 +2,7 @@
 -- PostgreSQL database cluster dump
 --
 
-\restrict hqQkYnbZpprSewykUR4SbvVf9BzafXYEYrzr61jKG9WcydA5cs4aSJba1okAWoU
+\restrict Qs1rw4q0wkcaGCOUJA10H9cv8jr2mqilbbDyD8JyaoWqJOnUk80UNAaGZCcoJR1
 
 SET default_transaction_read_only = off;
 
@@ -43,7 +43,7 @@ ALTER ROLE root WITH SUPERUSER INHERIT CREATEROLE CREATEDB LOGIN REPLICATION BYP
 
 
 
-\unrestrict hqQkYnbZpprSewykUR4SbvVf9BzafXYEYrzr61jKG9WcydA5cs4aSJba1okAWoU
+\unrestrict Qs1rw4q0wkcaGCOUJA10H9cv8jr2mqilbbDyD8JyaoWqJOnUk80UNAaGZCcoJR1
 
 --
 -- Databases
@@ -59,7 +59,7 @@ ALTER ROLE root WITH SUPERUSER INHERIT CREATEROLE CREATEDB LOGIN REPLICATION BYP
 -- PostgreSQL database dump
 --
 
-\restrict uN1Kd0yW67kMNwWySc8LKYm3oc6RaReU1n7frVBZDUjitlyx2VOQYFaFCa3bDFn
+\restrict HnC0Zz7RqKL57NVfZM0sZfbK7y3AYfcXDOFnMhMTspGw7gCUg5XV8HPvS0MbeyZ
 
 -- Dumped from database version 18.0 (Debian 18.0-1.pgdg13+3)
 -- Dumped by pg_dump version 18.0 (Debian 18.0-1.pgdg13+3)
@@ -80,7 +80,7 @@ SET row_security = off;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict uN1Kd0yW67kMNwWySc8LKYm3oc6RaReU1n7frVBZDUjitlyx2VOQYFaFCa3bDFn
+\unrestrict HnC0Zz7RqKL57NVfZM0sZfbK7y3AYfcXDOFnMhMTspGw7gCUg5XV8HPvS0MbeyZ
 
 --
 -- Database "labormanagement" dump
@@ -90,7 +90,7 @@ SET row_security = off;
 -- PostgreSQL database dump
 --
 
-\restrict 1UadIg9MP8ZzAtENG3aeagrKOb9RMBWDuiWgrjmzEYWxHZsOrEExzQdGkPZSlDA
+\restrict MUqcda4miYXHITxheHOSKFxs9vnBwsVm4h57uuawaw5lHMmlwkvu8BT3Li3y01u
 
 -- Dumped from database version 18.0 (Debian 18.0-1.pgdg13+3)
 -- Dumped by pg_dump version 18.0 (Debian 18.0-1.pgdg13+3)
@@ -116,9 +116,9 @@ CREATE DATABASE labormanagement WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCA
 
 ALTER DATABASE labormanagement OWNER TO root;
 
-\unrestrict 1UadIg9MP8ZzAtENG3aeagrKOb9RMBWDuiWgrjmzEYWxHZsOrEExzQdGkPZSlDA
+\unrestrict MUqcda4miYXHITxheHOSKFxs9vnBwsVm4h57uuawaw5lHMmlwkvu8BT3Li3y01u
 \connect labormanagement
-\restrict 1UadIg9MP8ZzAtENG3aeagrKOb9RMBWDuiWgrjmzEYWxHZsOrEExzQdGkPZSlDA
+\restrict MUqcda4miYXHITxheHOSKFxs9vnBwsVm4h57uuawaw5lHMmlwkvu8BT3Li3y01u
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -8791,7 +8791,7 @@ ALTER DEFAULT PRIVILEGES FOR ROLE root IN SCHEMA reconciliation GRANT SELECT,INS
 -- PostgreSQL database dump complete
 --
 
-\unrestrict 1UadIg9MP8ZzAtENG3aeagrKOb9RMBWDuiWgrjmzEYWxHZsOrEExzQdGkPZSlDA
+\unrestrict MUqcda4miYXHITxheHOSKFxs9vnBwsVm4h57uuawaw5lHMmlwkvu8BT3Li3y01u
 
 --
 -- Database "lbe" dump
@@ -8801,7 +8801,7 @@ ALTER DEFAULT PRIVILEGES FOR ROLE root IN SCHEMA reconciliation GRANT SELECT,INS
 -- PostgreSQL database dump
 --
 
-\restrict SamKShIcs1TGpzXA4usQOFuCNRIbxlCGOgzjMtlikDleBrcJ4bhQfyywgWy2crB
+\restrict cOZuSWT8XZwEvIR8Q9U7sdRhge258Q6Q9M49CbhpiDOmzLx8YuvN87JwZdiqfds
 
 -- Dumped from database version 18.0 (Debian 18.0-1.pgdg13+3)
 -- Dumped by pg_dump version 18.0 (Debian 18.0-1.pgdg13+3)
@@ -8827,9 +8827,9 @@ CREATE DATABASE lbe WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCALE_PROVIDER 
 
 ALTER DATABASE lbe OWNER TO root;
 
-\unrestrict SamKShIcs1TGpzXA4usQOFuCNRIbxlCGOgzjMtlikDleBrcJ4bhQfyywgWy2crB
+\unrestrict cOZuSWT8XZwEvIR8Q9U7sdRhge258Q6Q9M49CbhpiDOmzLx8YuvN87JwZdiqfds
 \connect lbe
-\restrict SamKShIcs1TGpzXA4usQOFuCNRIbxlCGOgzjMtlikDleBrcJ4bhQfyywgWy2crB
+\restrict cOZuSWT8XZwEvIR8Q9U7sdRhge258Q6Q9M49CbhpiDOmzLx8YuvN87JwZdiqfds
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -9344,10 +9344,10 @@ $$;
 ALTER FUNCTION payment_flow.get_status_code(p_id integer) OWNER TO root;
 
 --
--- Name: validate_uploaded_data(bigint); Type: PROCEDURE; Schema: payment_flow; Owner: root
+-- Name: validate_uploaded_data(bigint, bigint); Type: PROCEDURE; Schema: payment_flow; Owner: root
 --
 
-CREATE PROCEDURE payment_flow.validate_uploaded_data(IN file_id_input bigint, OUT validation_result json)
+CREATE PROCEDURE payment_flow.validate_uploaded_data(OUT validation_result json, IN file_id_input bigint, IN id_input bigint)
     LANGUAGE plpgsql
     AS $_$
 DECLARE
@@ -9360,6 +9360,7 @@ BEGIN
     FOR rec IN
         SELECT * FROM payment_flow.worker_uploaded_data
         WHERE file_id = file_id_input
+        AND (id_input IS NULL OR id = id_input)
     LOOP
         SELECT string_agg(reason, '; ') INTO v_rejection_reason
         FROM (
@@ -9414,6 +9415,28 @@ BEGIN
         total_records := total_records + 1;
     END LOOP;
 
+UPDATE payment_flow.uploaded_files uf
+SET
+    total_records = sub.total_records,
+    success_count = sub.success_count,
+    failure_count = sub.failure_count,
+    status = CASE WHEN sub.success_count = sub.total_records THEN 'VALIDATED' ELSE 'VALIDATION_FAILED' END
+FROM (
+    SELECT
+        file_id,
+        COUNT(*) AS total_records,
+        COUNT(*) FILTER (
+            WHERE status_id = 1
+        ) AS success_count,
+        COUNT(*) FILTER (
+            WHERE status_id = 2 AND rejection_reason IS NULL
+        ) AS failure_count
+    FROM payment_flow.worker_uploaded_data
+    WHERE file_id = file_id_input
+    GROUP BY file_id
+) sub
+WHERE uf.id = sub.file_id;
+
     validation_result := json_build_object(
         'file_id', file_id_input,
         'total_records', total_records,
@@ -9424,7 +9447,7 @@ END;
 $_$;
 
 
-ALTER PROCEDURE payment_flow.validate_uploaded_data(IN file_id_input bigint, OUT validation_result json) OWNER TO root;
+ALTER PROCEDURE payment_flow.validate_uploaded_data(OUT validation_result json, IN file_id_input bigint, IN id_input bigint) OWNER TO root;
 
 SET default_tablespace = '';
 
@@ -10889,7 +10912,7 @@ ALTER SEQUENCE payment_flow.worker_toli_relation_id_seq OWNED BY payment_flow.wo
 
 CREATE TABLE payment_flow.worker_uploaded_data (
     id bigint NOT NULL,
-    file_id bigint,
+    file_id bigint NOT NULL,
     employee_name character varying(255),
     employer_reg_no character varying(255),
     toli_reg_no character varying(255),
@@ -11532,6 +11555,8 @@ COPY audit.audit_event (id, trace_id, action, resource_type, resource_id, servic
 39	6083e493-89bb-4141-af17-c577da309978	GET_EMPLOYERS	EMPLOYER_MASTER	\N	payment-flow-service	payment_flow	tech.bootstrap	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	http://localhost:5173/	\N	\N	SUCCESS	{"result": {"body": [{"id": 1, "boardId": 1, "registrationNumber": "EMP-0001"}, {"id": 2, "boardId": 1, "registrationNumber": "EMP-0002"}, {"id": 6, "boardId": 1, "registrationNumber": "REG001"}], "headers": {}, "statusCode": "OK", "statusCodeValue": 200}}	a48139f8214d36504c5ae10f311d63114cb9116cf2b0ab6dccd36e6b6a7b4293	190550f4052294bf0dfa1250891f1c8ef7eec2b2d2152ac7c87cb9907196b45d	c2328e02d8c55ee71c8064bb6dcddd19b0dc9e2f246e271dae3c397a4ed841a6	2025-11-22 15:44:41.892977
 41	026e264d-4ad4-4c0f-9a6d-06cb529102ba	GET_BOARDS	BOARD_MASTER	\N	payment-flow-service	payment_flow	tech.bootstrap	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	http://localhost:5173/	\N	\N	SUCCESS	{"result": {"body": [{"id": 1, "boardId": 1, "boardCode": "DEF001", "boardName": "Default Board"}], "headers": {}, "statusCode": "OK", "statusCodeValue": 200}}	a48139f8214d36504c5ae10f311d63114cb9116cf2b0ab6dccd36e6b6a7b4293	2b6dc337f9d086ab84f9de5f905ac99e411a055c3485ed2196fbe0983f65fa26	c9e04fa611522692e45d5b31ea277c2152a310cf27e95e2bb3fa4acbbb48948c	2025-11-22 15:44:41.892945
 42	45f3fe5f-d1f4-4bf3-8d3a-cb277d0d94e2	FETCH_SECURE_PAGINATED_UPLOADED_DATA	WORKER_UPLOADED_DATA	\N	payment-flow-service	payment_flow	WORKER	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	http://localhost:8081/swagger-ui/index.html	\N	\N	SUCCESS	{"result": {"body": {"last": true, "first": true, "content": [{"id": 85, "day1": 1, "day2": 1, "day3": 1, "day4": 1, "day5": 1, "day6": 1, "day7": 1, "day8": 1, "day9": 1, "day10": 1, "day11": 1, "day12": 1, "day13": 1, "day14": 1, "day15": 1, "day16": 1, "day17": 1, "day18": 0, "day19": 0, "day20": 0, "day21": 0, "day22": 0, "day23": 0, "day24": 0, "day25": 0, "day26": 0, "day27": 0, "day28": 0, "day29": 0, "day30": 0, "day31": 0, "month": "2025-01", "amount": 15.00, "fileId": 48, "toliId": 1, "txnRef": "CASH", "advance": 1500.00, "boardId": 1, "statusId": 1, "createdAt": "2025-11-22T22:40:05.421726", "toliRegNo": "TOLI-002", "totalDays": 0, "updatedAt": "2025-11-22T22:40:05.44474", "employerId": 2, "netPayable": 0.00, "paymentType": "1500.00", "workerRegno": "WRK-0002", "employeeName": "Bob Builder", "employerRegNo": "EMP-0002", "rejectionReason": null}, {"id": 84, "day1": 1, "day2": 1, "day3": 1, "day4": 1, "day5": 1, "day6": 1, "day7": 1, "day8": 1, "day9": 1, "day10": 1, "day11": 1, "day12": 1, "day13": 1, "day14": 1, "day15": 1, "day16": 1, "day17": 1, "day18": 1, "day19": 1, "day20": 1, "day21": 1, "day22": 1, "day23": 1, "day24": 0, "day25": 0, "day26": 0, "day27": 0, "day28": 0, "day29": 0, "day30": 0, "day31": 0, "month": "2025-01", "amount": 22.00, "fileId": 48, "toliId": 1, "txnRef": "BANK_TRANSFER", "advance": 2200.00, "boardId": 1, "statusId": 1, "createdAt": "2025-11-22T22:40:05.421563", "toliRegNo": "TOLI-001", "totalDays": 0, "updatedAt": "2025-11-22T22:40:05.44474", "employerId": 2, "netPayable": 200.00, "paymentType": "2000.00", "workerRegno": "WRK-0001", "employeeName": "Alice Worker", "employerRegNo": "EMP-0001", "rejectionReason": null}], "hasNext": false, "pageSize": 20, "sortInfo": {"sortBy": "id", "sortDir": "desc"}, "dateRange": {"endDate": "2025-12-31", "startDate": "2025-01-01"}, "totalPages": 1, "currentPage": 0, "hasPrevious": false, "nextPageToken": null, "totalElements": 2, "previousPageToken": null}, "headers": {"ETag": ["\\"e5c7bf02f292497d9372c8e7bec565fe\\""]}, "statusCode": "OK", "statusCodeValue": 200}}	190550f4052294bf0dfa1250891f1c8ef7eec2b2d2152ac7c87cb9907196b45d	93ca0f29c42d43953a0bdf2d2c9c319a70e7fd8c19567c101cfbec227accd367	4b6aa174cbf4913577330ab1b636ad211a7f99d6fe274bf3b34d625292e431b5	2025-11-22 22:40:29.748194
+43	1438a880-f044-45ab-a4c4-821d5e4c8306	FETCH_SECURE_PAGINATED_UPLOADED_DATA	WORKER_UPLOADED_DATA	\N	payment-flow-service	payment_flow	WORKER	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	http://localhost:8081/swagger-ui/index.html	\N	\N	SUCCESS	{"result": {"body": {"last": true, "first": true, "content": [{"id": 101, "day1": 1, "day2": 1, "day3": 1, "day4": 1, "day5": 1, "day6": 1, "day7": 1, "day8": 1, "day9": 1, "day10": 1, "day11": 1, "day12": 1, "day13": 1, "day14": 1, "day15": 1, "day16": 1, "day17": 1, "day18": 0, "day19": 0, "day20": 0, "day21": 0, "day22": 0, "day23": 0, "day24": 0, "day25": 0, "day26": 0, "day27": 0, "day28": 0, "day29": 0, "day30": 0, "day31": 0, "month": "2025-01", "amount": 15.00, "fileId": 56, "toliId": 1, "txnRef": "CASH", "advance": 1500.00, "boardId": 1, "statusId": 1, "createdAt": "2025-11-23T08:42:56.525411", "toliRegNo": "TOLI-002", "totalDays": 0, "updatedAt": "2025-11-23T08:43:29.175624", "employerId": 2, "netPayable": 0.00, "paymentType": "1500.00", "workerRegno": "WRK-0002", "employeeName": "Bob Builder", "employerRegNo": "EMP-0002", "rejectionReason": null}, {"id": 100, "day1": 1, "day2": 1, "day3": 1, "day4": 1, "day5": 1, "day6": 1, "day7": 1, "day8": 1, "day9": 1, "day10": 1, "day11": 1, "day12": 1, "day13": 1, "day14": 1, "day15": 1, "day16": 1, "day17": 1, "day18": 1, "day19": 1, "day20": 1, "day21": 1, "day22": 1, "day23": 1, "day24": 0, "day25": 0, "day26": 0, "day27": 0, "day28": 0, "day29": 0, "day30": 0, "day31": 0, "month": "2025-01", "amount": 22.00, "fileId": 56, "toliId": 1, "txnRef": "BANK_TRANSFER", "advance": 2200.00, "boardId": 1, "statusId": 1, "createdAt": "2025-11-23T08:42:56.525255", "toliRegNo": "TOLI-001", "totalDays": 0, "updatedAt": "2025-11-23T08:42:56.54711", "employerId": 2, "netPayable": 200.00, "paymentType": "2000.00", "workerRegno": "WRK-0001", "employeeName": "Alice Worker", "employerRegNo": "EMP-0001", "rejectionReason": null}], "hasNext": false, "pageSize": 20, "sortInfo": {"sortBy": "id", "sortDir": "desc"}, "dateRange": {"endDate": "2025-12-31", "startDate": "2025-01-01"}, "totalPages": 1, "currentPage": 0, "hasPrevious": false, "nextPageToken": null, "totalElements": 2, "previousPageToken": null}, "headers": {"ETag": ["\\"9f079905f5b6dd58a5d7fd3a63701688\\""]}, "statusCode": "OK", "statusCodeValue": 200}}	93ca0f29c42d43953a0bdf2d2c9c319a70e7fd8c19567c101cfbec227accd367	4d3c90f3d2b9d3d98bb3c8eb8538e016434cb0cd5ce8b624fefb612271155a87	aed056945d8cf3e5ab718c812866cee569b33ac432d73517d14642698fd6e4fa	2025-11-23 08:52:49.212603
+44	aca86884-e5d2-493b-a18f-4a65f61fbad3	FETCH_SECURE_PAGINATED_UPLOADED_DATA	WORKER_UPLOADED_DATA	\N	payment-flow-service	payment_flow	WORKER	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	http://localhost:8081/swagger-ui/index.html	\N	\N	SUCCESS	{"result": {"body": {"last": true, "first": true, "content": [{"id": 103, "day1": 1, "day2": 1, "day3": 1, "day4": 1, "day5": 1, "day6": 1, "day7": 1, "day8": 1, "day9": 1, "day10": 1, "day11": 1, "day12": 1, "day13": 1, "day14": 1, "day15": 1, "day16": 1, "day17": 1, "day18": 0, "day19": 0, "day20": 0, "day21": 0, "day22": 0, "day23": 0, "day24": 0, "day25": 0, "day26": 0, "day27": 0, "day28": 0, "day29": 0, "day30": 0, "day31": 0, "month": "2025-01", "amount": 15.00, "fileId": 57, "toliId": 1, "txnRef": "CASH", "advance": 1500.00, "boardId": 1, "statusId": 1, "createdAt": "2025-11-23T08:53:43.02813", "toliRegNo": "TOLI-002", "totalDays": 0, "updatedAt": "2025-11-23T08:53:43.035188", "employerId": 2, "netPayable": 0.00, "paymentType": "1500.00", "workerRegno": "WRK-0002", "employeeName": "Bob Builder", "employerRegNo": "EMP-0002", "rejectionReason": null}, {"id": 102, "day1": 1, "day2": 1, "day3": 1, "day4": 1, "day5": 1, "day6": 1, "day7": 1, "day8": 1, "day9": 1, "day10": 1, "day11": 1, "day12": 1, "day13": 1, "day14": 1, "day15": 1, "day16": 1, "day17": 1, "day18": 1, "day19": 1, "day20": 1, "day21": 1, "day22": 1, "day23": 1, "day24": 0, "day25": 0, "day26": 0, "day27": 0, "day28": 0, "day29": 0, "day30": 0, "day31": 0, "month": "2025-01", "amount": 22.00, "fileId": 57, "toliId": 1, "txnRef": "BANK_TRANSFER", "advance": 2200.00, "boardId": 1, "statusId": 1, "createdAt": "2025-11-23T08:53:43.028051", "toliRegNo": "TOLI-001", "totalDays": 0, "updatedAt": "2025-11-23T08:53:43.035188", "employerId": 2, "netPayable": 200.00, "paymentType": "2000.00", "workerRegno": "WRK-0001", "employeeName": "Alice Worker", "employerRegNo": "EMP-0001", "rejectionReason": null}, {"id": 101, "day1": 1, "day2": 1, "day3": 1, "day4": 1, "day5": 1, "day6": 1, "day7": 1, "day8": 1, "day9": 1, "day10": 1, "day11": 1, "day12": 1, "day13": 1, "day14": 1, "day15": 1, "day16": 1, "day17": 1, "day18": 0, "day19": 0, "day20": 0, "day21": 0, "day22": 0, "day23": 0, "day24": 0, "day25": 0, "day26": 0, "day27": 0, "day28": 0, "day29": 0, "day30": 0, "day31": 0, "month": "2025-01", "amount": 15.00, "fileId": 56, "toliId": 1, "txnRef": "CASH", "advance": 1500.00, "boardId": 1, "statusId": 1, "createdAt": "2025-11-23T08:42:56.525411", "toliRegNo": "TOLI-002", "totalDays": 0, "updatedAt": "2025-11-23T08:43:29.175624", "employerId": 2, "netPayable": 0.00, "paymentType": "1500.00", "workerRegno": "WRK-0002", "employeeName": "Bob Builder", "employerRegNo": "EMP-0002", "rejectionReason": null}, {"id": 100, "day1": 1, "day2": 1, "day3": 1, "day4": 1, "day5": 1, "day6": 1, "day7": 1, "day8": 1, "day9": 1, "day10": 1, "day11": 1, "day12": 1, "day13": 1, "day14": 1, "day15": 1, "day16": 1, "day17": 1, "day18": 1, "day19": 1, "day20": 1, "day21": 1, "day22": 1, "day23": 1, "day24": 0, "day25": 0, "day26": 0, "day27": 0, "day28": 0, "day29": 0, "day30": 0, "day31": 0, "month": "2025-01", "amount": 22.00, "fileId": 56, "toliId": 1, "txnRef": "BANK_TRANSFER", "advance": 2200.00, "boardId": 1, "statusId": 1, "createdAt": "2025-11-23T08:42:56.525255", "toliRegNo": "TOLI-001", "totalDays": 0, "updatedAt": "2025-11-23T08:42:56.54711", "employerId": 2, "netPayable": 200.00, "paymentType": "2000.00", "workerRegno": "WRK-0001", "employeeName": "Alice Worker", "employerRegNo": "EMP-0001", "rejectionReason": null}], "hasNext": false, "pageSize": 20, "sortInfo": {"sortBy": "id", "sortDir": "desc"}, "dateRange": {"endDate": "2025-12-31", "startDate": "2025-01-01"}, "totalPages": 1, "currentPage": 0, "hasPrevious": false, "nextPageToken": null, "totalElements": 4, "previousPageToken": null}, "headers": {"ETag": ["\\"ae7cc24535516744ab6c0b0c354fd7b0\\""]}, "statusCode": "OK", "statusCodeValue": 200}}	4d3c90f3d2b9d3d98bb3c8eb8538e016434cb0cd5ce8b624fefb612271155a87	6a5b5f3db9e19eda45e142afd111ee0f8a46ac6263c1ee7790017c036bdf03de	5d963c603c8186239d1d24fa387a3ba543339fbd183195a85a030af714be3c30	2025-11-23 08:54:07.555772
 \.
 
 
@@ -11585,6 +11610,36 @@ COPY audit.entity_audit_event (id, audit_number, record_number, entity_type, ent
 46	0c16f9ca-ef72-4733-984c-a64c1e256220	20251120000002	USER	3	UPDATE	auth-service	auth	users	WORKER	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	{"id": 3, "role": "USER", "email": "ram@gmail.com", "roles": [5, 4], "enabled": true, "fullName": "Ram", "username": "WORKER", "createdAt": "2025-10-30T08:23:17", "lastLogin": "2025-11-21T22:05:15.352588", "updatedAt": "2025-11-21T22:05:15.365774", "passwordHash": "$2a$10$u1NYF1njJbIm8Dy3uOlCC.m1bJ3AdalTq7/Q7uGnnBGRepc8tjFI6", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 5, "credentialsNonExpired": true}	{"id": 3, "role": "USER", "email": "ram@gmail.com", "roles": [5, 4], "enabled": true, "fullName": "Ram", "username": "WORKER", "createdAt": "2025-10-30T08:23:17", "lastLogin": "2025-11-22T08:14:53.710501", "updatedAt": "2025-11-22T08:14:53.724689", "passwordHash": "$2a$10$u1NYF1njJbIm8Dy3uOlCC.m1bJ3AdalTq7/Q7uGnnBGRepc8tjFI6", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 5, "credentialsNonExpired": true}	\N	{"referer": "http://localhost:8080/swagger-ui/index.html", "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}	7b9e3288-a02b-4506-a50d-3ef7bbe72797	a88e6eef49e2db3fa0184daf939d2a72220ce118cf41a7bdc3b8700312d2d7d4	31c93fe0d10b9bcf3a672b0eec8a9606b836bd2af4cb9669be5169fcce8aed93	2025-11-22 08:14:53.75175	2025-11-22 08:14:53.600179
 47	d84968fe-dfd6-492c-ac7c-38d4eb7d7e85	20251120000001	USER	39	UPDATE	auth-service	auth	users	tech.bootstrap	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	{"id": 39, "role": "ADMIN", "email": "tech.bootstrap@system.local", "roles": [1, 2, 3], "enabled": true, "fullName": "Technical Bootstrap Administrator", "username": "tech.bootstrap", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-21T22:50:10.956516", "updatedAt": "2025-11-21T22:50:10.969654", "passwordHash": "$2a$10$qwblAK4hJlSWWQ8j7FIIueUEQCD/R1k6Lu7Nee5lFQxWFC9KIb2VG", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}	{"id": 39, "role": "ADMIN", "email": "tech.bootstrap@system.local", "roles": [1, 2, 3], "enabled": true, "fullName": "Technical Bootstrap Administrator", "username": "tech.bootstrap", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-22T15:41:07.195163", "updatedAt": "2025-11-22T15:41:07.198161", "passwordHash": "$2a$10$qwblAK4hJlSWWQ8j7FIIueUEQCD/R1k6Lu7Nee5lFQxWFC9KIb2VG", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}	\N	{"referer": "http://localhost:5173/", "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}	0b1f74c4-a715-426a-b69a-ba87c808a735	34cdb7f8ffacf6b162504c9d2ed08916ae9ed974c85b899d51e2710e23accee2	c4cac549659a3e026353c63a6ad750b6a295a6b7b1763019f80d597e57d23b6d	2025-11-22 15:41:07.221381	2025-11-22 15:41:07.128108
 48	5fc47728-b73c-40ae-b889-4590d0e6857b	20251120000002	USER	3	UPDATE	auth-service	auth	users	WORKER	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	{"id": 3, "role": "USER", "email": "ram@gmail.com", "roles": [5, 4], "enabled": true, "fullName": "Ram", "username": "WORKER", "createdAt": "2025-10-30T08:23:17", "lastLogin": "2025-11-22T08:14:53.710501", "updatedAt": "2025-11-22T08:14:53.724689", "passwordHash": "$2a$10$u1NYF1njJbIm8Dy3uOlCC.m1bJ3AdalTq7/Q7uGnnBGRepc8tjFI6", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 5, "credentialsNonExpired": true}	{"id": 3, "role": "USER", "email": "ram@gmail.com", "roles": [5, 4], "enabled": true, "fullName": "Ram", "username": "WORKER", "createdAt": "2025-10-30T08:23:17", "lastLogin": "2025-11-22T22:18:10.507869", "updatedAt": "2025-11-22T22:18:10.521487", "passwordHash": "$2a$10$u1NYF1njJbIm8Dy3uOlCC.m1bJ3AdalTq7/Q7uGnnBGRepc8tjFI6", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 5, "credentialsNonExpired": true}	\N	{"referer": "http://localhost:8080/swagger-ui/index.html", "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}	4056c00e-a9c3-4258-8681-bc32a866d1af	31c93fe0d10b9bcf3a672b0eec8a9606b836bd2af4cb9669be5169fcce8aed93	3b5fb647871178dbe3ae81fae64511a9e67c86730a922cd21d6a64c74abe0599	2025-11-22 22:18:10.549687	2025-11-22 22:18:10.404561
+49	b603f664-9806-45b0-b616-017aa2548590	20251120000001	USER	39	UPDATE	auth-service	auth	users	tech.bootstrap	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	{"id": 39, "role": "ADMIN", "email": "tech.bootstrap@system.local", "roles": [1, 2, 3], "enabled": true, "fullName": "Technical Bootstrap Administrator", "username": "tech.bootstrap", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-22T15:41:07.195163", "updatedAt": "2025-11-22T15:41:07.198161", "passwordHash": "$2a$10$qwblAK4hJlSWWQ8j7FIIueUEQCD/R1k6Lu7Nee5lFQxWFC9KIb2VG", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}	{"id": 39, "role": "ADMIN", "email": "tech.bootstrap@system.local", "roles": [1, 2, 3], "enabled": true, "fullName": "Technical Bootstrap Administrator", "username": "tech.bootstrap", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-22T23:14:20.751380", "updatedAt": "2025-11-22T23:14:20.752389", "passwordHash": "$2a$10$qwblAK4hJlSWWQ8j7FIIueUEQCD/R1k6Lu7Nee5lFQxWFC9KIb2VG", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}	\N	{"referer": "http://localhost:5173/", "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}	fa3789c8-b8bd-4480-b7b4-53dd8dc352bc	c4cac549659a3e026353c63a6ad750b6a295a6b7b1763019f80d597e57d23b6d	2dca280776019f04fb1c8ab011e941bf00dd86738befe744a9596926d29b2d74	2025-11-22 23:14:20.760543	2025-11-22 23:14:20.668868
+50	498ef877-820f-4aba-9525-bde1b7f5664b	20251122000001	ENDPOINT	122	CREATE	auth-service	auth	users	tech.bootstrap	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	\N	{"id": 122, "path": "/api/worker/uploaded-data/file/{fileId}", "method": "DELETE", "uiType": null, "service": "worker-upload", "version": "v1", "isActive": true, "createdAt": "2025-11-22T23:14:50.542865", "policyIds": [], "updatedAt": "2025-11-22T23:14:50.542869", "description": null}	\N	{"referer": "http://localhost:5173/", "tableName": "endpoints", "entityClass": "com.example.userauth.entity.Endpoint", "requestedWith": null}	f78c8455-4b80-496e-893f-50c4b11d5698	0                                                               	63313e8ed0b030776d711fc4481a9ce00612d7112a471a361a0c2b0d3153fe12	2025-11-22 23:14:50.553563	2025-11-22 23:14:50.544702
+51	c1a28d6b-cc70-4460-91bd-a0c600c8a7c6	20251122000002	ENDPOINT_POLICY	593	CREATE	auth-service	auth	users	tech.bootstrap	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	\N	{"id": 593, "policyId": 18, "endpointId": 100}	\N	{"referer": "http://localhost:5173/", "tableName": "endpoint_policies", "entityClass": "com.example.userauth.entity.EndpointPolicy", "requestedWith": null}	f5d56dfe-d4ce-40b3-974c-6d6311deec8a	0                                                               	875c61c3d7fc5abd65d44813b06e4645f74f257bc7b7e59a3152e9ac7a66e562	2025-11-22 23:15:33.315974	2025-11-22 23:15:33.290093
+52	a606dcea-9fac-42d9-b422-a6e3b503e1c6	20251122000003	ENDPOINT_POLICY	594	CREATE	auth-service	auth	users	tech.bootstrap	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	\N	{"id": 594, "policyId": 18, "endpointId": 73}	\N	{"referer": "http://localhost:5173/", "tableName": "endpoint_policies", "entityClass": "com.example.userauth.entity.EndpointPolicy", "requestedWith": null}	48bb9d10-4c28-4ec7-9497-925c71d1400c	0                                                               	9fd4d33f6bd9ce39fa4a7b4ef891e04218502e9a108c9389947db3805c437f32	2025-11-22 23:15:33.320744	2025-11-22 23:15:33.290093
+53	f6ff4003-7e93-427a-a0ae-25c2911b3d51	20251122000004	ENDPOINT_POLICY	595	CREATE	auth-service	auth	users	tech.bootstrap	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	\N	{"id": 595, "policyId": 18, "endpointId": 122}	\N	{"referer": "http://localhost:5173/", "tableName": "endpoint_policies", "entityClass": "com.example.userauth.entity.EndpointPolicy", "requestedWith": null}	28b54281-e4c1-46d3-9e92-230726c2abdd	0                                                               	30cc58e7f9e20c2588235dcd0949a0210e8278bad8367dc5a9cc746c573974fe	2025-11-22 23:15:33.323712	2025-11-22 23:15:33.290093
+54	ffcdc479-4c15-4a8f-a393-682fc4cee53c	20251122000002	ENDPOINT_POLICY	593	UPDATE	auth-service	auth	users	tech.bootstrap	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	{"id": 593, "policyId": 18, "endpointId": 100}	{"id": 593, "policyId": 18, "endpointId": 107}	\N	{"referer": "http://localhost:5173/", "tableName": "endpoint_policies", "entityClass": "com.example.userauth.entity.EndpointPolicy", "requestedWith": null}	fe91978e-bbe3-478f-97ed-685d9aa82120	875c61c3d7fc5abd65d44813b06e4645f74f257bc7b7e59a3152e9ac7a66e562	5bcdefe2844120227213c617106da2e71671e48b787938726e7a70f4e6393bdf	2025-11-22 23:15:33.328073	2025-11-22 23:15:33.290093
+55	294e4b08-df22-4e02-b279-98399c88b276	20251122000003	ENDPOINT_POLICY	594	UPDATE	auth-service	auth	users	tech.bootstrap	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	{"id": 594, "policyId": 18, "endpointId": 73}	{"id": 594, "policyId": 18, "endpointId": 108}	\N	{"referer": "http://localhost:5173/", "tableName": "endpoint_policies", "entityClass": "com.example.userauth.entity.EndpointPolicy", "requestedWith": null}	35a32a2f-76ab-46a4-b9bc-3cf9eb2aa812	9fd4d33f6bd9ce39fa4a7b4ef891e04218502e9a108c9389947db3805c437f32	10b35a5885ca7d95141a57fff34a1031da57f1737672986a0119c9fc70f1d97c	2025-11-22 23:15:33.330282	2025-11-22 23:15:33.290093
+56	f3b7de8d-0aee-4a07-907e-1c2641bde640	20251122000004	ENDPOINT_POLICY	595	UPDATE	auth-service	auth	users	tech.bootstrap	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	{"id": 595, "policyId": 18, "endpointId": 122}	{"id": 595, "policyId": 18, "endpointId": 109}	\N	{"referer": "http://localhost:5173/", "tableName": "endpoint_policies", "entityClass": "com.example.userauth.entity.EndpointPolicy", "requestedWith": null}	068a16b9-4b0d-4bf2-bd9c-7cd7db910fd6	30cc58e7f9e20c2588235dcd0949a0210e8278bad8367dc5a9cc746c573974fe	3088344978b329997636632a5438cd3e325336e9b2ce42d04ff1fb62cf5022b7	2025-11-22 23:15:33.332404	2025-11-22 23:15:33.290093
+72	330de3ca-1683-4879-a900-f0b7e5c1685f	20251120000001	USER	39	UPDATE	auth-service	auth	users	tech.bootstrap	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	{"id": 39, "role": "ADMIN", "email": "tech.bootstrap@system.local", "roles": [1, 2, 3], "enabled": true, "fullName": "Technical Bootstrap Administrator", "username": "tech.bootstrap", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-22T23:14:20.751380", "updatedAt": "2025-11-22T23:14:20.752389", "passwordHash": "$2a$10$qwblAK4hJlSWWQ8j7FIIueUEQCD/R1k6Lu7Nee5lFQxWFC9KIb2VG", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}	{"id": 39, "role": "ADMIN", "email": "tech.bootstrap@system.local", "roles": [1, 2, 3], "enabled": true, "fullName": "Technical Bootstrap Administrator", "username": "tech.bootstrap", "createdAt": "2025-11-03T05:03:38.142121", "lastLogin": "2025-11-22T23:38:37.864516", "updatedAt": "2025-11-22T23:38:37.865182", "passwordHash": "$2a$10$qwblAK4hJlSWWQ8j7FIIueUEQCD/R1k6Lu7Nee5lFQxWFC9KIb2VG", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 1, "credentialsNonExpired": true}	\N	{"referer": "http://localhost:8080/swagger-ui/index.html", "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}	a8434377-7800-422b-86ea-a541afd4f39a	2dca280776019f04fb1c8ab011e941bf00dd86738befe744a9596926d29b2d74	df524719ce096f15d4b043a761723d298229c8631f7a6e7f829cdb54bf9aa102	2025-11-22 23:38:37.869679	2025-11-22 23:38:37.779733
+88	732644ec-a578-4c51-9bd1-dbe321af6258	20251122000005	ENDPOINT_POLICY	627	CREATE	auth-service	auth	users	tech.bootstrap	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	\N	{"id": 627, "policyId": 18, "endpointId": 100}	\N	{"referer": "http://localhost:5173/", "tableName": "endpoint_policies", "entityClass": "com.example.userauth.entity.EndpointPolicy", "requestedWith": null}	911e451f-48fe-4ab7-bd1d-43164a4f8071	0                                                               	c591e61f661641a34de96a325faaf68b6588e7f4d4716a31696b545eeb6ad7bf	2025-11-22 23:50:15.704796	2025-11-22 23:50:15.675714
+89	2ac81a17-d5f6-4668-ba5b-825e2941d059	20251122000006	ENDPOINT_POLICY	628	CREATE	auth-service	auth	users	tech.bootstrap	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	\N	{"id": 628, "policyId": 18, "endpointId": 122}	\N	{"referer": "http://localhost:5173/", "tableName": "endpoint_policies", "entityClass": "com.example.userauth.entity.EndpointPolicy", "requestedWith": null}	0c5eb177-1cc6-467b-890c-71ed47ec78c3	0                                                               	7b3d1d01987ed7fb5813c21052d0a6edb1340c3ac10c733c37af200519e823d8	2025-11-22 23:50:15.711438	2025-11-22 23:50:15.675714
+90	988e5754-81e7-424b-9655-f554bd206376	20251122000007	ENDPOINT_POLICY	629	CREATE	auth-service	auth	users	tech.bootstrap	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	\N	{"id": 629, "policyId": 18, "endpointId": 107}	\N	{"referer": "http://localhost:5173/", "tableName": "endpoint_policies", "entityClass": "com.example.userauth.entity.EndpointPolicy", "requestedWith": null}	9d62faea-8100-4966-837f-d00e3c17ebfb	0                                                               	62897e6f55e3b613dcd95386f1613ba8182de58f630db0caaf7eac01744c4f9d	2025-11-22 23:50:15.714405	2025-11-22 23:50:15.675714
+91	4fe0cdfa-b2d4-400f-809a-c4c6f9e8a168	20251122000008	ENDPOINT_POLICY	630	CREATE	auth-service	auth	users	tech.bootstrap	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	\N	{"id": 630, "policyId": 18, "endpointId": 108}	\N	{"referer": "http://localhost:5173/", "tableName": "endpoint_policies", "entityClass": "com.example.userauth.entity.EndpointPolicy", "requestedWith": null}	2f439a31-f055-4b94-aec6-6edc20541506	0                                                               	8623bf7772880a23aafeb1cf246311206a143e64ab35190738e0d0a31d847266	2025-11-22 23:50:15.717429	2025-11-22 23:50:15.675714
+92	23709c75-ad37-40d8-b2ea-15d9ec8dd688	20251122000009	ENDPOINT_POLICY	631	CREATE	auth-service	auth	users	tech.bootstrap	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	\N	{"id": 631, "policyId": 18, "endpointId": 109}	\N	{"referer": "http://localhost:5173/", "tableName": "endpoint_policies", "entityClass": "com.example.userauth.entity.EndpointPolicy", "requestedWith": null}	5f091035-f66e-43b7-9a85-b51ff8fdbbf5	0                                                               	393b07c884e4af491b04cd93d5a3665366981df298bc380adbd0d5f69a602531	2025-11-22 23:50:15.720457	2025-11-22 23:50:15.675714
+93	2b68834e-a95f-4f59-a51e-47b7ea8ce560	20251120000002	USER	3	UPDATE	auth-service	auth	users	WORKER	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	{"id": 3, "role": "USER", "email": "ram@gmail.com", "roles": [5, 4], "enabled": true, "fullName": "Ram", "username": "WORKER", "createdAt": "2025-10-30T08:23:17", "lastLogin": "2025-11-22T22:18:10.507869", "updatedAt": "2025-11-22T22:18:10.521487", "passwordHash": "$2a$10$u1NYF1njJbIm8Dy3uOlCC.m1bJ3AdalTq7/Q7uGnnBGRepc8tjFI6", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 5, "credentialsNonExpired": true}	{"id": 3, "role": "USER", "email": "ram@gmail.com", "roles": [5, 4], "enabled": true, "fullName": "Ram", "username": "WORKER", "createdAt": "2025-10-30T08:23:17", "lastLogin": "2025-11-22T23:50:43.776298", "updatedAt": "2025-11-22T23:50:43.778177", "passwordHash": "$2a$10$u1NYF1njJbIm8Dy3uOlCC.m1bJ3AdalTq7/Q7uGnnBGRepc8tjFI6", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 5, "credentialsNonExpired": true}	\N	{"referer": "http://localhost:8080/swagger-ui/index.html", "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}	36b52fe1-78a9-4f2f-95fc-aee60073ed4f	3b5fb647871178dbe3ae81fae64511a9e67c86730a922cd21d6a64c74abe0599	27c2a6f0a7b41fa71c050d23b6e1a48fb37e53417121df8d98ec484f4a2db425	2025-11-22 23:50:43.789158	2025-11-22 23:50:43.703537
+94	c4527b06-bc0d-42a4-8d6a-d7f25d432202	20251120000002	USER	3	UPDATE	auth-service	auth	users	WORKER	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	{"id": 3, "role": "USER", "email": "ram@gmail.com", "roles": [5, 4], "enabled": true, "fullName": "Ram", "username": "WORKER", "createdAt": "2025-10-30T08:23:17", "lastLogin": "2025-11-22T23:50:43.776298", "updatedAt": "2025-11-22T23:50:43.778177", "passwordHash": "$2a$10$u1NYF1njJbIm8Dy3uOlCC.m1bJ3AdalTq7/Q7uGnnBGRepc8tjFI6", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 5, "credentialsNonExpired": true}	{"id": 3, "role": "USER", "email": "ram@gmail.com", "roles": [5, 4], "enabled": true, "fullName": "Ram", "username": "WORKER", "createdAt": "2025-10-30T08:23:17", "lastLogin": "2025-11-23T08:08:40.905872", "updatedAt": "2025-11-23T08:08:40.918938", "passwordHash": "$2a$10$u1NYF1njJbIm8Dy3uOlCC.m1bJ3AdalTq7/Q7uGnnBGRepc8tjFI6", "accountNonLocked": true, "accountNonExpired": true, "permissionVersion": 5, "credentialsNonExpired": true}	\N	{"referer": "http://localhost:8080/swagger-ui/index.html", "tableName": "users", "entityClass": "com.example.userauth.entity.User", "requestedWith": null}	2e4361d7-636b-4cc1-87ef-24cfa8ab233f	27c2a6f0a7b41fa71c050d23b6e1a48fb37e53417121df8d98ec484f4a2db425	8585c1ac8e97e0b5bd2875cf269c699b3f80853413c8107637121aecbdb306c4	2025-11-23 08:08:40.946361	2025-11-23 08:08:40.805945
+95	438ce6e8-1ba1-4e39-8d8a-9ac1a9b8d249	20251123000001	ENDPOINT	123	CREATE	auth-service	auth	users	tech.bootstrap	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	\N	{"id": 123, "path": "/api/worker/uploaded-data/file/{fileId}/records", "method": "PATCH", "uiType": null, "service": "worker", "version": "v1", "isActive": true, "createdAt": "2025-11-23T08:13:11.661770", "policyIds": [], "updatedAt": "2025-11-23T08:13:11.661772", "description": null}	\N	{"referer": "http://localhost:5173/", "tableName": "endpoints", "entityClass": "com.example.userauth.entity.Endpoint", "requestedWith": null}	53634b2d-8908-43cc-9d7b-5703972efdbc	0                                                               	a9c9e97b848831c3d7a8a72459069002a7dc3c5b503755f67a5be2fdb5d45b63	2025-11-23 08:13:11.672468	2025-11-23 08:13:11.664602
+96	b8837586-79f2-46b4-9de7-c7ece90f518f	20251123000002	ENDPOINT_POLICY	632	CREATE	auth-service	auth	users	tech.bootstrap	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	\N	{"id": 632, "policyId": 18, "endpointId": 100}	\N	{"referer": "http://localhost:5173/", "tableName": "endpoint_policies", "entityClass": "com.example.userauth.entity.EndpointPolicy", "requestedWith": null}	870cc568-2eb2-46c8-97e3-913a975abcf5	0                                                               	5b09c544883c8d9a299d8f046d0d90c096cede414abc2dc4c037c793662cd728	2025-11-23 08:13:24.082721	2025-11-23 08:13:24.063547
+97	77afdf1e-3532-4d65-93e1-68b4db03cb23	20251123000003	ENDPOINT_POLICY	633	CREATE	auth-service	auth	users	tech.bootstrap	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	\N	{"id": 633, "policyId": 18, "endpointId": 122}	\N	{"referer": "http://localhost:5173/", "tableName": "endpoint_policies", "entityClass": "com.example.userauth.entity.EndpointPolicy", "requestedWith": null}	274a6820-415b-4e61-b16e-7d574969c836	0                                                               	5c825b8fdd7951628b07fe00c58d47eb44ad7e7eb504a55402fa9f4691ae6afb	2025-11-23 08:13:24.085961	2025-11-23 08:13:24.063547
+98	dbe610ed-a495-4dd4-9dec-3e132f447a35	20251123000004	ENDPOINT_POLICY	634	CREATE	auth-service	auth	users	tech.bootstrap	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	\N	{"id": 634, "policyId": 18, "endpointId": 123}	\N	{"referer": "http://localhost:5173/", "tableName": "endpoint_policies", "entityClass": "com.example.userauth.entity.EndpointPolicy", "requestedWith": null}	9865849e-c1b7-4d98-af6c-b3dcb5241c4b	0                                                               	612123f946a947c1b9917821d45e1fdb53ddd2d63d67a0a21f7fbd63a667d84c	2025-11-23 08:13:24.089078	2025-11-23 08:13:24.063547
+99	1354d3be-85a8-48f3-af7d-d011f98143b2	20251123000005	ENDPOINT_POLICY	635	CREATE	auth-service	auth	users	tech.bootstrap	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	\N	{"id": 635, "policyId": 18, "endpointId": 107}	\N	{"referer": "http://localhost:5173/", "tableName": "endpoint_policies", "entityClass": "com.example.userauth.entity.EndpointPolicy", "requestedWith": null}	7dd503a2-3889-41f2-b272-946cf3918dbe	0                                                               	732fe4edbed549dacdeae42b940abb78a7ddde13473fe6e79b5ca1c4d63ac8ae	2025-11-23 08:13:24.091922	2025-11-23 08:13:24.063547
+100	44d34e98-57ee-4a01-aaaf-a350c9c32479	20251123000006	ENDPOINT_POLICY	636	CREATE	auth-service	auth	users	tech.bootstrap	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	\N	{"id": 636, "policyId": 18, "endpointId": 108}	\N	{"referer": "http://localhost:5173/", "tableName": "endpoint_policies", "entityClass": "com.example.userauth.entity.EndpointPolicy", "requestedWith": null}	c053f775-c0d0-4c2e-868e-656b3c9fa3c5	0                                                               	4782f9c9b25db5222db4bd191263a93a6e6b553a01fdbb22ba72b047d46f324d	2025-11-23 08:13:24.094824	2025-11-23 08:13:24.063547
+101	61d6a1e7-25f9-4404-8afb-c5ccfc82d4e1	20251123000007	ENDPOINT_POLICY	637	CREATE	auth-service	auth	users	tech.bootstrap	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	\N	{"id": 637, "policyId": 18, "endpointId": 109}	\N	{"referer": "http://localhost:5173/", "tableName": "endpoint_policies", "entityClass": "com.example.userauth.entity.EndpointPolicy", "requestedWith": null}	0474b7f1-f0c2-48a2-b7a4-9eca0fe94711	0                                                               	082b0d62711c068aff71470b9e8e4c677b16e019caa1d80a10acdb1e42a182b7	2025-11-23 08:13:24.096759	2025-11-23 08:13:24.063547
+102	8dc9d0a5-bce3-4006-ad13-f1b922086a5c	20251123000008	ENDPOINT_POLICY	638	CREATE	auth-service	auth	users	tech.bootstrap	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	\N	{"id": 638, "policyId": 18, "endpointId": 100}	\N	{"referer": "http://localhost:5173/", "tableName": "endpoint_policies", "entityClass": "com.example.userauth.entity.EndpointPolicy", "requestedWith": null}	3dfbcfd3-9eba-464f-bd8e-78ce78cfa8e0	0                                                               	bdb4678c8a8fc3b89e25e8bb42672bdee4393ec6cc12280259c6630197f4c32a	2025-11-23 08:51:39.910175	2025-11-23 08:51:39.894294
+103	4c887c66-bde9-419c-9ca9-6d195bf84e68	20251123000009	ENDPOINT_POLICY	639	CREATE	auth-service	auth	users	tech.bootstrap	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	\N	{"id": 639, "policyId": 18, "endpointId": 73}	\N	{"referer": "http://localhost:5173/", "tableName": "endpoint_policies", "entityClass": "com.example.userauth.entity.EndpointPolicy", "requestedWith": null}	7dd3d959-cfb1-4658-9a29-e6a8027e932a	0                                                               	c025f9ef0f62c04ffa4bf75c65ce901660a46c765f569e952583e4a1858149b4	2025-11-23 08:51:39.913722	2025-11-23 08:51:39.894294
+104	ad301723-15b4-491e-80b2-4c183e03f3ef	20251123000010	ENDPOINT_POLICY	640	CREATE	auth-service	auth	users	tech.bootstrap	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	\N	{"id": 640, "policyId": 18, "endpointId": 122}	\N	{"referer": "http://localhost:5173/", "tableName": "endpoint_policies", "entityClass": "com.example.userauth.entity.EndpointPolicy", "requestedWith": null}	ff2b9334-1d28-418c-b36a-7fa5769545af	0                                                               	c79dfd96695e69afb075c77c41ced7b2dfd53aada5740f63108273a1704c92f3	2025-11-23 08:51:39.916278	2025-11-23 08:51:39.894294
+105	b641615a-8d7c-4d37-bf1f-fc9f4ba95748	20251123000011	ENDPOINT_POLICY	641	CREATE	auth-service	auth	users	tech.bootstrap	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	\N	{"id": 641, "policyId": 18, "endpointId": 123}	\N	{"referer": "http://localhost:5173/", "tableName": "endpoint_policies", "entityClass": "com.example.userauth.entity.EndpointPolicy", "requestedWith": null}	896a01f8-d3db-412c-a519-8198d470403d	0                                                               	8d65cb485d4fa07f19271664688c73eecf8c1f89a6d4720541ac5d9c51802a0d	2025-11-23 08:51:39.91897	2025-11-23 08:51:39.894294
+106	e1daff3f-ac76-44d9-a881-a52ab235d121	20251123000012	ENDPOINT_POLICY	642	CREATE	auth-service	auth	users	tech.bootstrap	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	\N	{"id": 642, "policyId": 18, "endpointId": 107}	\N	{"referer": "http://localhost:5173/", "tableName": "endpoint_policies", "entityClass": "com.example.userauth.entity.EndpointPolicy", "requestedWith": null}	ade283c9-21c2-48f1-a998-6f97eb3cff19	0                                                               	bb9fa75cbac5b2546e55ecb4d938da837f2c6fbedefdfbc4c9fb55954d15abac	2025-11-23 08:51:39.921477	2025-11-23 08:51:39.894294
+107	72ba5758-29a8-46c4-9810-bac024c6f265	20251123000013	ENDPOINT_POLICY	643	CREATE	auth-service	auth	users	tech.bootstrap	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	\N	{"id": 643, "policyId": 18, "endpointId": 108}	\N	{"referer": "http://localhost:5173/", "tableName": "endpoint_policies", "entityClass": "com.example.userauth.entity.EndpointPolicy", "requestedWith": null}	b531ff3c-3474-4ecc-b6b7-43f08a01ad4a	0                                                               	ab9db898e11ded5056af3585559cfc877a43f29ecc3a0c3fbc1cf91d764e74f3	2025-11-23 08:51:39.924181	2025-11-23 08:51:39.894294
+108	c06981d4-547a-4ac4-8cb9-a8dfd475d824	20251123000014	ENDPOINT_POLICY	644	CREATE	auth-service	auth	users	tech.bootstrap	0:0:0:0:0:0:0:1	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	\N	{"id": 644, "policyId": 18, "endpointId": 109}	\N	{"referer": "http://localhost:5173/", "tableName": "endpoint_policies", "entityClass": "com.example.userauth.entity.EndpointPolicy", "requestedWith": null}	0a6bbde0-4ed1-4bf6-9347-e45f91bfeb30	0                                                               	4e74acaf564ff8f38148581ece97a93a0afabc2b41c7f5a6dba4c24824b22858	2025-11-23 08:51:39.92634	2025-11-23 08:51:39.894294
 \.
 
 
@@ -11604,11 +11659,6 @@ COPY auth.endpoint_policies (id, endpoint_id, policy_id) FROM stdin;
 521	35	11
 522	99	11
 523	102	9
-532	100	18
-533	73	18
-534	107	18
-535	108	18
-536	109	18
 537	112	20
 538	110	20
 539	111	20
@@ -11695,6 +11745,13 @@ COPY auth.endpoint_policies (id, endpoint_id, policy_id) FROM stdin;
 587	119	19
 588	87	19
 589	93	19
+638	100	18
+639	73	18
+640	122	18
+641	123	18
+642	107	18
+643	108	18
+644	109	18
 \.
 
 
@@ -11802,6 +11859,8 @@ COPY auth.endpoints (id, service, version, method, path, description, is_active,
 113	admin	v1	POST	/api/master/workers	Worker master upload	t	2025-11-15 21:08:14.818883	2025-11-20 20:43:30.243915	\N
 114	admin	v1	POST	/api/master/toli	Toli master upload	t	2025-11-15 21:08:34.029446	2025-11-20 20:43:44.766544	\N
 115	admin	v1	POST	/api/master/employers	Employer master upload	t	2025-11-15 21:08:56.215705	2025-11-20 20:43:50.598907	\N
+122	worker-upload	v1	DELETE	/api/worker/uploaded-data/file/{fileId}	\N	t	2025-11-22 23:14:50.542865	2025-11-22 23:14:50.542869	\N
+123	worker	v1	PATCH	/api/worker/uploaded-data/file/{fileId}/records	\N	t	2025-11-23 08:13:11.66177	2025-11-23 08:13:11.661772	\N
 \.
 
 
@@ -12061,8 +12120,8 @@ COPY auth.users (id, username, email, password, full_name, role, is_enabled, is_
 1	admin	admin@example.com	$2b$10$ZuNPpWnsWE/DVaHFzPGnHuh0ANT7.ZlT8YeSCnY3W8pInAOKk/vwu	System Administrator	ADMIN	f	t	t	t	2025-10-09 15:23:20	2025-11-05 10:01:51.008601	2025-11-02 10:27:03.960444	12	ADMIN
 2	rahul	rahul@hotmail.com	$2a$10$9KbZe.9oH.ybQl03KyOcKu9GqsVfib6l9J5aHnRmPIjVUrTlfbOGi	rahul c	ADMIN	f	t	t	t	2025-10-29 06:23:05	2025-11-04 15:54:54.744435	2025-10-29 06:27:48	8	ADMIN
 5	Ram2	ram2@gmail.com	$2a$10$1mYbHoutHH5O3XcsyyQrheoEIhfj7C552lfgRA7ybDp12ij00QdUe	Ram1	EMPLOYER	f	t	t	t	2025-10-30 10:26:55	2025-11-04 15:54:57.878647	\N	6	ADMIN
-39	tech.bootstrap	tech.bootstrap@system.local	$2a$10$qwblAK4hJlSWWQ8j7FIIueUEQCD/R1k6Lu7Nee5lFQxWFC9KIb2VG	Technical Bootstrap Administrator	ADMIN	t	t	t	t	2025-11-03 05:03:38.142121	2025-11-22 15:41:07.198161	2025-11-22 15:41:07.195163	1	ADMIN
-3	WORKER	ram@gmail.com	$2a$10$u1NYF1njJbIm8Dy3uOlCC.m1bJ3AdalTq7/Q7uGnnBGRepc8tjFI6	Ram	USER	t	t	t	t	2025-10-30 08:23:17	2025-11-22 22:18:10.521487	2025-11-22 22:18:10.507869	5	ADMIN
+39	tech.bootstrap	tech.bootstrap@system.local	$2a$10$qwblAK4hJlSWWQ8j7FIIueUEQCD/R1k6Lu7Nee5lFQxWFC9KIb2VG	Technical Bootstrap Administrator	ADMIN	t	t	t	t	2025-11-03 05:03:38.142121	2025-11-22 23:38:37.865182	2025-11-22 23:38:37.864516	1	ADMIN
+3	WORKER	ram@gmail.com	$2a$10$u1NYF1njJbIm8Dy3uOlCC.m1bJ3AdalTq7/Q7uGnnBGRepc8tjFI6	Ram	USER	t	t	t	t	2025-10-30 08:23:17	2025-11-23 08:08:40.918938	2025-11-23 08:08:40.905872	5	ADMIN
 \.
 
 
@@ -12171,8 +12230,8 @@ COPY payment_flow.toli_master (id, registration_number, employer_name_marathi, a
 --
 
 COPY payment_flow.uploaded_files (id, filename, stored_path, file_hash, file_type, created_at, uploaded_by, total_records, success_count, failure_count, status, file_reference_number, board_id, employer_id, toli_id) FROM stdin;
-48	worker_uploaded_data_entity_format_sample.csv	/Users/rahulcharvekar/Documents/Repos/LBE/PaymentReconciliation/payment-flow-service/API/workerpayments/da0f3057-e074-49eb-9c49-94f78b984b64_worker_uploaded_data_entity_format_sample.csv	2f2096c9e297595adf47cb1ccbfba91ca1dfe6f704f508a90a1c419e75c80ca6	workerpayments	2025-11-22 22:40:05.402031	\N	2	2	0	VALIDATED	REQ-20251122-224005-403	1	2	1
-49	worker_uploaded_data_entity_format_sample copy.csv	/Users/rahulcharvekar/Documents/Repos/LBE/PaymentReconciliation/payment-flow-service/API/workerpayments/49adbf95-a47f-43a6-b92f-d0a9ab5dec89_worker_uploaded_data_entity_format_sample copy.csv	b94911214a75cecfe3f78ad09334a0fbf050e5c9c23eeec3d646a4ccbb646856	workerpayments	2025-11-22 22:43:32.454889	\N	2	1	1	VALIDATION_FAILED	REQ-20251122-224332-456	1	2	1
+57	worker_payment_all_success.csv	/Users/rahulcharvekar/Documents/Repos/LBE/PaymentReconciliation/payment-flow-service/API/workerpayments/f861630d-c6d2-4dd0-9325-7eb8e1ed93b8_worker_payment_all_success.csv	2f2096c9e297595adf47cb1ccbfba91ca1dfe6f704f508a90a1c419e75c80ca6	workerpayments	2025-11-23 08:53:43.025202	\N	2	2	0	VALIDATED	REQ-20251123-085343-025	1	2	1
+56	worker_payment_partial_success.csv	/Users/rahulcharvekar/Documents/Repos/LBE/PaymentReconciliation/payment-flow-service/API/workerpayments/e46fd716-8962-4639-b220-9bcb4b5c1247_worker_payment_partial_success.csv	b94911214a75cecfe3f78ad09334a0fbf050e5c9c23eeec3d646a4ccbb646856	workerpayments	2025-11-23 08:42:56.505462	\N	2	2	0	VALIDATED	REQ-20251123-084256-507	1	2	1
 \.
 
 
@@ -12215,10 +12274,10 @@ COPY payment_flow.worker_toli_relation (id, worker_id, toli_id, board_id, employ
 --
 
 COPY payment_flow.worker_uploaded_data (id, file_id, employee_name, employer_reg_no, toli_reg_no, year_month, day1, day2, day3, day4, day5, day6, day7, day8, day9, day10, day11, day12, day13, day14, day15, day16, day17, day18, day19, day20, day21, day22, day23, day24, day25, day26, day27, day28, day29, day30, day31, total_days, amount, advance, net_payable, payment_type, txn_ref, rejection_reason, created_at, updated_at, board_id, employer_id, toli_id, request_nmbr, status_id, worker_regno) FROM stdin;
-86	49	Alice Worker	EMP-0001	TOLI-001	2025-01	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	22.00	2200.00	200.00	2000.00	BANK_TRANSFER	\N	2025-11-22 22:43:32.458552	2025-11-22 22:43:32.465335	1	2	1	\N	1	WRK-0001
-87	49	Bob Builder	EMP-0002	TOLI-002	2025-01	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	15.00	1500.00	0.00	1500.00	CASH	worker_regno not found in worker_master	2025-11-22 22:43:32.458621	2025-11-22 22:43:32.465335	1	2	1	\N	2	WRK-0004
-84	48	Alice Worker	EMP-0001	TOLI-001	2025-01	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	22.00	2200.00	200.00	2000.00	BANK_TRANSFER	\N	2025-11-22 22:40:05.421563	2025-11-22 22:40:05.44474	1	2	1	\N	1	WRK-0001
-85	48	Bob Builder	EMP-0002	TOLI-002	2025-01	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	15.00	1500.00	0.00	1500.00	CASH	\N	2025-11-22 22:40:05.421726	2025-11-22 22:40:05.44474	1	2	1	\N	1	WRK-0002
+100	56	Alice Worker	EMP-0001	TOLI-001	2025-01	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	22.00	2200.00	200.00	2000.00	BANK_TRANSFER	\N	2025-11-23 08:42:56.525255	2025-11-23 08:42:56.54711	1	2	1	\N	1	WRK-0001
+101	56	Bob Builder	EMP-0002	TOLI-002	2025-01	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	15.00	1500.00	0.00	1500.00	CASH	\N	2025-11-23 08:42:56.525411	2025-11-23 08:43:29.175624	1	2	1	\N	1	WRK-0002
+102	57	Alice Worker	EMP-0001	TOLI-001	2025-01	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	22.00	2200.00	200.00	2000.00	BANK_TRANSFER	\N	2025-11-23 08:53:43.028051	2025-11-23 08:53:43.035188	1	2	1	\N	1	WRK-0001
+103	57	Bob Builder	EMP-0002	TOLI-002	2025-01	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	15.00	1500.00	0.00	1500.00	CASH	\N	2025-11-23 08:53:43.02813	2025-11-23 08:53:43.035188	1	2	1	\N	1	WRK-0002
 \.
 
 
@@ -12360,28 +12419,28 @@ COPY reconciliation.van_transaction (id, import_run_id, main_account_number, vir
 -- Name: audit_event_id_seq; Type: SEQUENCE SET; Schema: audit; Owner: admin_lbe
 --
 
-SELECT pg_catalog.setval('audit.audit_event_id_seq', 42, true);
+SELECT pg_catalog.setval('audit.audit_event_id_seq', 44, true);
 
 
 --
 -- Name: entity_audit_event_id_seq; Type: SEQUENCE SET; Schema: audit; Owner: admin_lbe
 --
 
-SELECT pg_catalog.setval('audit.entity_audit_event_id_seq', 48, true);
+SELECT pg_catalog.setval('audit.entity_audit_event_id_seq', 108, true);
 
 
 --
 -- Name: endpoint_policies_id_seq; Type: SEQUENCE SET; Schema: auth; Owner: admin_lbe
 --
 
-SELECT pg_catalog.setval('auth.endpoint_policies_id_seq', 592, true);
+SELECT pg_catalog.setval('auth.endpoint_policies_id_seq', 644, true);
 
 
 --
 -- Name: endpoints_id_seq; Type: SEQUENCE SET; Schema: auth; Owner: admin_lbe
 --
 
-SELECT pg_catalog.setval('auth.endpoints_id_seq', 121, true);
+SELECT pg_catalog.setval('auth.endpoints_id_seq', 123, true);
 
 
 --
@@ -12535,7 +12594,7 @@ SELECT pg_catalog.setval('payment_flow.toli_master_id_seq', 3, true);
 -- Name: uploaded_files_id_seq; Type: SEQUENCE SET; Schema: payment_flow; Owner: admin_lbe
 --
 
-SELECT pg_catalog.setval('payment_flow.uploaded_files_id_seq', 49, true);
+SELECT pg_catalog.setval('payment_flow.uploaded_files_id_seq', 57, true);
 
 
 --
@@ -12570,7 +12629,7 @@ SELECT pg_catalog.setval('payment_flow.worker_toli_relation_id_seq', 1, false);
 -- Name: worker_uploaded_data_id_seq; Type: SEQUENCE SET; Schema: payment_flow; Owner: admin_lbe
 --
 
-SELECT pg_catalog.setval('payment_flow.worker_uploaded_data_id_seq', 87, true);
+SELECT pg_catalog.setval('payment_flow.worker_uploaded_data_id_seq', 103, true);
 
 
 --
@@ -13175,14 +13234,6 @@ ALTER TABLE ONLY payment_flow.worker_payments
 
 ALTER TABLE ONLY payment_flow.worker_toli_relation
     ADD CONSTRAINT worker_toli_relation_pkey PRIMARY KEY (id);
-
-
---
--- Name: worker_uploaded_data worker_uploaded_data_pkey; Type: CONSTRAINT; Schema: payment_flow; Owner: admin_lbe
---
-
-ALTER TABLE ONLY payment_flow.worker_uploaded_data
-    ADD CONSTRAINT worker_uploaded_data_pkey PRIMARY KEY (id);
 
 
 --
@@ -14350,10 +14401,10 @@ GRANT ALL ON FUNCTION payment_flow.get_status_code(p_id integer) TO app_payment_
 
 
 --
--- Name: PROCEDURE validate_uploaded_data(IN file_id_input bigint, OUT validation_result json); Type: ACL; Schema: payment_flow; Owner: root
+-- Name: PROCEDURE validate_uploaded_data(OUT validation_result json, IN file_id_input bigint, IN id_input bigint); Type: ACL; Schema: payment_flow; Owner: root
 --
 
-GRANT ALL ON PROCEDURE payment_flow.validate_uploaded_data(IN file_id_input bigint, OUT validation_result json) TO app_payment_flow;
+GRANT ALL ON PROCEDURE payment_flow.validate_uploaded_data(OUT validation_result json, IN file_id_input bigint, IN id_input bigint) TO app_payment_flow;
 
 
 --
@@ -14729,7 +14780,7 @@ GRANT SELECT,INSERT,DELETE,UPDATE ON TABLE reconciliation.van_transaction TO app
 -- PostgreSQL database dump complete
 --
 
-\unrestrict SamKShIcs1TGpzXA4usQOFuCNRIbxlCGOgzjMtlikDleBrcJ4bhQfyywgWy2crB
+\unrestrict cOZuSWT8XZwEvIR8Q9U7sdRhge258Q6Q9M49CbhpiDOmzLx8YuvN87JwZdiqfds
 
 --
 -- Database "postgres" dump
@@ -14741,7 +14792,7 @@ GRANT SELECT,INSERT,DELETE,UPDATE ON TABLE reconciliation.van_transaction TO app
 -- PostgreSQL database dump
 --
 
-\restrict mxREM7vMxRjSeNOdmbPigKyppSVgh1fsTFYG7XLgMtdBHkza4b7tSMXTUnhicKE
+\restrict 6xZuTsNpJBeLRNdIjkq6mfmXE14M69eDlSjiZHYME3qeGGA1VXl3fHdggNCIb3I
 
 -- Dumped from database version 18.0 (Debian 18.0-1.pgdg13+3)
 -- Dumped by pg_dump version 18.0 (Debian 18.0-1.pgdg13+3)
@@ -14762,7 +14813,7 @@ SET row_security = off;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict mxREM7vMxRjSeNOdmbPigKyppSVgh1fsTFYG7XLgMtdBHkza4b7tSMXTUnhicKE
+\unrestrict 6xZuTsNpJBeLRNdIjkq6mfmXE14M69eDlSjiZHYME3qeGGA1VXl3fHdggNCIb3I
 
 --
 -- PostgreSQL database cluster dump complete
