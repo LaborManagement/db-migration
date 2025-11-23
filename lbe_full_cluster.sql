@@ -2,7 +2,7 @@
 -- PostgreSQL database cluster dump
 --
 
-\restrict IlGuQuGTOw90Nk4aem8zaQrRiIShl76JzFHQIdw8vrcpP1SbfGeCgaAa5T3k32h
+\restrict TfUABeTxfmo7uYXVUBjWmgKNHyqd93qqzNbILy4KX7I2byfAWv5Xqn2SsXcBwhF
 
 SET default_transaction_read_only = off;
 
@@ -43,7 +43,7 @@ ALTER ROLE root WITH SUPERUSER INHERIT CREATEROLE CREATEDB LOGIN REPLICATION BYP
 
 
 
-\unrestrict IlGuQuGTOw90Nk4aem8zaQrRiIShl76JzFHQIdw8vrcpP1SbfGeCgaAa5T3k32h
+\unrestrict TfUABeTxfmo7uYXVUBjWmgKNHyqd93qqzNbILy4KX7I2byfAWv5Xqn2SsXcBwhF
 
 --
 -- Databases
@@ -59,7 +59,7 @@ ALTER ROLE root WITH SUPERUSER INHERIT CREATEROLE CREATEDB LOGIN REPLICATION BYP
 -- PostgreSQL database dump
 --
 
-\restrict cOGAYmrlC4pSBcT5g6vxRMEawAaXGJZ6U38PCgVZnkUWF23rhw3St3W48wb0Sdl
+\restrict t5BwYN3vaw3cqhprHno2Gv4ivloNUnWwios5bLe9SeKwFbKrlVAyLupyVoAUNEC
 
 -- Dumped from database version 18.0 (Debian 18.0-1.pgdg13+3)
 -- Dumped by pg_dump version 18.0 (Debian 18.0-1.pgdg13+3)
@@ -80,7 +80,7 @@ SET row_security = off;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict cOGAYmrlC4pSBcT5g6vxRMEawAaXGJZ6U38PCgVZnkUWF23rhw3St3W48wb0Sdl
+\unrestrict t5BwYN3vaw3cqhprHno2Gv4ivloNUnWwios5bLe9SeKwFbKrlVAyLupyVoAUNEC
 
 --
 -- Database "labormanagement" dump
@@ -90,7 +90,7 @@ SET row_security = off;
 -- PostgreSQL database dump
 --
 
-\restrict 8QoutNFtVocXlH8oE14eKafpokc3nefpBVMtYg9TsioCY9NFTghU1wFdSmxVW0l
+\restrict M1uf1Xfpze3tYaBkqyvZfoEKwBkr3IcITeknu9Ep0cYeSadrB0zGOt4kHiCfrwn
 
 -- Dumped from database version 18.0 (Debian 18.0-1.pgdg13+3)
 -- Dumped by pg_dump version 18.0 (Debian 18.0-1.pgdg13+3)
@@ -116,9 +116,9 @@ CREATE DATABASE labormanagement WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCA
 
 ALTER DATABASE labormanagement OWNER TO root;
 
-\unrestrict 8QoutNFtVocXlH8oE14eKafpokc3nefpBVMtYg9TsioCY9NFTghU1wFdSmxVW0l
+\unrestrict M1uf1Xfpze3tYaBkqyvZfoEKwBkr3IcITeknu9Ep0cYeSadrB0zGOt4kHiCfrwn
 \connect labormanagement
-\restrict 8QoutNFtVocXlH8oE14eKafpokc3nefpBVMtYg9TsioCY9NFTghU1wFdSmxVW0l
+\restrict M1uf1Xfpze3tYaBkqyvZfoEKwBkr3IcITeknu9Ep0cYeSadrB0zGOt4kHiCfrwn
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -8791,7 +8791,7 @@ ALTER DEFAULT PRIVILEGES FOR ROLE root IN SCHEMA reconciliation GRANT SELECT,INS
 -- PostgreSQL database dump complete
 --
 
-\unrestrict 8QoutNFtVocXlH8oE14eKafpokc3nefpBVMtYg9TsioCY9NFTghU1wFdSmxVW0l
+\unrestrict M1uf1Xfpze3tYaBkqyvZfoEKwBkr3IcITeknu9Ep0cYeSadrB0zGOt4kHiCfrwn
 
 --
 -- Database "lbe" dump
@@ -8801,7 +8801,7 @@ ALTER DEFAULT PRIVILEGES FOR ROLE root IN SCHEMA reconciliation GRANT SELECT,INS
 -- PostgreSQL database dump
 --
 
-\restrict uxBtQllX3NKedVLJBvuccWEfSWPdEI6PrfUPlPxuvyKeqbhnThl4utOu8crBoMe
+\restrict YabtOWPDebPzIt2ieh5af7vQoL7MkzzHCut0OUFYF00wawlzGfhl7N7UGQr3oc8
 
 -- Dumped from database version 18.0 (Debian 18.0-1.pgdg13+3)
 -- Dumped by pg_dump version 18.0 (Debian 18.0-1.pgdg13+3)
@@ -8827,9 +8827,9 @@ CREATE DATABASE lbe WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCALE_PROVIDER 
 
 ALTER DATABASE lbe OWNER TO root;
 
-\unrestrict uxBtQllX3NKedVLJBvuccWEfSWPdEI6PrfUPlPxuvyKeqbhnThl4utOu8crBoMe
+\unrestrict YabtOWPDebPzIt2ieh5af7vQoL7MkzzHCut0OUFYF00wawlzGfhl7N7UGQr3oc8
 \connect lbe
-\restrict uxBtQllX3NKedVLJBvuccWEfSWPdEI6PrfUPlPxuvyKeqbhnThl4utOu8crBoMe
+\restrict YabtOWPDebPzIt2ieh5af7vQoL7MkzzHCut0OUFYF00wawlzGfhl7N7UGQr3oc8
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -9300,12 +9300,12 @@ BEGIN
     net_wages_payable_val := gross_wages_val - COALESCE(valid_row.advance, 0);
 
     INSERT INTO payment_flow.worker_payments (
-        worker_id, toli_id, employer_id, board_id, month, total_days,
+        worker_regno, toli_id, employer_id, board_id, year_month, total_days,
         basic_wages, advance, levy, gross_wages, net_wages_payable,
         payment_type, txn_ref, receipt_nmbr
     ) VALUES (
-        valid_row.worker_id, valid_row.toli_id, valid_row.employer_id, valid_row.board_id,
-        valid_row.month, valid_row.total_days,
+        valid_row.worker_regno, valid_row.toli_id, valid_row.employer_id, valid_row.board_id,
+        valid_row.year_month, valid_row.total_days,
         valid_row.amount, valid_row.advance,
         levy_val, gross_wages_val, net_wages_payable_val,
         valid_row.payment_type, valid_row.txn_ref, new_receipt_number
@@ -9313,7 +9313,8 @@ BEGIN
         -- Update receipt_nmbr in worker_uploaded_data
         UPDATE payment_flow.worker_uploaded_data
            SET request_nmbr = new_receipt_number
-         WHERE id = valid_row.id;
+         WHERE file_id = file_id_input
+           AND id = valid_row.id;
     END LOOP;
 
     receipt_number_out := new_receipt_number;
@@ -9429,7 +9430,7 @@ FROM (
             WHERE status_id = 1
         ) AS success_count,
         COUNT(*) FILTER (
-            WHERE status_id = 2 AND rejection_reason IS NULL
+            WHERE status_id = 2 AND rejection_reason IS NOT NULL
         ) AS failure_count
     FROM payment_flow.worker_uploaded_data
     WHERE file_id = file_id_input
@@ -10832,11 +10833,11 @@ ALTER TABLE payment_flow.worker_payment_receipts ALTER COLUMN id ADD GENERATED B
 
 CREATE TABLE payment_flow.worker_payments (
     id bigint NOT NULL,
-    worker_id bigint,
+    worker_regno character varying,
     toli_id bigint,
     employer_id bigint,
     board_id bigint,
-    month character varying(50),
+    year_month character varying,
     total_days integer,
     basic_wages numeric(10,2),
     advance numeric(10,2),
@@ -12216,8 +12217,8 @@ COPY payment_flow.toli_master (id, registration_number, employer_name_marathi, a
 --
 
 COPY payment_flow.uploaded_files (id, filename, stored_path, file_hash, file_type, created_at, uploaded_by, total_records, success_count, failure_count, status, file_reference_number, board_id, employer_id, toli_id) FROM stdin;
-67	worker_payment_all_success.csv	/Users/rahulcharvekar/Documents/Repos/LBE/PaymentReconciliation/payment-flow-service/API/workerpayments/cffdca5d-2313-44eb-93f7-3c9f06ffc5cd_worker_payment_all_success.csv	2f2096c9e297595adf47cb1ccbfba91ca1dfe6f704f508a90a1c419e75c80ca6	workerpayments	2025-11-23 09:39:54.514066	\N	2	2	0	VALIDATED	REQ-20251123-093954-514	1	2	1
-66	worker_payment_partial_success.csv	/Users/rahulcharvekar/Documents/Repos/LBE/PaymentReconciliation/payment-flow-service/API/workerpayments/11324d05-19ca-41e7-9289-cfc2f8ab39bf_worker_payment_partial_success.csv	b94911214a75cecfe3f78ad09334a0fbf050e5c9c23eeec3d646a4ccbb646856	workerpayments	2025-11-23 09:39:47.411428	\N	2	2	0	VALIDATED	REQ-20251123-093947-412	1	2	1
+71	worker_payment_partial_success.csv	/Users/rahulcharvekar/Documents/Repos/LBE/PaymentReconciliation/payment-flow-service/API/workerpayments/718bdc84-f631-4c65-80e8-b111e717eed5_worker_payment_partial_success.csv	b94911214a75cecfe3f78ad09334a0fbf050e5c9c23eeec3d646a4ccbb646856	workerpayments	2025-11-23 10:01:48.063523	\N	2	2	0	REQUEST_GENERATED	REQ-20251123-100148-064	1	2	1
+70	worker_payment_all_success.csv	/Users/rahulcharvekar/Documents/Repos/LBE/PaymentReconciliation/payment-flow-service/API/workerpayments/0b2df08e-09e3-484d-9324-66ff7ed5903e_worker_payment_all_success.csv	2f2096c9e297595adf47cb1ccbfba91ca1dfe6f704f508a90a1c419e75c80ca6	workerpayments	2025-11-23 10:01:41.336069	\N	2	2	0	REQUEST_GENERATED	REQ-20251123-100141-338	1	2	1
 \.
 
 
@@ -12236,6 +12237,8 @@ COPY payment_flow.worker_master (id, worker_name_marathi, worker_name_english, w
 --
 
 COPY payment_flow.worker_payment_receipts (id, receipt_number, employer_id, toli_id, board_id, created_at, total_records, total_amount, status_id) FROM stdin;
+18	WR-70-1763872366.220793	2	1	1	2025-11-23 10:02:46.220793	2	37.00	1
+19	WR-71-1763872373.591268	2	1	1	2025-11-23 10:02:53.591268	2	37.00	1
 \.
 
 
@@ -12243,7 +12246,11 @@ COPY payment_flow.worker_payment_receipts (id, receipt_number, employer_id, toli
 -- Data for Name: worker_payments; Type: TABLE DATA; Schema: payment_flow; Owner: admin_lbe
 --
 
-COPY payment_flow.worker_payments (id, worker_id, toli_id, employer_id, board_id, month, total_days, basic_wages, advance, gross_wages, payment_type, txn_ref, receipt_nmbr, levy, net_wages_payable, status_id) FROM stdin;
+COPY payment_flow.worker_payments (id, worker_regno, toli_id, employer_id, board_id, year_month, total_days, basic_wages, advance, gross_wages, payment_type, txn_ref, receipt_nmbr, levy, net_wages_payable, status_id) FROM stdin;
+17	WRK-0001	1	2	1	2025-01	0	22.00	2200.00	28.60	2000.00	BANK_TRANSFER	WR-70-1763872366.220793	6.60	-2171.40	\N
+18	WRK-0002	1	2	1	2025-01	0	15.00	1500.00	19.50	1500.00	CASH	WR-70-1763872366.220793	4.50	-1480.50	\N
+19	WRK-0001	1	2	1	2025-01	0	22.00	2200.00	28.60	2000.00	BANK_TRANSFER	WR-71-1763872373.591268	6.60	-2171.40	\N
+20	WRK-0002	1	2	1	2025-01	0	15.00	1500.00	19.50	1500.00	CASH	WR-71-1763872373.591268	4.50	-1480.50	\N
 \.
 
 
@@ -12260,10 +12267,10 @@ COPY payment_flow.worker_toli_relation (id, worker_id, toli_id, board_id, employ
 --
 
 COPY payment_flow.worker_uploaded_data (id, file_id, employee_name, employer_reg_no, toli_reg_no, year_month, day1, day2, day3, day4, day5, day6, day7, day8, day9, day10, day11, day12, day13, day14, day15, day16, day17, day18, day19, day20, day21, day22, day23, day24, day25, day26, day27, day28, day29, day30, day31, total_days, amount, advance, net_payable, payment_type, txn_ref, rejection_reason, created_at, updated_at, board_id, employer_id, toli_id, request_nmbr, status_id, worker_regno) FROM stdin;
-1	66	Alice Worker	EMP-0001	TOLI-001	2025-01	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	22.00	2200.00	200.00	2000.00	BANK_TRANSFER	\N	2025-11-23 09:39:47.414497	2025-11-23 09:39:47.424331	1	2	1	\N	1	WRK-0001
-1	67	Alice Worker	EMP-0001	TOLI-001	2025-01	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	22.00	2200.00	200.00	2000.00	BANK_TRANSFER	\N	2025-11-23 09:39:54.5173	2025-11-23 09:39:54.525438	1	2	1	\N	1	WRK-0001
-2	67	Bob Builder	EMP-0002	TOLI-002	2025-01	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	15.00	1500.00	0.00	1500.00	CASH	\N	2025-11-23 09:39:54.517393	2025-11-23 09:39:54.525438	1	2	1	\N	1	WRK-0002
-2	66	Bob Builder	EMP-0002	TOLI-002	2025-01	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	15.00	1500.00	0.00	1500.00	CASH	\N	2025-11-23 09:39:47.41458	2025-11-23 09:40:52.049566	1	2	1	\N	1	WRK-0002
+1	70	Alice Worker	EMP-0001	TOLI-001	2025-01	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	22.00	2200.00	200.00	2000.00	BANK_TRANSFER	\N	2025-11-23 10:01:41.359129	2025-11-23 10:01:41.394751	1	2	1	WR-70-1763872366.220793	1	WRK-0001
+2	70	Bob Builder	EMP-0002	TOLI-002	2025-01	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	15.00	1500.00	0.00	1500.00	CASH	\N	2025-11-23 10:01:41.359287	2025-11-23 10:01:41.394751	1	2	1	WR-70-1763872366.220793	1	WRK-0002
+1	71	Alice Worker	EMP-0001	TOLI-001	2025-01	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	22.00	2200.00	200.00	2000.00	BANK_TRANSFER	\N	2025-11-23 10:01:48.067377	2025-11-23 10:01:48.076589	1	2	1	WR-71-1763872373.591268	1	WRK-0001
+2	71	Bob Builder	EMP-0002	TOLI-002	2025-01	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	15.00	1500.00	0.00	1500.00	CASH	\N	2025-11-23 10:01:48.06747	2025-11-23 10:02:17.213976	1	2	1	WR-71-1763872373.591268	1	WRK-0002
 \.
 
 
@@ -12580,7 +12587,7 @@ SELECT pg_catalog.setval('payment_flow.toli_master_id_seq', 3, true);
 -- Name: uploaded_files_id_seq; Type: SEQUENCE SET; Schema: payment_flow; Owner: admin_lbe
 --
 
-SELECT pg_catalog.setval('payment_flow.uploaded_files_id_seq', 67, true);
+SELECT pg_catalog.setval('payment_flow.uploaded_files_id_seq', 71, true);
 
 
 --
@@ -12594,14 +12601,14 @@ SELECT pg_catalog.setval('payment_flow.worker_master_id_seq', 6, true);
 -- Name: worker_payment_receipts_id_seq; Type: SEQUENCE SET; Schema: payment_flow; Owner: admin_lbe
 --
 
-SELECT pg_catalog.setval('payment_flow.worker_payment_receipts_id_seq', 11, true);
+SELECT pg_catalog.setval('payment_flow.worker_payment_receipts_id_seq', 19, true);
 
 
 --
 -- Name: worker_payments_id_seq; Type: SEQUENCE SET; Schema: payment_flow; Owner: admin_lbe
 --
 
-SELECT pg_catalog.setval('payment_flow.worker_payments_id_seq', 12, true);
+SELECT pg_catalog.setval('payment_flow.worker_payments_id_seq', 20, true);
 
 
 --
@@ -14767,7 +14774,7 @@ GRANT SELECT,INSERT,DELETE,UPDATE ON TABLE reconciliation.van_transaction TO app
 -- PostgreSQL database dump complete
 --
 
-\unrestrict uxBtQllX3NKedVLJBvuccWEfSWPdEI6PrfUPlPxuvyKeqbhnThl4utOu8crBoMe
+\unrestrict YabtOWPDebPzIt2ieh5af7vQoL7MkzzHCut0OUFYF00wawlzGfhl7N7UGQr3oc8
 
 --
 -- Database "postgres" dump
@@ -14779,7 +14786,7 @@ GRANT SELECT,INSERT,DELETE,UPDATE ON TABLE reconciliation.van_transaction TO app
 -- PostgreSQL database dump
 --
 
-\restrict EuRppoqfObHR0Uc5U3gcUELVaVSbq2oyx3RcVNnWPwKa3MR2kf8bsmX9VZkdNEI
+\restrict WwbBbJAxdx6Xb2z9LCmqmKWDdz45eVYFGMXwCL3nF6I5Di9yLp1xPbMrdEdPKkz
 
 -- Dumped from database version 18.0 (Debian 18.0-1.pgdg13+3)
 -- Dumped by pg_dump version 18.0 (Debian 18.0-1.pgdg13+3)
@@ -14800,7 +14807,7 @@ SET row_security = off;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict EuRppoqfObHR0Uc5U3gcUELVaVSbq2oyx3RcVNnWPwKa3MR2kf8bsmX9VZkdNEI
+\unrestrict WwbBbJAxdx6Xb2z9LCmqmKWDdz45eVYFGMXwCL3nF6I5Di9yLp1xPbMrdEdPKkz
 
 --
 -- PostgreSQL database cluster dump complete
