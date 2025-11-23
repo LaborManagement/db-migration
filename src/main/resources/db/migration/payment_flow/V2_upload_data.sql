@@ -113,3 +113,19 @@ ALTER TABLE payment_flow.worker_uploaded_data ADD COLUMN worker_regno VARCHAR(50
 
 ALTER TABLE payment_flow.worker_uploaded_data
 DROP COLUMN worker_id;
+
+ALTER TABLE payment_flow.worker_uploaded_data
+    ALTER COLUMN id DROP IDENTITY IF EXISTS;
+    
+-- Remove existing primary key constraint on id
+ALTER TABLE payment_flow.worker_uploaded_data
+    DROP CONSTRAINT IF EXISTS worker_uploaded_data_pkey,
+    DROP CONSTRAINT IF EXISTS worker_uploaded_data_id_not_null;
+
+-- Remove identity/serial (if any)
+ALTER TABLE payment_flow.worker_uploaded_data
+    ALTER COLUMN id DROP DEFAULT;
+
+-- Add composite primary key on (file_id, id)
+ALTER TABLE payment_flow.worker_uploaded_data
+    ADD CONSTRAINT worker_uploaded_data_pk PRIMARY KEY (file_id, id);
