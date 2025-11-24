@@ -1,7 +1,11 @@
---export full dump 
+--export full dump in swl format
 docker exec -t labormanagement \
   pg_dumpall -U root -f /tmp/lbe_full_cluster.sql
 
+--export full dump 
+docker exec -t labormanagement \
+  pg_dump -U root -d lbe -F c -f /tmp/lbe_db.dump
+  
 --export full grants
 docker exec -t labormanagement \
   pg_dumpall --globals-only -U root -f /tmp/global.sql
@@ -9,6 +13,8 @@ docker exec -t labormanagement \
 --copy form docker to local
 docker cp labormanagement:/tmp/lbe_full_cluster.sql lbe_full_cluster.sql
 docker cp labormanagement:/tmp/global.sql global.sql
+docker cp labormanagement:/tmp/lbe_db.dump lbe_db.dump
+
 
 
 --Table and View
