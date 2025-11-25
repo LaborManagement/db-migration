@@ -27,9 +27,9 @@ FROM reconciliation.van_transaction vt;
 GRANT
 SELECT ON reconciliation.vw_all_bank_transactions TO app_clearing;
 
-GRANT USAGE ON SCHEMA reconciliation TO app_payment_flow;
+GRANT USAGE ON SCHEMA reconciliation TO app_clearing;
 
-GRANT SELECT ON reconciliation.vw_all_bank_transactions TO app_payment_flow;
+GRANT SELECT ON reconciliation.vw_all_bank_transactions TO app_clearing;
 
-GRANT SELECT, INSERT, UPDATE, DELETE ON reconciliation.statement_transaction TO app_payment_flow;
-GRANT SELECT, INSERT, UPDATE, DELETE ON reconciliation.van_transaction TO app_payment_flow;
+GRANT SELECT, INSERT, UPDATE, DELETE ON reconciliation.statement_transaction TO app_clearing;
+GRANT SELECT, INSERT, UPDATE, DELETE ON reconciliation.van_transaction TO app_clearing;

@@ -471,3 +471,4 @@ GRANT USAGE ON SCHEMA reconciliation TO app_reconciliation;
 
 -- Grant all table privileges in schema
 GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA reconciliation TO app_reconciliation;
+GRANT INSERT, SELECT, UPDATE, DELETE ON reconciliation.bank_account TO app_clearing;

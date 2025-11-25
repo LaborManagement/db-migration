@@ -1,3 +1,18 @@
+drop table if exists clearing.bank_transaction CASCADE;
+
+
+CREATE TABLE clearing.bank_transaction (bank_txn_id SERIAL PRIMARY KEY,
+                                                           bank_account_id INTEGER NOT NULL,
+                                                                                   txn_ref VARCHAR(100), -- or utr_number
+ txn_date DATE NOT NULL,
+               amount NUMERIC(18, 2) NOT NULL,
+                                     dr_cr_flag CHAR(2) NOT NULL, -- e.g. 'DR'/'CR'
+ description TEXT, allocated_amount NUMERIC(18, 2) DEFAULT 0,
+                                                           remaining_amount NUMERIC(18, 2) DEFAULT 0,
+                                                                                                   status INTEGER NOT NULL DEFAULT 1,
+                                                                                                                                   board_id INTEGER, employee_id INTEGER, created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                                                                                                                                                                                                                updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP);
+
 -- Table: clearing.clearing_status
 
 drop table if exists clearing.clearing_status;
@@ -23,24 +38,7 @@ CREATE TABLE clearing.payment_allocation (allocation_id SERIAL PRIMARY KEY,
                                                                                                                                                                                             voucher_id INTEGER, source_file_id INTEGER);
 
 -- Table: clearing.bank_transaction
-
-drop table if exists clearing.bank_transaction CASCADE;
-
-
-CREATE TABLE clearing.bank_transaction (bank_txn_id SERIAL PRIMARY KEY,
-                                                           bank_account_id INTEGER NOT NULL,
-                                                                                   txn_ref VARCHAR(100), -- or utr_number
- txn_date DATE NOT NULL,
-               amount NUMERIC(18, 2) NOT NULL,
-                                     dr_cr_flag CHAR(2) NOT NULL, -- e.g. 'DR'/'CR'
- description TEXT, allocated_amount NUMERIC(18, 2) DEFAULT 0,
-                                                           remaining_amount NUMERIC(18, 2) DEFAULT 0,
-                                                                                                   status INTEGER NOT NULL DEFAULT 1,
-                                                                                                                                   board_id INTEGER, employee_id INTEGER, created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-                                                                                                                                                                                                                updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP);
-
---include grants as necessary
-GRANT
+ GRANT
 SELECT,
 INSERT,
 UPDATE,

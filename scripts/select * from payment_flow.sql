@@ -32,7 +32,13 @@ commit;
 
 select * from reconciliation.statement_transaction;
 select * from reconciliation.van_transaction;
-select * from reconciliation.vw_all_bank_transactions;
+select * from reconciliation.bank_account;
 
 
 select * From payment_flow.validation_rule;
+
+select * from reconciliation.bank_transaction;
+select * from reconciliation.payment_allocation;
+
+
+
