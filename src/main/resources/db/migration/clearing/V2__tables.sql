@@ -48,3 +48,9 @@ GRANT USAGE,
 SELECT ON ALL SEQUENCES IN SCHEMA clearing TO app_clearing;
 
 GRANT EXECUTE ON ALL FUNCTIONS IN SCHEMA clearing TO app_clearing;
+
+ALTER TABLE clearing.voucher_header ENABLE ROW LEVEL SECURITY;
+ALTER TABLE clearing.voucher_line ENABLE ROW LEVEL SECURITY;
+ALTER TABLE clearing.payment_allocation ENABLE ROW LEVEL SECURITY;
+ALTER TABLE clearing.bank_transaction ENABLE ROW LEVEL SECURITY;
+ALTER TABLE clearing.accounting_event ENABLE ROW LEVEL SECURITY;
