@@ -27,6 +27,7 @@ select * from clearing.voucher_header;
 select * from clearing.payment_allocation;
 select * from clearing.request_settlement;
 
+
 delete from clearing.voucher_header;
 delete from clearing.accounting_event;
 delete from clearing.payment_allocation;
