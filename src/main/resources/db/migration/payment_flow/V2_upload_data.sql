@@ -114,30 +114,45 @@ ALTER TABLE payment_flow.worker_uploaded_data ADD COLUMN worker_regno VARCHAR(50
 ALTER TABLE payment_flow.worker_uploaded_data
 DROP COLUMN worker_id;
 
+
 ALTER TABLE payment_flow.worker_uploaded_data
-    ALTER COLUMN id DROP IDENTITY IF EXISTS;
-    
+ALTER COLUMN id
+DROP IDENTITY IF EXISTS;
+
 -- Remove existing primary key constraint on id
+
 ALTER TABLE payment_flow.worker_uploaded_data
-    DROP CONSTRAINT IF EXISTS worker_uploaded_data_pkey,
-    DROP CONSTRAINT IF EXISTS worker_uploaded_data_id_not_null;
+DROP CONSTRAINT IF EXISTS worker_uploaded_data_pkey,
+DROP CONSTRAINT IF EXISTS worker_uploaded_data_id_not_null;
 
 -- Remove identity/serial (if any)
+
 ALTER TABLE payment_flow.worker_uploaded_data
-    ALTER COLUMN id DROP DEFAULT;
+ALTER COLUMN id
+DROP DEFAULT;
 
 -- Add composite primary key on (file_id, id)
-ALTER TABLE payment_flow.worker_uploaded_data
-    ADD CONSTRAINT worker_uploaded_data_pk PRIMARY KEY (file_id, id);
+
+ALTER TABLE payment_flow.worker_uploaded_data ADD CONSTRAINT worker_uploaded_data_pk PRIMARY KEY (file_id,
+                                                                                                  id);
+
+
+ALTER TABLE payment_flow.worker_payments RENAME COLUMN worker_id TO worker_regno;
+
 
 ALTER TABLE payment_flow.worker_payments
-    RENAME COLUMN worker_id TO worker_regno;
+ALTER COLUMN worker_regno TYPE varchar;
+
+
+ALTER TABLE payment_flow.worker_payments RENAME COLUMN month TO year_month;
+
 
 ALTER TABLE payment_flow.worker_payments
-    ALTER COLUMN worker_regno TYPE varchar;
+ALTER COLUMN year_month TYPE varchar;
 
-ALTER TABLE payment_flow.worker_payments
-    RENAME COLUMN month TO year_month;
 
-ALTER TABLE payment_flow.worker_payments
-    ALTER COLUMN year_month TYPE varchar;
+ALTER TABLE payment_flow.uploaded_files
+DROP COLUMN status;
+
+
+ALTER TABLE payment_flow.uploaded_files ADD COLUMN status_id integer;

@@ -1,5 +1,6 @@
 
 select * from payment_flow.uploaded_files;
+
 select * from payment_flow.worker_uploaded_data;
 
 select * from payment_flow.worker_payment_receipts;
@@ -15,9 +16,11 @@ delete from payment_flow.worker_payment_receipts;
 commit;
 
 select * from clearing.accounting_event_type;
-select * from clearing.accounting_event;
 select * from clearing.accounting_rule_header;
 select * from clearing.accounting_rule_line;
+
+select * from clearing.accounting_event;
+
 
 select * from clearing.bank_transaction;
 select * from clearing.voucher_header;
@@ -35,10 +38,11 @@ select * from reconciliation.van_transaction;
 select * from reconciliation.bank_account;
 
 
-select * From payment_flow.validation_rule;
+select * from payment_flow.status_master;
 
-select * from reconciliation.bank_transaction;
-select * from reconciliation.payment_allocation;
+delete From payment_flow.status_master;
+commit;
+
 
 
 
