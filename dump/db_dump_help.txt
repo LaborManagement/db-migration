@@ -1,4 +1,4 @@
---export full dump in swl format
+--export full dump in sql format
 docker exec -t labormanagement \
   pg_dumpall -U root -f /tmp/lbe_full_cluster.sql
 
