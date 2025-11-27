@@ -9,6 +9,8 @@ CREATE TABLE IF NOT EXISTS payment_flow.status_master (id SERIAL PRIMARY KEY,
 
 -- Unique constraint to avoid duplicate status per type
 
+ALTER TABLE payment_flow.status_master Drop CONSTRAINT uq_status_type_code;
+
 ALTER TABLE payment_flow.status_master ADD CONSTRAINT uq_status_type_code UNIQUE (status_type,
                                                                                   status_code);
 
