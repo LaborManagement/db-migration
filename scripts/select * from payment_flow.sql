@@ -57,6 +57,16 @@ SELECT * FROM information_schema.columns
 WHERE table_schema = 'reconciliation'
   AND table_name   = 'statement_transaction';
 
-select * from payment_flow.worker_master;
+select * from clearing.status_master
+where status_type = 'bank_transaction';
 
-s
+update clearing.status_master
+set seq_no = 3
+where status_type = 'bank_transaction'
+and status_code = 'SETTLED';
+commit;
+
+DELETE from clearing.status_master
+where status_type = 'bank_transaction'
+and status_code = 'AVAILABLE';
+commit;
