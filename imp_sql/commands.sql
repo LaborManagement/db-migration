@@ -106,7 +106,7 @@ from clearing.request_settlement;
 
 update clearing.bank_transaction
 set allocated_amount = 0,
-    remaining_amount = 200;
+    remaining_amount = 114400.00;
 
 
 commit;
@@ -179,7 +179,28 @@ from clearing.status_master;
 select status_type,
        status_code,
        seq_no
-from payment_flow.status_master;
+from payment_flow.status_master
+where status_type = 'worker_payment_receipt';
+
+
+update payment_flow.status_master
+set seq_no = seq_no + 1
+where status_type = 'worker_payment_receipt'
+  and status_code in ('RECONCILED_BY_EMPLOYER',
+                      'APPROVED_BY_BOARD',
+                      'PROCESSED_BY_BOARD');
+
+
+commit;
+
+
+delete
+from payment_flow.status_master
+where status_type = 'worker_payment_request'
+  and status_code in ('APPROVED_BY_EMPLOYER');
+
+
+commit;
 
 
 select *
