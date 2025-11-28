@@ -4,7 +4,8 @@ from payment_flow.uploaded_files;
 
 
 select *
-from payment_flow.worker_uploaded_data;
+from payment_flow.worker_uploaded_data
+where file_id = 96;
 
 
 select *
@@ -18,6 +19,11 @@ from payment_flow.worker_payments;
 select *
 from payment_flow.employer_payment_receipts;
 
+
+select *
+from payment_flow.status_master;
+
+--delete statements to clear data for re-running tests
 
 delete
 from payment_flow.worker_uploaded_data;
@@ -66,6 +72,13 @@ select *
 from clearing.voucher_header;
 
 
+update clearing.voucher_header
+set status_id = 3;
+
+
+commit;
+
+
 select *
 from clearing.payment_allocation;
 
@@ -73,6 +86,7 @@ from clearing.payment_allocation;
 select *
 from clearing.request_settlement;
 
+--delete statements to clear data for re-running tests
 
 delete
 from clearing.voucher_header;
@@ -129,8 +143,8 @@ from reconciliation.vw_all_bank_transactions;
 
 SELECT *
 FROM information_schema.columns
-WHERE table_schema = 'reconciliation'
-  AND table_name = 'statement_transaction';
+WHERE table_schema = 'payment_flow'
+  AND table_name = 'worker_payments';
 
 
 select *
@@ -156,6 +170,18 @@ where status_type = 'bank_transaction'
 commit;
 
 
+select status_type,
+       status_code,
+       seq_no
+from clearing.status_master;
+
+
+select status_type,
+       status_code,
+       seq_no
+from payment_flow.status_master;
+
+
 select *
 from payment_flow.worker_master;
 
@@ -166,3 +192,7 @@ from payment_flow.employer_master;
 
 select *
 from payment_flow.toli_master;
+
+
+select *
+from payment_flow.validation_rule;
